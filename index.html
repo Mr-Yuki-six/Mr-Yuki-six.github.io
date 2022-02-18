@@ -148,6 +148,141 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-debug" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/19/debug/">debug</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/19/debug/" class="archive-article-date">
+  	<time datetime="2022-02-18T17:19:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-19</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="hexo博客在chrome＆edge中无法显示图片"><a href="#hexo博客在chrome＆edge中无法显示图片" class="headerlink" title="hexo博客在chrome＆edge中无法显示图片"></a>hexo博客在chrome＆edge中无法显示图片</h3><h4 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h4><p> hexo 发的博客图片 在 Google Chrome 和Microsoft Edge下无法正常显示，但在 Safari 和 hello、FireFox、 QQ浏览器下却可以正常显示。</p>
+<h4 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h4><p> 使用的图床不支持&#x2F;未开启https访问，自 Chrome83 版本开始，Chrome浏览器默认阻止混合内容<code>MixContent</code>的下载，加载等。既 HTTPS 网站 只能以 HTTPS 加载内容。这个问题导致很多未配置静态资源SSL证书的网站在加载图片等http内容时失败。</p>
+<h4 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h4><p> 最佳方法：使用支持https的图床，例如GitHub图床<br> 其他方法：更换浏览器（</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/19/debug/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+<!--显示阅读次数-->
+
+
+  
+    <article id="post-使用Color-themes-for-Google-Code-Prettify改变代码高亮风格" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/02/13/%E4%BD%BF%E7%94%A8Color-themes-for-Google-Code-Prettify%E6%94%B9%E5%8F%98%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/">使用Color themes for Google Code Prettify改变代码高亮风格</a>
+    </h1>
+  
+
+        
+        <a href="/2022/02/13/%E4%BD%BF%E7%94%A8Color-themes-for-Google-Code-Prettify%E6%94%B9%E5%8F%98%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/" class="archive-article-date">
+  	<time datetime="2022-02-13T15:35:17.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-02-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="使用Color-themes-for-Google-Code-Prettify改变代码高亮风格"><a href="#使用Color-themes-for-Google-Code-Prettify改变代码高亮风格" class="headerlink" title="使用Color themes for Google Code Prettify改变代码高亮风格"></a>使用Color themes for Google Code Prettify改变代码高亮风格</h1><h2 id="一：放弃使用highlight-js代码高亮"><a href="#一：放弃使用highlight-js代码高亮" class="headerlink" title="一：放弃使用highlight.js代码高亮"></a>一：放弃使用highlight.js代码高亮</h2><p>在博客配置文件_config.yml中将highlight相关配置全设置为false：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">highlight:</span><br><span class="line">  enable: false</span><br><span class="line">  line_number: false</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace: &#x27;&#x27;</span><br><span class="line">  wrap: true</span><br><span class="line">  hljs: false</span><br></pre></td></tr></table></figure>
+
+<p>然后去掉highlight.css样式文件的加载，其中有代码相关的<code>pre</code>标签和<code>code</code>标签样式，会影响后面我们加载code-prettify代码样式。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/02/13/%E4%BD%BF%E7%94%A8Color-themes-for-Google-Code-Prettify%E6%94%B9%E5%8F%98%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+<!--显示阅读次数-->
+
+
+  
     <article id="post-Markdown教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
