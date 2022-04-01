@@ -184,7 +184,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">-软路由 -R2S</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">软路由</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">R2S</a>
         		</li>
       		
 		</ul>
@@ -246,69 +250,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="1-技术框架"><a href="#1-技术框架" class="headerlink" title="1 技术框架"></a>1 技术框架</h1><p>Spring Boot + MyBatis Plus + Thymeleaf + MySQL</p>
-<h1 id="2-前端原型页面"><a href="#2-前端原型页面" class="headerlink" title="2 前端原型页面"></a>2 前端原型页面</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.southwind.controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.stereotype.Controller;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.Pat</span><br><span class="line">hVariable;</span><br><span class="line"><span class="keyword">import</span> org.springframework.web.bind.annotation.Res</span><br><span class="line">ponseBody;</span><br><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RedirectController</span> &#123;</span><br><span class="line"><span class="meta">@GetMapping(&quot;/&#123;url&#125;&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String</span><br><span class="line"><span class="title function_">redirect</span><span class="params">(<span class="meta">@PathVariable(&quot;url&quot;)</span> String url)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> url;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@GetMapping(&quot;/&quot;)</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="string">&quot;redirect:/main&quot;</span>;</span><br><span class="line"><span class="comment">// 防后台报错（不影响运行）</span></span><br><span class="line"><span class="meta">@GetMapping(&quot;favicon.ico&quot;)</span></span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="keyword">void</span> <span class="title function_">returnNoFavicon</span><span class="params">()</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="3-数据库"><a href="#3-数据库" class="headerlink" title="3 数据库"></a>3 数据库</h1><p>cart、orders、order_detail、product、<br>product_category、user、user_address</p>
-<details>
-  <summary>建表</summary>
-  <pre><code> 
-
-<p>DROP TABLE IF EXISTS <code>cart</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>cart</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT,<br>  <code>product_id</code> int DEFAULT NULL,<br>  <code>quantity</code> int DEFAULT NULL,<br>  <code>cost</code> float DEFAULT NULL,<br>  <code>user_id</code> int DEFAULT NULL,<br>  <code>create_time</code> datetime NOT NULL,<br>  <code>update_time</code> datetime NOT NULL,<br>  PRIMARY KEY (<code>id</code>),<br>  KEY <code>productId</code> (<code>product_id</code>),<br>  KEY <code>userId</code> (<code>user_id</code>),<br>  CONSTRAINT <code>cart_ibfk_1</code> FOREIGN KEY (<code>product_id</code>) REFERENCES <code>product</code> (<code>id</code>),<br>  CONSTRAINT <code>cart_ibfk_2</code> FOREIGN KEY (<code>user_id</code>) REFERENCES <code>user</code> (<code>id</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;326 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>cart</code><br>–</p>
-<p>LOCK TABLES <code>cart</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>cart</code> DISABLE KEYS <em>&#x2F;;<br>&#x2F;</em>!40000 ALTER TABLE <code>cart</code> ENABLE KEYS *&#x2F;;<br>UNLOCK TABLES;</p>
-<p>–<br>– Table structure for table <code>order_detail</code><br>–</p>
-<p>DROP TABLE IF EXISTS <code>order_detail</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>order_detail</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT COMMENT ‘主键’,<br>  <code>order_id</code> int NOT NULL COMMENT ‘订单主键’,<br>  <code>product_id</code> int NOT NULL COMMENT ‘商品主键’,<br>  <code>quantity</code> int NOT NULL COMMENT ‘数量’,<br>  <code>cost</code> float NOT NULL COMMENT ‘消费’,<br>  PRIMARY KEY (<code>id</code>),<br>  UNIQUE KEY <code>PK__EASYBUY___66E1BD8E2F10007B</code> (<code>id</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;178 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>order_detail</code><br>–</p>
-<p>LOCK TABLES <code>order_detail</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>order_detail</code> DISABLE KEYS <em>&#x2F;;<br>&#x2F;</em>!40000 ALTER TABLE <code>order_detail</code> ENABLE KEYS *&#x2F;;<br>UNLOCK TABLES;</p>
-<p>–<br>– Table structure for table <code>orders</code><br>–</p>
-<p>DROP TABLE IF EXISTS <code>orders</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>orders</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT COMMENT ‘主键’,<br>  <code>user_id</code> int DEFAULT NULL COMMENT ‘用户主键’,<br>  <code>login_name</code> varchar(255) DEFAULT NULL COMMENT ‘用户名’,<br>  <code>user_address</code> varchar(255) DEFAULT NULL COMMENT ‘用户地址’,<br>  <code>cost</code> float DEFAULT NULL COMMENT ‘总金额’,<br>  <code>serialnumber</code> varchar(255) DEFAULT NULL COMMENT ‘订单号’,<br>  <code>create_time</code> datetime DEFAULT NULL COMMENT ‘创建时间’,<br>  <code>update_time</code> datetime NOT NULL COMMENT ‘更新时间’,<br>  PRIMARY KEY (<code>id</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;178 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>orders</code><br>–</p>
-<p>LOCK TABLES <code>orders</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>orders</code> DISABLE KEYS <em>&#x2F;;<br>&#x2F;</em>!40000 ALTER TABLE <code>orders</code> ENABLE KEYS *&#x2F;;<br>UNLOCK TABLES;</p>
-<p>–<br>– Table structure for table <code>product</code><br>–</p>
-<p>DROP TABLE IF EXISTS <code>product</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>product</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT COMMENT ‘主键’,<br>  <code>name</code> varchar(200) NOT NULL COMMENT ‘名称’,<br>  <code>description</code> varchar(1024) DEFAULT NULL COMMENT ‘描述’,<br>  <code>price</code> float NOT NULL COMMENT ‘价格’,<br>  <code>stock</code> int NOT NULL COMMENT ‘库存’,<br>  <code>categorylevelone_id</code> int DEFAULT NULL COMMENT ‘分类1’,<br>  <code>categoryleveltwo_id</code> int DEFAULT NULL COMMENT ‘分类2’,<br>  <code>categorylevelthree_id</code> int DEFAULT NULL COMMENT ‘分类3’,<br>  <code>file_name</code> varchar(200) DEFAULT NULL COMMENT ‘文件名称’,<br>  PRIMARY KEY (<code>id</code>),<br>  UNIQUE KEY <code>PK__EASYBUY___94F6E55132E0915F</code> (<code>id</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;777 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>product</code><br>–</p>
-<p>LOCK TABLES <code>product</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>product</code> DISABLE KEYS <em>&#x2F;;<br>INSERT INTO <code>product</code> VALUES (733,’香奈儿’,’好闻的香水！！！’,152,1,548,654,655,’baby_1.jpg’),(734,’洗面奶’,’’,153,75,548,654,655,’baby_2.jpg’),(735,’啫喱水’,’’,152,948,548,654,655,’baby_3.jpg’),(736,’香水’,’’,152,984,548,654,655,’baby_4.jpg’),(737,’香水’,’’,152,111,548,654,655,’baby_5.jpg’),(738,’润肤露’,’’,45,99,548,654,655,’baby_6.jpg’),(739,’洁面装’,’’,156,33,548,654,655,’bk_2.jpg’),(740,’电饭锅’,’’,158,87,628,656,659,’bk_1.jpg’),(741,’婴儿喂奶装’,’’,569,100,632,637,653,’bk_3.jpg’),(742,’坚果套餐’,’’,158,1000,660,661,662,’bk_4.jpg’),(743,’超甜蜜崭’,’’,589,995,660,661,663,’bk_5.jpg’),(744,’华为2566’,’’,589,1000,670,671,672,’de1.jpg’),(745,’荣耀3C’,’’,589,92,670,671,672,’de2.jpg’),(746,’小米手环’,’’,963,98,670,674,675,’de3.jpg’),(747,’华为2265’,’’,896,1000,670,671,673,’de4.jpg’),(748,’越南坚果’,’’,520,1,660,661,662,’de5.jpg’),(749,’进口马桶’,’’,5866,93,628,657,NULL,’food_1.jpg’),(750,’联想Y系列’,’’,569,894,670,690,691,’food_2.jpg’),(751,’脑白金1号’,’’,589,998,676,677,680,’food_3.jpg’),(752,’莫里斯按’,’’,589,998,660,661,662,’food_4.jpg’),(753,’三鹿好奶粉’,’’,859,100,660,661,662,’food_5.jpg’),(754,’儿童牛奶’,’’,5896,100,676,679,NULL,’food_6.jpg’),(755,’软沙发’,’’,8596,7,628,696,NULL,’food_b1.jpg’),(756,’收纳盒’,’’,5966,103,628,696,NULL,’food_b2.jpg’),(757,’洗衣液’,’’,58,1000,628,696,NULL,’food_r.jpg’),(758,’红短沙发’,’’,596,113,628,696,NULL,’fre_1.jpg’),(759,’新西兰奶粉’,’’,5896,100,676,679,NULL,’fre_2.jpg’),(760,’婴儿车’,’’,11000,100,681,682,687,’fre_3.jpg’),(761,’夏款婴儿车’,’’,963,99,681,682,688,’fre_4.jpg’),(762,’抗压旅行箱’,’’,569,998,681,683,685,’fre_5.jpg’),(763,’透明手提箱’,’’,8596,1000,681,683,684,’fre_6.jpg’),(764,’婴儿果粉’,’’,5896,999,660,661,662,’milk_1.jpg’),(765,’椰子粉’,’’,5963,1000,660,661,662,’milk_2.jpg’),(766,’坚果蛋糕’,’’,200,94,660,661,663,’milk_3.jpg’),(767,’编制手提箱’,’’,5896,1000,681,682,688,’milk_4.jpg’),(768,’纸箱’,’’,5896,3,681,682,687,’milk_5.jpg’),(769,’健胃液’,’’,152,1000,676,679,NULL,’milk_6.jpg’),(770,’联想NTC’,’’,8596,100,670,671,673,’milk_7.jpg’),(771,’香水1’,NULL,100,100,548,654,655,’milk_8.jpg’),(772,’香水2’,NULL,100,100,548,654,655,’pro1.jpg’),(773,’香水3’,NULL,100,95,548,654,655,’pro2.jpg’),(774,’香水4’,NULL,100,100,548,654,655,’pro3.jpg’),(775,’香水5’,NULL,100,100,548,654,655,’pro4.jpg’),(776,’香水6’,NULL,1,1,548,654,655,’pro5.jpg’);<br>&#x2F;</em>!40000 ALTER TABLE <code>product</code> ENABLE KEYS *&#x2F;;<br>UNLOCK TABLES;</p>
-<p>–<br>– Table structure for table <code>product_category</code><br>–</p>
-<p>DROP TABLE IF EXISTS <code>product_category</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>product_category</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT COMMENT ‘主键’,<br>  <code>name</code> varchar(20) NOT NULL COMMENT ‘名称’,<br>  <code>parent_id</code> int NOT NULL COMMENT ‘父级目录id’,<br>  <code>type</code> int DEFAULT NULL COMMENT ‘级别(1:一级 2：二级 3：三级)’,<br>  PRIMARY KEY (<code>id</code>),<br>  UNIQUE KEY <code>PK__EASYBUY___9EC2A4E236B12243</code> (<code>id</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;697 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>product_category</code><br>–</p>
-<p>LOCK TABLES <code>product_category</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>product_category</code> DISABLE KEYS <em>&#x2F;;<br>INSERT INTO <code>product_category</code> VALUES (548,’化妆品’,0,1),(628,’家用商品’,0,1),(654,’面部护理’,548,2),(655,’少女派’,654,3),(656,’餐具’,628,2),(657,’卫具’,628,2),(658,’叉子’,656,3),(659,’锅’,656,3),(660,’进口食品’,0,1),(661,’零食&#x2F;糖果&#x2F;巧克力’,660,2),(662,’坚果’,661,3),(663,’蜜饯’,661,3),(669,’孕期教育’,546,3),(670,’电子商品’,0,1),(671,’手机’,670,2),(672,’华为手机’,671,3),(673,’联想手机’,671,3),(674,’手环’,670,2),(675,’小米手环’,674,3),(676,’保健食品’,0,1),(677,’老年保健品’,676,2),(678,’中年营养品’,676,2),(679,’儿童保健品’,676,2),(680,’脑白金’,677,3),(681,’箱包’,0,1),(682,’旅行箱’,681,2),(683,’手提箱’,681,2),(684,’大型’,683,3),(685,’小型’,683,3),(686,’中型’,683,3),(687,’大型’,682,3),(688,’中型’,682,3),(689,’小型’,682,3),(690,’电脑’,670,2),(691,’联想电脑’,690,3),(692,’刀叉’,656,3),(693,’碗筷’,656,3),(696,’客厅专用’,628,2);<br>&#x2F;</em>!40000 ALTER TABLE <code>product_category</code> ENABLE KEYS *&#x2F;;<br>UNLOCK TABLES;</p>
-<p>–<br>– Table structure for table <code>user</code><br>–</p>
-<p>DROP TABLE IF EXISTS <code>user</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>user</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT COMMENT ‘主键’,<br>  <code>login_name</code> varchar(255) NOT NULL COMMENT ‘登录名’,<br>  <code>user_name</code> varchar(255) NOT NULL COMMENT ‘用户名’,<br>  <code>password</code> varchar(255) NOT NULL COMMENT ‘密码’,<br>  <code>gender</code> int NOT NULL DEFAULT ‘1’ COMMENT ‘性别(1:男 0：女)’,<br>  <code>email</code> varchar(80) DEFAULT NULL COMMENT ‘邮箱’,<br>  <code>mobile</code> varchar(11) DEFAULT NULL COMMENT ‘手机’,<br>  <code>file_name</code> varchar(255) DEFAULT NULL,<br>  <code>create_time</code> datetime NOT NULL,<br>  <code>update_time</code> datetime NOT NULL,<br>  PRIMARY KEY (<code>id</code>),<br>  UNIQUE KEY <code>PK__EASYBUY___C96109CC3A81B327</code> (<code>login_name</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;60 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>user</code><br>–</p>
-<p>LOCK TABLES <code>user</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>user</code> DISABLE KEYS <em>&#x2F;;<br>INSERT INTO <code>user</code> VALUES (58,’test’,’张三’,’b3472e734711122a5c892c3a93705ed11d1513d59b107d57’,1,‘<a href="mailto:&#x31;&#x32;&#x33;&#64;&#116;&#x65;&#115;&#116;&#46;&#x63;&#111;&#109;">&#x31;&#x32;&#x33;&#64;&#116;&#x65;&#115;&#116;&#46;&#x63;&#111;&#109;</a>‘,’13312345678’,NULL,’2021-11-18 12:55:37’,’2021-11-18 12:55:37’),(59,’test2’,’张三’,’f1bc53d58d67b98a3d41a247a94f5b11de5aa2bc61596723’,1,‘<a href="mailto:&#49;&#x32;&#51;&#x40;&#116;&#101;&#115;&#x74;&#46;&#99;&#111;&#109;">&#49;&#x32;&#51;&#x40;&#116;&#101;&#115;&#x74;&#46;&#99;&#111;&#109;</a>‘,’13312345678’,NULL,’2021-11-18 13:00:07’,’2021-11-18 13:00:07’);<br>&#x2F;</em>!40000 ALTER TABLE <code>user</code> ENABLE KEYS *&#x2F;;<br>UNLOCK TABLES;</p>
-<p>–<br>– Table structure for table <code>user_address</code><br>–</p>
-<p>DROP TABLE IF EXISTS <code>user_address</code>;<br>&#x2F;*!40101 SET @saved_cs_client     &#x3D; @@character_set_client <em>&#x2F;;<br>&#x2F;</em>!50503 SET character_set_client &#x3D; utf8mb4 <em>&#x2F;;<br>CREATE TABLE <code>user_address</code> (<br>  <code>id</code> int NOT NULL AUTO_INCREMENT COMMENT ‘主键id’,<br>  <code>user_id</code> int DEFAULT NULL COMMENT ‘用户主键’,<br>  <code>address</code> varchar(255) DEFAULT NULL COMMENT ‘地址’,<br>  <code>remark</code> varchar(255) DEFAULT NULL COMMENT ‘备注’,<br>  <code>isdefault</code> int DEFAULT ‘0’ COMMENT ‘是否是默认地址（1:是 0否）’,<br>  <code>create_time</code> datetime DEFAULT NULL COMMENT ‘创建时间’,<br>  <code>update_time</code> datetime NOT NULL,<br>  PRIMARY KEY (<code>id</code>)<br>) ENGINE&#x3D;InnoDB AUTO_INCREMENT&#x3D;60 DEFAULT CHARSET&#x3D;utf8;<br>&#x2F;</em>!40101 SET character_set_client &#x3D; @saved_cs_client *&#x2F;;</p>
-<p>–<br>– Dumping data for table <code>user_address</code><br>–</p>
-<p>LOCK TABLES <code>user_address</code> WRITE;<br>&#x2F;*!40000 ALTER TABLE <code>user_address</code> DISABLE KEYS <em>&#x2F;;<br>INSERT INTO <code>user_address</code> VALUES (49,56,’IT园’,’公司’,0,’2020-05-21 15:55:24’,’2020-07-29 11:22:13’),(50,56,’软件园’,’公司’,0,’2020-05-22 15:11:07’,’2020-07-25 09:14:19’),(57,56,’测试’,’测试’,0,’2021-11-17 18:04:49’,’2021-11-17 18:04:49’),(59,59,’软件园’,’公司’,1,’2021-11-18 13:01:19’,’2021-11-18 13:01:19’);<br>&#x2F;</em>!40000 ALTER TABLE <code>user_address</code> ENABLE KEYS <em>&#x2F;;<br>UNLOCK TABLES;<br>&#x2F;</em>!40103 SET TIME_ZONE&#x3D;@OLD_TIME_ZONE *&#x2F;;</p>
-<p>&#x2F;*!40101 SET SQL_MODE&#x3D;@OLD_SQL_MODE <em>&#x2F;;<br>&#x2F;</em>!40014 SET FOREIGN_KEY_CHECKS&#x3D;@OLD_FOREIGN_KEY_CHECKS <em>&#x2F;;<br>&#x2F;</em>!40014 SET UNIQUE_CHECKS&#x3D;@OLD_UNIQUE_CHECKS <em>&#x2F;;<br>&#x2F;</em>!40101 SET CHARACTER_SET_CLIENT&#x3D;@OLD_CHARACTER_SET_CLIENT <em>&#x2F;;<br>&#x2F;</em>!40101 SET CHARACTER_SET_RESULTS&#x3D;@OLD_CHARACTER_SET_RESULTS <em>&#x2F;;<br>&#x2F;</em>!40101 SET COLLATION_CONNECTION&#x3D;@OLD_COLLATION_CONNECTION <em>&#x2F;;<br>&#x2F;</em>!40111 SET SQL_NOTES&#x3D;@OLD_SQL_NOTES *&#x2F;;</p>
-<p>– Dump completed on 2021-11-22 17:43:09</p>
-<p>  </code></pre></p>
-</details>
-IDEA自带数据库
-
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220327165053.png" alt="20220327165053"></p>
-<h1 id="4-项目开发"><a href="#4-项目开发" class="headerlink" title="4 项目开发"></a>4 项目开发</h1><p>1、创建 Spring Boot 工程，选择对应的依赖。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220327164238.png" alt="20220327164238"><br>2、拷贝前端静态资源（html页面、js、css等等）html<br>页面放到 templates 下，其他静态资源放到 static 下。<br>3、创建 RedirectController，实现页面的映射。<br>4、MyBatis Plus 连接数据库，自动生成代码（Controller、Service、Entity、Mapper）。<br>添加依赖</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-boot-</span><br><span class="line">starter<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.baomidou<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis-plus-</span><br><span class="line">generator<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>3.3.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.velocity<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>velocity<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.7<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>自动生成代码</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.southwind;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.DbType;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.annotation.FieldFill;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.AutoGenerator;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.DataSourceConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.GlobalConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.PackageConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.StrategyConfig;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.po.TableFill;</span><br><span class="line"><span class="keyword">import</span> com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.ArrayList;</span><br><span class="line"><span class="keyword">import</span> java.util.List;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Main</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">AutoGenerator</span> <span class="variable">autoGenerator</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AutoGenerator</span>();</span><br><span class="line">        <span class="type">DataSourceConfig</span> <span class="variable">dataSourceConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">DataSourceConfig</span>();</span><br><span class="line">        dataSourceConfig.setDbType(DbType.MYSQL);</span><br><span class="line">        dataSourceConfig.setDriverName(<span class="string">&quot;com.mysql.cj.jdbc.Driver&quot;</span>);</span><br><span class="line">        <span class="comment">// 数据库账号密码</span></span><br><span class="line">        dataSourceConfig.setUsername(<span class="string">&quot;root&quot;</span>);</span><br><span class="line">        dataSourceConfig.setPassword(<span class="string">&quot;109372&quot;</span>);</span><br><span class="line">        dataSourceConfig.setUrl(<span class="string">&quot;jdbc:mysql://localhost:3306/mall?useUnicode=true&amp;characterEncoding=UTF-8&quot;</span>);</span><br><span class="line">        autoGenerator.setDataSource(dataSourceConfig);</span><br><span class="line">        <span class="type">GlobalConfig</span> <span class="variable">globalConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">GlobalConfig</span>();</span><br><span class="line">        globalConfig.setOpen(<span class="literal">false</span>);</span><br><span class="line">        globalConfig.setOutputDir(System.getProperty(<span class="string">&quot;user.dir&quot;</span>)+<span class="string">&quot;/src/main/java&quot;</span>);</span><br><span class="line">        globalConfig.setAuthor(<span class="string">&quot;jiyinchongzu&quot;</span>);</span><br><span class="line">        globalConfig.setServiceName(<span class="string">&quot;%sService&quot;</span>);</span><br><span class="line">        autoGenerator.setGlobalConfig(globalConfig);</span><br><span class="line">        <span class="type">PackageConfig</span> <span class="variable">packageConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">PackageConfig</span>();</span><br><span class="line">        packageConfig.setParent(<span class="string">&quot;com.southwind&quot;</span>);</span><br><span class="line">        packageConfig.setEntity(<span class="string">&quot;entity&quot;</span>);</span><br><span class="line">        packageConfig.setMapper(<span class="string">&quot;mapper&quot;</span>);</span><br><span class="line">        packageConfig.setController(<span class="string">&quot;controller&quot;</span>);</span><br><span class="line">        packageConfig.setService(<span class="string">&quot;service&quot;</span>);</span><br><span class="line">        packageConfig.setServiceImpl(<span class="string">&quot;service.impl&quot;</span>);</span><br><span class="line">        autoGenerator.setPackageInfo(packageConfig);</span><br><span class="line">        <span class="type">StrategyConfig</span> <span class="variable">strategyConfig</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StrategyConfig</span>();</span><br><span class="line">        strategyConfig.setEntityLombokModel(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 下划线转驼峰</span></span><br><span class="line">        strategyConfig.setNaming(NamingStrategy.underline_to_camel);</span><br><span class="line">        strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);</span><br><span class="line"></span><br><span class="line">        List&lt;TableFill&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">        <span class="type">TableFill</span> <span class="variable">tableFill1</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TableFill</span>(<span class="string">&quot;create_time&quot;</span>, FieldFill.INSERT);</span><br><span class="line">        <span class="type">TableFill</span> <span class="variable">tableFill2</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">TableFill</span>(<span class="string">&quot;update_time&quot;</span>,FieldFill.INSERT_UPDATE);</span><br><span class="line">        list.add(tableFill1);</span><br><span class="line">        list.add(tableFill2);</span><br><span class="line"></span><br><span class="line">        strategyConfig.setTableFillList(list);</span><br><span class="line">        autoGenerator.setStrategy(strategyConfig);</span><br><span class="line"></span><br><span class="line">        autoGenerator.execute();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>连接数据库</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/mall?useUnicode=true&amp;characterEncoding=UTF-8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">109372</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">configuration:</span></span><br><span class="line">    <span class="attr">log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:com/southwind/mapper/xml/*.xml</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h1 id="5-注册"><a href="#5-注册" class="headerlink" title="5 注册"></a>5 注册</h1><h1 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h1><p>1、Unsatisfied dependency expressed through field ‘baseMapper’; nested exception is org.springframework.beans.fact<br>解决方法：添加<code>@MapperScan(&quot;com.southwind.mapper&quot;)</code><br>2、Failed to configure a Datasource: ‘ur’ attribute is not specified and no embedded datasource could be configured.<br>解决方法：引用Mybatis Plus依赖之后，启动时就会自动添加相关组件，配数据库解决</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/mall?useUnicode=true&amp;characterEncoding=UTF-8</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">password:</span> <span class="number">109372</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line"><span class="attr">mybatis-plus:</span></span><br><span class="line">  <span class="attr">configuration:</span></span><br><span class="line">    <span class="attr">log-impl:</span> <span class="string">org.apache.ibatis.logging.stdout.StdOutImpl</span></span><br><span class="line">  <span class="attr">mapper-locations:</span> <span class="string">classpath:com/southwind/mapper/xml/*.xml</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+        <p>Spring Boot + MyBatis Plus + Thymeleaf + MySQL搭建动态网页</p>
+        
+          <a class="article-more-a" href="/2022/03/26/web/#more">more >></a>
+        
       
 
       
@@ -316,6 +261,29 @@ IDEA自带数据库
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">spring boot</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">thyme leaf</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -372,7 +340,7 @@ IDEA自带数据库
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Spring Boot + MyBatis Plus + Thymeleaf + MySQL搭建商城</p>
+        <p>基于JSP的Javaweb</p>
         
           <a class="article-more-a" href="/2022/03/09/JavaWeb/#more">more >></a>
         
@@ -388,7 +356,15 @@ IDEA自带数据库
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">-笔记 -Java -Javaweb</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">笔记</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Javaweb</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
         		</li>
       		
 		</ul>
@@ -671,172 +647,10 @@ IDEA自带数据库
     
     <div class="article-entry" itemprop="articleBody">
       
-        <span id="more"></span>
-<p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
-<!--more-->
-<h1 id="Markdown教程"><a href="#Markdown教程" class="headerlink" title="Markdown教程"></a>Markdown教程</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一. 简介"></a>一. 简介</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
-<h3 id="Markdown-应用"><a href="#Markdown-应用" class="headerlink" title="Markdown 应用"></a>Markdown 应用</h3><p>Markdown 能被使用来撰写电子书，如：Gitbook。<br>当前许多网站都广泛使用 Markdown 来撰写帮助文档或是用于论坛上发表消息。例如GitHub、简书、reddit、Diaspora、Stack Exchange、OpenStreetMap 、SourceForge等。</p>
-<h2 id="二-Markdown-标题"><a href="#二-Markdown-标题" class="headerlink" title="二.Markdown 标题"></a>二.Markdown 标题</h2><h3 id="1-格式一："><a href="#1-格式一：" class="headerlink" title="1.格式一："></a>1.格式一：</h3><p>使用 &#x3D; 和 - 标记一级和二级标题，&#x3D; 和 - 标记语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我展示的是一级标题</span><br><span class="line">=================</span><br><span class="line"></span><br><span class="line">我展示的是二级标题</span><br><span class="line">-----------------</span><br></pre></td></tr></table></figure>
-<p>显示效果如下图：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20%3D%20%E5%92%8C%20-%20%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98.png" alt="使用 = 和 - 标记一级和二级标题"></p>
-<h3 id="2-格式二："><a href="#2-格式二：" class="headerlink" title="2.格式二："></a>2.格式二：</h3><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推，语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-<p>显示效果如下图：<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20" alt="使用#号标记"></p>
-<h2 id="三-Markdown-段落格式"><a href="#三-Markdown-段落格式" class="headerlink" title="三.Markdown 段落格式"></a>三.Markdown 段落格式</h2><ul>
-<li><p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%AE%B5%E8%90%BD%E6%8D%A2%E8%A1%8C.png" alt="image-20220210235910549"></p>
-</li>
-<li><p>字体<br>Markdown 可以使用以下几种字体：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
-<p>显示效果如图：</p>
-</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%AD%97%E4%BD%93.png" alt="字体"></p>
-<ul>
-<li>分隔线<br>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
-显示效果如下所示：</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%86%E9%9A%94%E7%BA%BF.png" alt="分隔线"></p>
-<ul>
-<li><p>删除线</p>
-<p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 <strong>~~</strong> 即可，实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~ hello world~~</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%A0%E9%99%A4%E7%BA%BF.png" alt="删除线"></p>
-</li>
-<li><p>下划线</p>
-<p>下划线可以通过 HTML 的<code>&lt;u&gt;</code>标签来实现：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线&lt;/u&gt;</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%B8%8B%E5%88%92%E7%BA%BF.png" alt="下划线"></p>
-</li>
-<li><p>脚注</p>
-<p>脚注是对文本的补充说明。</p>
-<p>Markdown 脚注的格式如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[^要注明的文本]   </span><br></pre></td></tr></table></figure>
-
-<p>实例演示：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建脚注格式类似这样 [^这是脚注]。</span><br><span class="line"></span><br><span class="line">[^这是脚注]: 你的鼠标放到了脚注上</span><br></pre></td></tr></table></figure>
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%84%9A%E6%B3%A8%E5%B1%95%E7%A4%BA.png" alt="脚注"></p>
-</li>
-</ul>
-<h2 id="四-Markdown-列表"><a href="#四-Markdown-列表" class="headerlink" title="四.Markdown 列表"></a>四.Markdown 列表</h2><p>Markdown 支持有序列表和无序列表。</p>
-<p>无序列表使用星号(*)、加号(+)或是减号(-)作为列表标记，这些标记后面要添加一个空格，然后再填写内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8.png" alt="无序列表"></p>
-<p>有序列表使用数字并加上 <strong>.</strong> 号来表示，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8.png" alt="有序列表"></p>
-<p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97.png" alt="列表嵌套"></p>
-<h2 id="五-Markdown-区块"><a href="#五-Markdown-区块" class="headerlink" title="五.Markdown 区块"></a>五.Markdown 区块</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 春眠不觉晓，</span><br><span class="line">&gt; 处处闻啼鸟。</span><br><span class="line">&gt; 夜来风雨声，</span><br><span class="line">&gt; 花落知多少。</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8.png" alt="区块引用"></p>
-<p>另外区块是可以嵌套的，一个 <strong>&gt;</strong> 符号是最外层，两个 <strong>&gt;</strong> 符号是第一层嵌套，以此类推：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 春眠不觉晓，</span><br><span class="line">&gt; &gt; 处处闻啼鸟。</span><br><span class="line">&gt; &gt; &gt; 夜来风雨声，</span><br><span class="line">&gt; &gt; &gt; &gt; 花落知多少。</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E5%B5%8C%E5%A5%97.png" alt="区块嵌套"></p>
-<p>区块中使用列表实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8.png" alt="区块中使用列表"></p>
-<p>如果要在列表项目内放进区块，那么就需要在 <strong>&gt;</strong> 前添加四个空格的缩进。</p>
-<p>列表中使用区块实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 春眠不觉晓</span><br><span class="line">    &gt; 处处闻啼鸟</span><br><span class="line">* 第二项</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97.png" alt="列表中使用区块"></p>
-<h2 id="六-Markdown-代码"><a href="#六-Markdown-代码" class="headerlink" title="六.Markdown 代码"></a>六.Markdown 代码</h2><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（**&#96;**），例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.png" alt="代码片段"></p>
-<p>代码区块使用 <strong>4 个空格</strong>或者一个<strong>制表符（Tab 键）</strong>。例如：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97.png" alt="代码区块"></p>
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97%E6%BC%94%E7%A4%BA.png" alt="代码区块演示"></p>
-<p>也可以用 <strong>&#96;&#96;&#96;</strong> 包裹一段代码，并指定一种语言（也可以不指定）：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;helloworld&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p>![&#96;&#96;&#96;包裹代码](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%60%60%60%E5%8C%85%E8%A3%B9%E4%BB%A3%E7%A0%81.png">https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%60%60%60%E5%8C%85%E8%A3%B9%E4%BB%A3%E7%A0%81.png</a>)</p>
-<h2 id="七-Markdown-链接"><a href="#七-Markdown-链接" class="headerlink" title="七.Markdown 链接"></a>七.Markdown 链接</h2><p>链接使用方法如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[链接名称](链接地址)</span><br><span class="line"></span><br><span class="line">或者</span><br><span class="line"></span><br><span class="line">&lt;链接地址&gt;</span><br></pre></td></tr></table></figure>
-
-<p>例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个B站链接 [哔哩哔哩](https://www.bilibili.com/)</span><br><span class="line">&lt;https://www.bilibili.com/&gt;</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%93%BE%E6%8E%A5.png" alt="链接"></p>
-<p>高级链接：我们可以通过变量来设置一个链接，变量赋值在文档末尾进行，例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [Google][1]</span><br><span class="line">这个链接用 2 作为网址变量 [Baidu][2]</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">  [1]: https://www.google.com/</span><br><span class="line">  [2]: https://www.baidu.com/</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5.png" alt="高级链接"></p>
-<h2 id="八-Markdown-图片"><a href="#八-Markdown-图片" class="headerlink" title="八.Markdown 图片"></a>八.Markdown 图片</h2><p>Markdown 图片语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>开头一个感叹号 !</li>
-<li>接着一个方括号，里面放上图片的替代文字</li>
-<li>接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上选择性的 ‘title’ 属性的文字。</li>
-</ul>
-<p>例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![标题](https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20)</span><br><span class="line"></span><br><span class="line">![标题2](https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%86%E9%9A%94%E7%BA%BF.png &quot;tittle&quot;)</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p>Markdown 还没有办法指定图片的高度与宽度，如果你需要的话，你可以使用普通的 <img> 标签。例如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5.png&quot; width=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E7%94%A8img%E8%AE%BE%E7%BD%AE%E9%AB%98%E5%BA%A6%E4%B8%8E%E5%AE%BD%E5%BA%A6.png" alt="用img设置高度与宽度"></p>
-<h2 id="九-Markdown-表格"><a href="#九-Markdown-表格" class="headerlink" title="九.Markdown 表格"></a>九.Markdown 表格</h2><p>Markdown 制作表格使用 <strong>|</strong> 来分隔不同的单元格，使用 <strong>-</strong> 来分隔表头和其他行。</p>
-<p>语法格式如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%A1%A8%E6%A0%BC.png" alt="表格"></p>
-<p><strong>我们可以设置表格的对齐方式：</strong></p>
-<ul>
-<li><strong>-:</strong> 设置内容和标题栏居右对齐。</li>
-<li><strong>:-</strong> 设置内容和标题栏居左对齐。</li>
-<li><strong>:-:</strong> 设置内容和标题栏居中对齐。</li>
-</ul>
-<p>实例如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%A1%A8%E6%A0%BC%E5%AF%B9%E9%BD%90.png" alt="表格对齐"></p>
-<h2 id="十-Markdown-高级技巧"><a href="#十-Markdown-高级技巧" class="headerlink" title="十.Markdown 高级技巧"></a>十.Markdown 高级技巧</h2><h3 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h3><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
-<p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/HTML%E5%85%83%E7%B4%A0.png" alt="HTML元素"></p>
-<p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
-
-<p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%BD%AC%E4%B9%89.png" alt="转义"></p>
-<p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
-<hr>
-<p>文献参考<br><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a></p>
-
+        <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
+        
+          <a class="article-more-a" href="/2022/02/11/Markdown%E6%95%99%E7%A8%8B/#more">more >></a>
+        
       
 
       
@@ -1005,11 +819,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">-笔记 -Java -Javaweb</a>
+                <a href="javascript:void(0)" class="js-tag color4">软路由</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">-软路由 -R2S</a>
+                <a href="javascript:void(0)" class="js-tag color4">R2S</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Javaweb</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">spring boot</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">thyme leaf</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
             
             <div class="clearfix"></div>
