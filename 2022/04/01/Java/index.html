@@ -18,8 +18,15 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401224900.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401224939.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401225456.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401230835.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401231004.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401231118.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232331.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232451.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232808.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232947.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-04-01T15:01:31.141Z">
+<meta property="article:modified_time" content="2022-04-01T15:30:34.307Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="Java">
@@ -178,7 +185,7 @@
       
         <p>尚硅谷Java入门</p>
 <span id="more"></span>
-<h1 id="编程入门"><a href="#编程入门" class="headerlink" title="编程入门"></a>编程入门</h1><h2 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h2><p>计算机包括<font color =red>硬件(hardware)</font>和<font color = red>软件(software)</font>两部分。硬件包括计算机中可以看得见的物理部分。而软件提供看不见的指令。这些指令控制硬件并且使得硬件完成特定的任务。</p>
+<h1 id="一、编程入门"><a href="#一、编程入门" class="headerlink" title="一、编程入门"></a>一、编程入门</h1><h2 id="1、概述"><a href="#1、概述" class="headerlink" title="1、概述"></a>1、概述</h2><p>计算机包括<font color =red>硬件(hardware)</font>和<font color = red>软件(software)</font>两部分。硬件包括计算机中可以看得见的物理部分。而软件提供看不见的指令。这些指令控制硬件并且使得硬件完成特定的任务。</p>
 <h3 id="程序设计"><a href="#程序设计" class="headerlink" title="程序设计"></a>程序设计</h3><p><font face = "黑体"> 定义：</font>创建（或开发）软件。软件包含了指令，告诉计算机做什么。<br><font face = "黑体">应用场景：</font>软件遍布我们周围。除了个人计算机，飞机、汽车、手机甚至烤面包机中，同样运行着软件。</p>
 <h3 id="程序设计语言"><a href="#程序设计语言" class="headerlink" title="程序设计语言"></a>程序设计语言</h3><p>软件开发人员在称为程序设计语言的强大工具的帮助下创建软件。</p>
 <h3 id="如何选择该学习哪种程序设计语言？"><a href="#如何选择该学习哪种程序设计语言？" class="headerlink" title="如何选择该学习哪种程序设计语言？"></a>如何选择该学习哪种程序设计语言？</h3><ul>
@@ -200,13 +207,90 @@
 <li>存储设备主要有以下三种：<ul>
 <li><font color = blue>磁盘驱动器</font><br>  每台计算机至少有一个硬盘驱动器。硬盘(hard disk)用于永久的保存数据和程序。</li>
 <li><font color = blue>光盘驱动器(CD和DVD)</font><br>  CD的容量可达700MB。<br>  DVD的容量可达4.7GB。</li>
-<li><font color = blue>USB闪存驱动器</font><br>  USB: Universal Serial Bus，通用串行总线。可以使用USB将打印机、数码相机、鼠标、外部硬盘驱动器连接到计算机上。<br>  USB闪存驱动器很小，可用于存储和传输数据的设备。<br>hexop <h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3><font face = "黑体">比特(bit)和字节(byte)</font></li>
+<li><font color = blue>USB闪存驱动器</font><br>  USB: Universal Serial Bus，通用串行总线。可以使用USB将打印机、数码相机、鼠标、外部硬盘驱动器连接到计算机上。<br>  USB闪存驱动器很小，可用于存储和传输数据的设备。<br>hexop <h3 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h3></li>
 </ul>
 </li>
-<li>在讨论内存前，先清楚数据是如何存储在计算机中的。</li>
-<li>计算机就是一系列的电路开关。每个开关存在两种状态：关(off)和开(on)。如果电路是开的，它的值是1。如果电路是关的，它的值是0。</li>
-<li><font color = blue></font></li>
 </ul>
+<p><strong>比特(bit)和字节(byte)</strong></p>
+<ul>
+<li><p>在讨论内存前，先清楚数据是如何存储在计算机中的。</p>
+</li>
+<li><p>计算机就是一系列的电路开关。每个开关存在两种状态：关(off)和开(on)。如果电路是开的，它的值是1。如果电路是关的，它的值是0。</p>
+</li>
+<li><p><font color = blue>一个0或者一个1存储为一个比特(bit)，是计算机中最小的存储单位。</font></p>
+</li>
+<li><p><font color = blue>计算机中是最基本的存储单元是字节(byte) 。</font>每个字节由8个比特构成。</p>
+</li>
+<li><p>计算机的存储能力是以字节和多字节来衡量的。如下：</p>
+<ul>
+<li>千字节(kilobyte,KB) &#x3D; 1024B</li>
+<li>兆字节(megabyte,MB) &#x3D; 1024KB</li>
+<li>千兆字节(gigabyte,GB) &#x3D; 1024MB</li>
+<li>万亿字节(terabyte,TB) &#x3D; 1024GB</li>
+</ul>
+</li>
+<li><p>内存(也叫 Random-Access Memory,RAM)：由一个有序的字节序列组成，用于存储程序及程序需要的数据。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401230835.png" alt="20220401230835"></p>
+</li>
+<li><p><font color = red>一个程序和它的数据在被CPU行前必须移到计算机的内存中。</font></p>
+</li>
+<li><p>每个字节都有一个唯一的地址。见上图。使用这个地址确定字节的位置，以便于存储和获取数据。</p>
+</li>
+<li><p>一个计算机具有的RAM越多，它的运行速度越快，但是此规律是有限制的。</p>
+</li>
+<li><p>内存与CPU一样，也构建在表面嵌有数百万晶体管的硅半导体芯片上。但内存芯片更简单、更低速、更便宜。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401231004.png" alt="20220401231004"><br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401231118.png" alt="20220401231118"></p>
+</li>
+<li><p>实测发现：<font color = red>内存存取数据的速度比硬盘的存取速度快10倍</font>，在某些环境里，硬盘和内存之间的速度差距可能会更大。<font color = red>而CPU的速度比内存不知还要快多少倍。</font>当我们把程序从硬盘放到内存以后，CPU就直接在内存运行程序，这样比CPU直接在硬盘运行程序就要快很多。</p>
+</li>
+<li><p>内存解决了一部分CPU运行过快，而硬盘数据存取太慢的问题。 提高了我们的电脑的运行速度。内存就如同一条“高速车道”一般，数据由传输速度较慢的硬盘通过这条高速车道传送至CPU进行处理！</p>
+</li>
+<li><p><font color = red>但内存是带电存储的(一旦断电数据就会消失)，而且容量有限，所以要长时间储存程序或数据就需要使用硬盘。</font> </p>
+</li>
+<li><p>内存在这里起了两个作用：</p>
+<ol>
+<li>保存从硬盘读取的数据，提供给CPU使用</li>
+<li>保存CPU的一些临时执行结果，以便CPU下次使用或保存到硬盘</li>
+</ol>
+</li>
+</ul>
+<h3 id="输入和输出设备"><a href="#输入和输出设备" class="headerlink" title="输入和输出设备"></a>输入和输出设备</h3><ul>
+<li>常见的输入设备：键盘（keyboard）和鼠标（mouse）</li>
+<li>常见的输出设备：显示器（monitor）和打印机（printer）</li>
+<li>显示器屏幕分辨率：是指显示设备水平和垂直方向上显示的像素(px)数。<ul>
+<li>分辨率可以手工设置。</li>
+<li><font color =red>分辨率越高，图像越锐化、越清晰。</font></li>
+</ul>
+</li>
+</ul>
+<h3 id="通讯设备"><a href="#通讯设备" class="headerlink" title="通讯设备"></a>通讯设备</h3><ul>
+<li>计算机可以通过通信设备进行联网。</li>
+<li>常见的设备有：<blockquote>
+<p><font color = blue>拨号调制解调器：</font>使用的是电话线，传输速度可达56 000bps(bps:每秒比特)<br><font color = blue>DSL（数字用户线）：</font>使用的也是电话线，但传输速度叫上面的快20倍<br><font color = blue>电缆调制解调器：</font>利用有线电视电缆进行数据传输，通常速度比DSL快。<br><font color = blue>网络接口卡（NIC）：</font>将计算机接入局域网（LAN）的设备。局域网通常用于大学、商业组织和政府组织。速度甚至可达1000Mbps<br><font color = blue>无线网络：</font>在家庭、商业和学校中极其常见。计算机可通过无线适配器连接到局域网或internet上。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="3、计算机发展史上的鼻祖"><a href="#3、计算机发展史上的鼻祖" class="headerlink" title="3、计算机发展史上的鼻祖"></a>3、计算机发展史上的鼻祖</h2><p>最近半个世纪以来，世界计算机科学界的重大进步，离不开图灵等人的理论奠基作用和多方面的开创性研究成果。图灵是当之无愧的计算机科学和人工智能之父。甚至认为，他在技术上的贡献及对未来世界的影响几乎可与牛顿、爱因斯坦等巨人比肩。<br>图灵论文中的“用有限的指令和有限的存储空间可算尽一切可算之物”理论让当时所有的科学家震惊。<br>美国计算机学会（ACM）的年度“图灵奖”，自从1966年设立以来，一直是世界计算机科学领域的最高荣誉，相当于计算机科学界的诺贝尔奖。至今，中国人只有姚期智院士获该奖项。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232331.png" alt="20220401232331"><br>20世纪最重要的数学家之一，在现代计算机、博弈论、核武器和生化武器等诸多领域内有杰出建树的最伟大的科学全才之一，被后人称为“计算机之父”和“博弈论之父”。<br>计算机基本工作原理是存储程序和程序控制，它是由世界著名数学家冯·诺依曼提出的。<font color = blue>最简单的来说，冯诺依曼理论的要点是：数字计算机的数制采用二进制；计算机应该按照程序顺序执行。</font><br>同样有着“计算机之父”称号的冯·诺依曼的助手弗兰克尔在一封信中写到：“……计算机的基本概念属于图灵。按照我的看法，冯·诺依曼的基本作用是使世界认识了由图灵引入的计算机基本概念……”<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232451.png" alt="20220401232451"></p>
+<p><strong>根据冯诺依曼体系结构构成的计算机，必须具有如下功能：</strong></p>
+<ul>
+<li>把需要的程序和数据送至计算机中。</li>
+<li>必须具有长期记忆程序、数据、中间结果及最终运算结果的能力。</li>
+<li>能够完成各种算术、逻辑运算和数据传送等数据加工处理的能力。</li>
+<li>能够根据需要控制程序走向，并能根据指令控制机器的各部件协调操作。</li>
+<li>能够按照要求将处理结果输出给用户。</li>
+</ul>
+<h2 id="4、操作系统"><a href="#4、操作系统" class="headerlink" title="4、操作系统"></a>4、操作系统</h2><ul>
+<li>操作系统(Operating System)是运行在计算机上的最重要的程序，它可以管理和控制计算机的活动。</li>
+<li>硬件、操作系统、应用程序和用户之间的关系如下图。</li>
+<li>操作系统的主要任务：<blockquote>
+<ul>
+<li>控制和监视系统的活动</li>
+<li>分配和调配系统资源</li>
+<li>调度操作</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232808.png" alt="20220401232808"></p>
+<h2 id="5、万维网"><a href="#5、万维网" class="headerlink" title="5、万维网"></a>5、万维网</h2><p>万维网（World Wide Web,www,环球信息网）常简称为Web,发明者蒂姆·伯纳斯·李。分为Web客户端和Web服务器程序。 WWW可以让Web客户端（常用浏览器）访问浏览Web服务器上的页面。 是一个由许多互相链接的超文本组成的系统，通过互联网访问。在这个系统中，每个有用的事物，称为一样“资源”；并且由一个全局“统一资源标识符”（URI）标识；这些资源通过超文本传输协议（Hypertext Transfer Protocol）传送给用户，而后者通过点击链接来获得资源。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220401232947.png" alt="20220401232947"><br>万维网是无数个网络站点和网页的集合，它们在一起构成了因特网Internet最主要的部分（因特网也包括电子邮件、Usenet以及新闻组）。它实际上是多媒体的集合，是由超级链接连接而成的。我们通常通过网络浏览器上网观看的，就是万维网的内容。</p>
 
       
 
@@ -323,7 +407,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">编程入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">程序设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80"><span class="toc-number">1.1.2.</span> <span class="toc-text">程序设计语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E8%AF%A5%E5%AD%A6%E4%B9%A0%E5%93%AA%E7%A7%8D%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%EF%BC%9F"><span class="toc-number">1.1.3.</span> <span class="toc-text">如何选择该学习哪种程序设计语言？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.</span> <span class="toc-text">2、计算机硬件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">1.2.1.</span> <span class="toc-text">中央处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87"><span class="toc-number">1.2.2.</span> <span class="toc-text">存储设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-number">1.2.3.</span> <span class="toc-text">内存</span></a></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%BC%96%E7%A8%8B%E5%85%A5%E9%97%A8"><span class="toc-number">1.</span> <span class="toc-text">一、编程入门</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%A6%82%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">1、概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-number">1.1.1.</span> <span class="toc-text">程序设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80"><span class="toc-number">1.1.2.</span> <span class="toc-text">程序设计语言</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%E8%AF%A5%E5%AD%A6%E4%B9%A0%E5%93%AA%E7%A7%8D%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%EF%BC%9F"><span class="toc-number">1.1.3.</span> <span class="toc-text">如何选择该学习哪种程序设计语言？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.2.</span> <span class="toc-text">2、计算机硬件介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%AD%E5%A4%AE%E5%A4%84%E7%90%86%E5%99%A8"><span class="toc-number">1.2.1.</span> <span class="toc-text">中央处理器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87"><span class="toc-number">1.2.2.</span> <span class="toc-text">存储设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E5%AD%98"><span class="toc-number">1.2.3.</span> <span class="toc-text">内存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA%E8%AE%BE%E5%A4%87"><span class="toc-number">1.2.4.</span> <span class="toc-text">输入和输出设备</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%9A%E8%AE%AF%E8%AE%BE%E5%A4%87"><span class="toc-number">1.2.5.</span> <span class="toc-text">通讯设备</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%8F%91%E5%B1%95%E5%8F%B2%E4%B8%8A%E7%9A%84%E9%BC%BB%E7%A5%96"><span class="toc-number">1.3.</span> <span class="toc-text">3、计算机发展史上的鼻祖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="toc-number">1.4.</span> <span class="toc-text">4、操作系统</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E4%B8%87%E7%BB%B4%E7%BD%91"><span class="toc-number">1.5.</span> <span class="toc-text">5、万维网</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
