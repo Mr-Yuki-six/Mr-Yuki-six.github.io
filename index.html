@@ -168,12 +168,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-购买阿里云oss对象存储服务"><a href="#1-购买阿里云oss对象存储服务" class="headerlink" title="1.购买阿里云oss对象存储服务"></a>1.购买阿里云oss对象存储服务</h2><p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405062349.png" alt="20220405062349"><br>40G一年只要9块钱，四舍五入等于白嫖（流量要钱</p>
+        <h2 id="1-购买阿里云oss对象存储服务"><a href="#1-购买阿里云oss对象存储服务" class="headerlink" title="1.购买阿里云oss对象存储服务"></a>1.购买阿里云oss对象存储服务</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405062349.png" alt="20220405062349"><br>40G一年只要9块钱，四舍五入等于白嫖（流量要钱</p>
 <blockquote>
 <p>注意有两种计费方式，一种按量计费，一种包年包月</p>
 </blockquote>
-<h2 id="2-新建OSS-Bucket"><a href="#2-新建OSS-Bucket" class="headerlink" title="2. 新建OSS Bucket"></a>2. 新建OSS Bucket</h2><p>不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405063628.png" alt="20220405063628"><br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/testwallpapper.jpg" alt="20220405063628"></p>
-
+<h2 id="2-新建OSS-Bucket"><a href="#2-新建OSS-Bucket" class="headerlink" title="2. 新建OSS Bucket"></a>2. 新建OSS Bucket</h2><p>不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405063628.png" alt="20220405063628"><br>创建好Bucket之后，点击文件管理，新建目录，随便上传一张图片，测试能不能用<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405064358.png" alt="20220405064358"></p>
+<blockquote>
+<p>链接输入到浏览器中默认是下载而不是查看，不过写markdown时并不影响</p>
+</blockquote>
+<p>手头刚好有域名的话可以进行如下操作</p>
+<h2 id="3-配置OSS资源访问域名"><a href="#3-配置OSS资源访问域名" class="headerlink" title="3. 配置OSS资源访问域名"></a>3. 配置OSS资源访问域名</h2><p>弄一个子域名作为自己的静态资源访问<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405065454.png" alt="20220405065454"></p>
+<p>申请一个免费的证书，用来做https访问（不申请也行）<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405071023.png" alt="20220405071023"><br>阿里云域名不需要下证书，后面可以自动识别</p>
+<p><strong>OSS控制台</strong></p>
+<ol>
+<li>单击Bucket列表，然后单击目标Bucket名称</li>
+<li>单击传输管理 &gt; 域名管理 </li>
+<li>单击绑定域名</li>
+<li>在绑定域名面板，输入要绑定的域名。</li>
+<li>添加好域名后将刚刚下载的证书添加进去，阿里云证书会自动感应，不用添加，选择一下证书名称就好，如果没有名称的手动添加一下</li>
+</ol>
+<h2 id="4-配置picGO"><a href="#4-配置picGO" class="headerlink" title="4. 配置picGO"></a>4. 配置picGO</h2><p><strong>accesskeyID</strong>和<strong>accesskeySecret</strong>将鼠标悬停在阿里云右上角头像上，点击Accesskey管理进行创建<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405073925.png" alt="20220405073925"></p>
+<h2 id="5-将"><a href="#5-将" class="headerlink" title="5.将"></a>5.将</h2>
       
 
       

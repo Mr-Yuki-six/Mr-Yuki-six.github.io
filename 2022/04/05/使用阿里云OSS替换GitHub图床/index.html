@@ -8,21 +8,24 @@
   <link rel="dns-prefetch" href="http://example.com">
   <title>使用阿里云OSS替换GitHub图床 | Yuki&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.购买阿里云oss对象存储服务40G一年只要9块钱，四舍五入等于白嫖（流量要钱  注意有两种计费方式，一种按量计费，一种包年包月  2. 新建OSS Bucket不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改">
+  <meta name="description" content="1.购买阿里云oss对象存储服务40G一年只要9块钱，四舍五入等于白嫖（流量要钱  注意有两种计费方式，一种按量计费，一种包年包月  2. 新建OSS Bucket不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改创建好Bucket之后，点击文件管理，新建目录，随便上传一张图片，测试能不能用  链接输入到浏览器中默认是下载而不是查看，不过写markdown时并不影">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用阿里云OSS替换GitHub图床">
 <meta property="og:url" content="http://example.com/2022/04/05/%E4%BD%BF%E7%94%A8%E9%98%BF%E9%87%8C%E4%BA%91OSS%E6%9B%BF%E6%8D%A2GitHub%E5%9B%BE%E5%BA%8A/index.html">
 <meta property="og:site_name" content="Yuki&#39;s Blog">
-<meta property="og:description" content="1.购买阿里云oss对象存储服务40G一年只要9块钱，四舍五入等于白嫖（流量要钱  注意有两种计费方式，一种按量计费，一种包年包月  2. 新建OSS Bucket不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改">
+<meta property="og:description" content="1.购买阿里云oss对象存储服务40G一年只要9块钱，四舍五入等于白嫖（流量要钱  注意有两种计费方式，一种按量计费，一种包年包月  2. 新建OSS Bucket不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改创建好Bucket之后，点击文件管理，新建目录，随便上传一张图片，测试能不能用  链接输入到浏览器中默认是下载而不是查看，不过写markdown时并不影">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405062349.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405063628.png">
-<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/testwallpapper.jpg">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405062349.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405063628.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405064358.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405065454.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405071023.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405073925.png">
 <meta property="article:published_time" content="2022-04-04T22:19:48.000Z">
-<meta property="article:modified_time" content="2022-04-04T22:41:20.573Z">
+<meta property="article:modified_time" content="2022-04-04T23:59:31.622Z">
 <meta property="article:author" content="Yuki">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405062349.png">
+<meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405062349.png">
   
     <link rel="alternative" href="/atom.xml" title="Yuki&#39;s Blog" type="application/atom+xml">
   
@@ -174,12 +177,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-购买阿里云oss对象存储服务"><a href="#1-购买阿里云oss对象存储服务" class="headerlink" title="1.购买阿里云oss对象存储服务"></a>1.购买阿里云oss对象存储服务</h2><p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405062349.png" alt="20220405062349"><br>40G一年只要9块钱，四舍五入等于白嫖（流量要钱</p>
+        <h2 id="1-购买阿里云oss对象存储服务"><a href="#1-购买阿里云oss对象存储服务" class="headerlink" title="1.购买阿里云oss对象存储服务"></a>1.购买阿里云oss对象存储服务</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405062349.png" alt="20220405062349"><br>40G一年只要9块钱，四舍五入等于白嫖（流量要钱</p>
 <blockquote>
 <p>注意有两种计费方式，一种按量计费，一种包年包月</p>
 </blockquote>
-<h2 id="2-新建OSS-Bucket"><a href="#2-新建OSS-Bucket" class="headerlink" title="2. 新建OSS Bucket"></a>2. 新建OSS Bucket</h2><p>不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/vs-picgo/main/images/20220405063628.png" alt="20220405063628"><br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/testwallpapper.jpg" alt="20220405063628"></p>
-
+<h2 id="2-新建OSS-Bucket"><a href="#2-新建OSS-Bucket" class="headerlink" title="2. 新建OSS Bucket"></a>2. 新建OSS Bucket</h2><p>不同Bucket之间独立，注意Bucket名称全网唯一，不能重复，且创建后就不能修改<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405063628.png" alt="20220405063628"><br>创建好Bucket之后，点击文件管理，新建目录，随便上传一张图片，测试能不能用<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405064358.png" alt="20220405064358"></p>
+<blockquote>
+<p>链接输入到浏览器中默认是下载而不是查看，不过写markdown时并不影响</p>
+</blockquote>
+<p>手头刚好有域名的话可以进行如下操作</p>
+<h2 id="3-配置OSS资源访问域名"><a href="#3-配置OSS资源访问域名" class="headerlink" title="3. 配置OSS资源访问域名"></a>3. 配置OSS资源访问域名</h2><p>弄一个子域名作为自己的静态资源访问<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405065454.png" alt="20220405065454"></p>
+<p>申请一个免费的证书，用来做https访问（不申请也行）<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405071023.png" alt="20220405071023"><br>阿里云域名不需要下证书，后面可以自动识别</p>
+<p><strong>OSS控制台</strong></p>
+<ol>
+<li>单击Bucket列表，然后单击目标Bucket名称</li>
+<li>单击传输管理 &gt; 域名管理 </li>
+<li>单击绑定域名</li>
+<li>在绑定域名面板，输入要绑定的域名。</li>
+<li>添加好域名后将刚刚下载的证书添加进去，阿里云证书会自动感应，不用添加，选择一下证书名称就好，如果没有名称的手动添加一下</li>
+</ol>
+<h2 id="4-配置picGO"><a href="#4-配置picGO" class="headerlink" title="4. 配置picGO"></a>4. 配置picGO</h2><p><strong>accesskeyID</strong>和<strong>accesskeySecret</strong>将鼠标悬停在阿里云右上角头像上，点击Accesskey管理进行创建<br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220405073925.png" alt="20220405073925"></p>
+<h2 id="5-将"><a href="#5-将" class="headerlink" title="5.将"></a>5.将</h2>
       
 
       
@@ -280,7 +298,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%B4%AD%E4%B9%B0%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">1.购买阿里云oss对象存储服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B0%E5%BB%BAOSS-Bucket"><span class="toc-number">2.</span> <span class="toc-text">2. 新建OSS Bucket</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%B4%AD%E4%B9%B0%E9%98%BF%E9%87%8C%E4%BA%91oss%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1"><span class="toc-number">1.</span> <span class="toc-text">1.购买阿里云oss对象存储服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%96%B0%E5%BB%BAOSS-Bucket"><span class="toc-number">2.</span> <span class="toc-text">2. 新建OSS Bucket</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AEOSS%E8%B5%84%E6%BA%90%E8%AE%BF%E9%97%AE%E5%9F%9F%E5%90%8D"><span class="toc-number">3.</span> <span class="toc-text">3. 配置OSS资源访问域名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E9%85%8D%E7%BD%AEpicGO"><span class="toc-number">4.</span> <span class="toc-text">4. 配置picGO</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%B0%86"><span class="toc-number">5.</span> <span class="toc-text">5.将</span></a></li></ol>
                     </div>
                 </span>
             </div>
