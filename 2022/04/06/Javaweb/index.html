@@ -48,7 +48,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220406230015.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220419150228.png">
 <meta property="article:published_time" content="2022-04-06T08:48:25.000Z">
-<meta property="article:modified_time" content="2022-04-19T07:58:48.288Z">
+<meta property="article:modified_time" content="2022-04-19T08:10:17.073Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="javawev">
@@ -302,6 +302,9 @@
 </ol>
 <p>&#x2F;&#x2F; 200 : 正常响应<br>&#x2F;&#x2F; 404 : 找不到资源<br>&#x2F;&#x2F; 405 : 请求方式不支持<br>&#x2F;&#x2F; 500 : 服务器内部错误</p>
 <h2 id="IDEA断点调试"><a href="#IDEA断点调试" class="headerlink" title="IDEA断点调试"></a>IDEA断点调试</h2><h2 id="thyme-leaf"><a href="#thyme-leaf" class="headerlink" title="thyme leaf"></a>thyme leaf</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220419150228.png" alt="20220419150228"></p>
+<ol start="7">
+<li>Thymeleaf - 视图模板技术<br> 1） 添加thymeleaf的jar包(maven用pom)<br> 2） 新建一个Servlet类ViewBaseServlet（用了框架会被取代）<br> 3） 在web.xml文件中添加配置<br>- 配置前缀 view-prefix<br>- 配置后缀 view-suffix<br> 4） 使得我们的Servlet继承ViewBaseServlet<br> 5） 根据逻辑视图名称 得到 物理视图名称<br> &#x2F;&#x2F;此处的视图名称是 index<br> &#x2F;&#x2F;那么thymeleaf会将这个 逻辑视图名称 对应到 物理视图 名称上去<br> &#x2F;&#x2F;逻辑视图名称 ：   index<br> &#x2F;&#x2F;物理视图名称 ：   view-prefix + 逻辑视图名称 + view-suffix<br> &#x2F;&#x2F;所以真实的视图名称是：      &#x2F;       index       .html<br> super.processTemplate(“index”,request,response);<br> 6） 使用thymeleaf的标签<br>   th:if   ,  th:unless   , th:each   ,   th:text</li>
+</ol>
 
       
 
