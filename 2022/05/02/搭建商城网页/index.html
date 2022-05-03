@@ -31,11 +31,12 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502181036.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502183406.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502183516.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220503181129.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502170717.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174133.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174432.png">
 <meta property="article:published_time" content="2022-05-02T07:32:57.000Z">
-<meta property="article:modified_time" content="2022-05-02T10:35:55.835Z">
+<meta property="article:modified_time" content="2022-05-03T12:01:25.886Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="thyme leaf">
@@ -231,7 +232,8 @@
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502183516.png" alt="20220502183516"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@PostMapping(&quot;register&quot;)</span></span><br><span class="line"><span class="comment">//前端数据封装成UserRegisterForm对象，根据注解判断是否有错误，结果封装汇总到BindingResult对象中</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">register</span><span class="params">(<span class="meta">@Valid</span> UserRegisterForm userRegisterForm, BindingResult bindingResult)</span>&#123;</span><br><span class="line">    <span class="comment">//判断BindingResult中有没有错误信息</span></span><br><span class="line">    <span class="keyword">if</span> (bindingResult.hasErrors())&#123;</span><br><span class="line">        <span class="comment">//错误可能不止一个，结果是个集合</span></span><br><span class="line">        List&lt;ObjectError&gt; allErrors = bindingResult.getAllErrors();</span><br><span class="line">        <span class="comment">//输出所有错误信息</span></span><br><span class="line">        <span class="keyword">for</span> (ObjectError allError : allErrors) &#123;</span><br><span class="line">            System.out.println(allError.getDefaultMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="3、异常处理"><a href="#3、异常处理" class="headerlink" title="3、异常处理"></a>3、异常处理</h3><h1 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h1><h2 id="1、路径问题"><a href="#1、路径问题" class="headerlink" title="1、路径问题"></a>1、路径问题</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502170717.png" alt="20220502170717"></p>
+<h3 id="3、异常处理"><a href="#3、异常处理" class="headerlink" title="3、异常处理"></a>3、异常处理</h3><p>1、定义异常<br>新建<code>exception.MallException</code><br>新建错误枚举类型<code>result.ResponseEnum</code><br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220503181129.png" alt="20220503181129"></p>
+<h1 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h1><h2 id="1、路径问题"><a href="#1、路径问题" class="headerlink" title="1、路径问题"></a>1、路径问题</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502170717.png" alt="20220502170717"></p>
 <h2 id="2、mapper找不到"><a href="#2、mapper找不到" class="headerlink" title="2、mapper找不到"></a>2、mapper找不到</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174133.png" alt="20220502174133"></p>
 <h2 id="3、没有配数据库"><a href="#3、没有配数据库" class="headerlink" title="3、没有配数据库"></a>3、没有配数据库</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174432.png" alt="20220502174432"></p>
 
