@@ -80,13 +80,24 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509183303.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509200713.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509200803.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510004759.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510005014.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510005128.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510005337.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510010716.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510010950.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510015403.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510013538.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510014225.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509230432.png">
+<meta property="og:image" content="c:/Users/10937/AppData/Roaming/Typora/typora-user-images/image-20220509230515777.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502170717.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174133.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174432.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220505230940.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220505230946.png">
 <meta property="article:published_time" content="2022-05-02T07:32:57.000Z">
-<meta property="article:modified_time" content="2022-05-09T12:10:02.440Z">
+<meta property="article:modified_time" content="2022-05-09T18:05:11.624Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="thyme leaf">
@@ -336,91 +347,105 @@
 </li>
 <li><p>构建子菜单<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508173830.png"></p>
 </li>
-<li><p>&#96;&#96;&#96;java<br>package com.yuki.travel.service.impl;</p>
-<p>import com.yuki.travel.entity.ProductCategory;<br>import com.yuki.travel.mapper.ProductCategoryMapper;<br>import com.yuki.travel.service.ProductCategoryService;<br>import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;<br>import com.yuki.travel.vo.ProductCategoryVO;<br>import org.springframework.beans.factory.annotation.Autowired;<br>import org.springframework.stereotype.Service;</p>
-<p>import java.util.ArrayList;<br>import java.util.Iterator;<br>import java.util.List;<br>import java.util.stream.Collectors;</p>
-<p>&#x2F;**</p>
-<ul>
-<li><p></li>
-<li>服务实现类</li>
-<li></p></li>
-<li></li>
-<li>@author Yuki</li>
-<li>@since 2022-05-02</li>
-</ul>
-<p> *&#x2F;<br>@Service<br>public class ProductCategoryServiceImpl extends ServiceImpl&lt;ProductCategoryMapper, ProductCategory&gt; implements ProductCategoryService {</p>
-<pre><code>@Autowired
-private ProductCategoryMapper productCategoryMapper;
+<li><pre><code class="java">package com.yuki.travel.service.impl;
+
+import com.yuki.travel.entity.ProductCategory;
+import com.yuki.travel.mapper.ProductCategoryMapper;
+import com.yuki.travel.service.ProductCategoryService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yuki.travel.vo.ProductCategoryVO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * 构建商品分类菜单
- * @return
+ * &lt;p&gt;
+ *  服务实现类
+ * &lt;/p&gt;
+ *
+ * @author Yuki
+ * @since 2022-05-02
  */
-@Override
-public List&lt;ProductCategoryVO&gt; buildProductCategoryMenu() &#123;
-    //1、查询所有商品分类数据
-    List&lt;ProductCategory&gt; productCategoryList = this.productCategoryMapper.selectList(null);
-    //2、数据类型转换成PROductCategoryVO
-    List&lt;ProductCategoryVO&gt; productCategoryVOList = productCategoryList.stream().map(ProductCategoryVO::new).collect(Collectors.toList());
-    //3、进行父子级菜单的封装
-    List&lt;ProductCategoryVO&gt; levelOneList = buildMenu(productCategoryVOList);
-    return levelOneList;
-&#125;
+@Service
+public class ProductCategoryServiceImpl extends ServiceImpl&lt;ProductCategoryMapper, ProductCategory&gt; implements ProductCategoryService &#123;
 
+    @Autowired
+    private ProductCategoryMapper productCategoryMapper;
 
-/**
- * 构建菜单
- * @param list
- */
-public List&lt;ProductCategoryVO&gt; buildMenu(List&lt;ProductCategoryVO&gt; list)&#123;
-//找到一级菜单
-    List&lt;ProductCategoryVO&gt; levelOneList = list.stream().filter(c -&gt; c.getParentId() == 0).collect(Collectors.toList());
-    //对一级菜单进行遍历，调下面的递归方法
-    for (ProductCategoryVO vo : levelOneList) &#123;
-        recursion(list,vo);
+    /**
+     * 构建商品分类菜单
+     * @return
+     */
+    @Override
+    public List&lt;ProductCategoryVO&gt; buildProductCategoryMenu() &#123;
+        //1、查询所有商品分类数据
+        List&lt;ProductCategory&gt; productCategoryList = this.productCategoryMapper.selectList(null);
+        //2、数据类型转换成PROductCategoryVO
+        List&lt;ProductCategoryVO&gt; productCategoryVOList = productCategoryList.stream().map(ProductCategoryVO::new).collect(Collectors.toList());
+        //3、进行父子级菜单的封装
+        List&lt;ProductCategoryVO&gt; levelOneList = buildMenu(productCategoryVOList);
+        return levelOneList;
     &#125;
-    return levelOneList;
-&#125;
 
-/**
- * 递归分类
- * @param list
- * @param vo
- */
-public void recursion(List&lt;ProductCategoryVO&gt; list,ProductCategoryVO vo)&#123;
-    //找到子菜单
-    List&lt;ProductCategoryVO&gt; children = getChildren(list, vo);
-    vo.setChildren(children);
-    //继续查找子菜单,长度大于0就继续遍历
-    if(children.size() &gt; 0)&#123;
-        for (ProductCategoryVO child : children) &#123;
-            recursion(list,child);
+
+    /**
+     * 构建菜单
+     * @param list
+     */
+    public List&lt;ProductCategoryVO&gt; buildMenu(List&lt;ProductCategoryVO&gt; list)&#123;
+    //找到一级菜单
+        List&lt;ProductCategoryVO&gt; levelOneList = list.stream().filter(c -&gt; c.getParentId() == 0).collect(Collectors.toList());
+        //对一级菜单进行遍历，调下面的递归方法
+        for (ProductCategoryVO vo : levelOneList) &#123;
+            recursion(list,vo);
+        &#125;
+        return levelOneList;
+    &#125;
+
+    /**
+     * 递归分类
+     * @param list
+     * @param vo
+     */
+    public void recursion(List&lt;ProductCategoryVO&gt; list,ProductCategoryVO vo)&#123;
+        //找到子菜单
+        List&lt;ProductCategoryVO&gt; children = getChildren(list, vo);
+        vo.setChildren(children);
+        //继续查找子菜单,长度大于0就继续遍历
+        if(children.size() &gt; 0)&#123;
+            for (ProductCategoryVO child : children) &#123;
+                recursion(list,child);
+            &#125;
         &#125;
     &#125;
+
+    /**
+     * 获取子菜单
+     * @param list
+     * @param vo
+     */
+    public List&lt;ProductCategoryVO&gt; getChildren(List&lt;ProductCategoryVO&gt; list,ProductCategoryVO vo)&#123;
+    List&lt;ProductCategoryVO&gt; children = new ArrayList&lt;&gt;();
+        Iterator&lt;ProductCategoryVO&gt; iterator = list.iterator();
+        while (iterator.hasNext()) &#123;
+            ProductCategoryVO next = iterator.next();
+            if(next.getParentId().equals(vo.getId()))&#123;
+                children.add(next);
+            &#125;
+        &#125;
+        return children;
+    &#125;
 &#125;
 
-/**
- * 获取子菜单
- * @param list
- * @param vo
- */
-public List&lt;ProductCategoryVO&gt; getChildren(List&lt;ProductCategoryVO&gt; list,ProductCategoryVO vo)&#123;
-List&lt;ProductCategoryVO&gt; children = new ArrayList&lt;&gt;();
-    Iterator&lt;ProductCategoryVO&gt; iterator = list.iterator();
-    while (iterator.hasNext()) &#123;
-        ProductCategoryVO next = iterator.next();
-        if(next.getParentId().equals(vo.getId()))&#123;
-            children.add(next);
-        &#125;
-    &#125;
-    return children;
-&#125;
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">7. 在`ProductCategoryController`调用service层方法   ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508183742.png)</span><br><span class="line">8. 获取菜单![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508183918.png)</span><br><span class="line">9. 修改前端页面代码![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508185140.png)</span><br><span class="line">10. 修改前端代码（未做）</span><br><span class="line">11. 购物车的修改（判断用户是否为登录用户，从session判断）![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508213415.png)</span><br><span class="line">12. ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508214204.png)</span><br><span class="line">13. 查找各级分类对应的商品信息![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508220746.png) 把封装好的集合当作参数传入</span><br><span class="line">14. 在VO里加上一级分类商品的集合![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508221209.png)</span><br><span class="line">15. ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508221832.png)</span><br><span class="line">16. 改前端代码：</span><br><span class="line">13. 用户已登录：</span><br><span class="line"></span><br><span class="line"># 九、商品列表</span><br><span class="line">## 一、根据商品类型查找商品</span><br><span class="line"></span><br><span class="line">`/product/list/type/id`进入`ProductController`中对应方法→先判断数据有没有问题→根据对应字段，把商品查出来→</span><br><span class="line"></span><br><span class="line">1. 修改前端跳转代码![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509005525.png)</span><br><span class="line"></span><br><span class="line">2. 编写`ProductController` ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509005852.png) ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509005902.png)</span><br><span class="line"></span><br><span class="line">3. 编写`ProductService`，`    public List&lt;Product&gt; findAllByTypeAndProductCategoryId(Integer type,Integer id);</span><br><span class="line">  `  ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509233847.png)</span><br><span class="line"></span><br><span class="line">4. 进到`ProductServiceImpl`去实现![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509010757.png)</span><br><span class="line"></span><br><span class="line">5. ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509011402.png)</span><br><span class="line"></span><br><span class="line">6. 编写`ProductController` ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509011621.png)</span><br><span class="line"></span><br><span class="line">7. ```java</span><br><span class="line">   package com.yuki.travel.controller;</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   import com.yuki.travel.exception.MallException;</span><br><span class="line">   import com.yuki.travel.result.ResponseEnum;</span><br><span class="line">   import com.yuki.travel.service.ProductService;</span><br><span class="line">   import lombok.extern.slf4j.Slf4j;</span><br><span class="line">   import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">   import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">   import org.springframework.web.bind.annotation.PathVariable;</span><br><span class="line">   import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">   </span><br><span class="line">   import org.springframework.stereotype.Controller;</span><br><span class="line">   import org.springframework.web.servlet.ModelAndView;</span><br><span class="line">   </span><br><span class="line">   /**</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    *  前端控制器</span><br><span class="line">    * &lt;/p&gt;</span><br><span class="line">    *</span><br><span class="line">    * @author Yuki</span><br><span class="line">    * @since 2022-05-02</span><br><span class="line">    */</span><br><span class="line">   @Controller</span><br><span class="line">   @RequestMapping(&quot;/product&quot;)</span><br><span class="line">   @Slf4j</span><br><span class="line">   public class ProductController &#123;</span><br><span class="line">       @Autowired</span><br><span class="line">       private ProductService productService;</span><br><span class="line">       //两个参数。类型ID</span><br><span class="line">       @GetMapping(&quot;/list/&#123;type&#125;/&#123;id&#125;&quot;)</span><br><span class="line">       public ModelAndView list(</span><br><span class="line">               @PathVariable(&quot;type&quot;) Integer type,</span><br><span class="line">               @PathVariable(&quot;id&quot;) Integer productCategeryId</span><br><span class="line">       )&#123;</span><br><span class="line">           if (type == null || productCategeryId == null)&#123;</span><br><span class="line">               log.info(&quot;【商品列表】参数为空&quot;);</span><br><span class="line">               throw new MallException(ResponseEnum.PARAMETER_NULL);</span><br><span class="line">           &#125;</span><br><span class="line">           ModelAndView modelAndView = new ModelAndView();</span><br><span class="line">           modelAndView.setViewName(&quot;productList&quot;);</span><br><span class="line">           //把值拿出来</span><br><span class="line">           modelAndView.addObject(&quot;list&quot;,this.productService.findAllByTypeAndProductCategoryId(type, productCategeryId));</span><br><span class="line">           return null;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
 </code></pre>
-<p>}</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">7. 在`ProductCategoryController`调用service层方法   ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508183742.png)</span><br><span class="line">8. 获取菜单![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508183918.png)</span><br><span class="line">9. 修改前端页面代码![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508185140.png)</span><br><span class="line">10. 修改前端代码（未做）</span><br><span class="line">11. 购物车的修改（判断用户是否为登录用户，从session判断）![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508213415.png)</span><br><span class="line">12. ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508214204.png)</span><br><span class="line">13. 查找各级分类对应的商品信息![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508220746.png) 把封装好的集合当作参数传入</span><br><span class="line">14. 在VO里加上一级分类商品的集合![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508221209.png)</span><br><span class="line">15. ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220508221832.png)</span><br><span class="line">16. 改前端代码：</span><br><span class="line">13. 用户已登录：</span><br><span class="line"></span><br><span class="line"># 九、商品列表</span><br><span class="line">## 一、根据商品类型查找商品</span><br><span class="line">1. 修改前端跳转代码![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509005525.png)</span><br><span class="line">2. 编写`ProductController` ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509005852.png) ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509005902.png)</span><br><span class="line">3. 编写`ProductService`，`    public List&lt;Product&gt; findAllByTypeAndProductCategoryId(Integer type,Integer id);</span><br><span class="line">` </span><br><span class="line">4. 进到`ProductServiceImpl`去实现![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509010757.png)</span><br><span class="line">5. ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509011402.png)</span><br><span class="line">6. 编写`ProductController` ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509011621.png)</span><br><span class="line">7. ```java</span><br><span class="line">   package com.yuki.travel.controller;</span><br><span class="line">   </span><br><span class="line">   </span><br><span class="line">   import com.yuki.travel.exception.MallException;</span><br><span class="line">   import com.yuki.travel.result.ResponseEnum;</span><br><span class="line">   import com.yuki.travel.service.ProductService;</span><br><span class="line">   import lombok.extern.slf4j.Slf4j;</span><br><span class="line">   import org.springframework.beans.factory.annotation.Autowired;</span><br><span class="line">   import org.springframework.web.bind.annotation.GetMapping;</span><br><span class="line">   import org.springframework.web.bind.annotation.PathVariable;</span><br><span class="line">   import org.springframework.web.bind.annotation.RequestMapping;</span><br><span class="line">   </span><br><span class="line">   import org.springframework.stereotype.Controller;</span><br><span class="line">   import org.springframework.web.servlet.ModelAndView;</span><br><span class="line">   </span><br><span class="line">   /**</span><br><span class="line">    * &lt;p&gt;</span><br><span class="line">    *  前端控制器</span><br><span class="line">    * &lt;/p&gt;</span><br><span class="line">    *</span><br><span class="line">    * @author Yuki</span><br><span class="line">    * @since 2022-05-02</span><br><span class="line">    */</span><br><span class="line">   @Controller</span><br><span class="line">   @RequestMapping(&quot;/product&quot;)</span><br><span class="line">   @Slf4j</span><br><span class="line">   public class ProductController &#123;</span><br><span class="line">       @Autowired</span><br><span class="line">       private ProductService productService;</span><br><span class="line">       //两个参数。类型ID</span><br><span class="line">       @GetMapping(&quot;/list/&#123;type&#125;/&#123;id&#125;&quot;)</span><br><span class="line">       public ModelAndView list(</span><br><span class="line">               @PathVariable(&quot;type&quot;) Integer type,</span><br><span class="line">               @PathVariable(&quot;id&quot;) Integer productCategeryId</span><br><span class="line">       )&#123;</span><br><span class="line">           if (type == null || productCategeryId == null)&#123;</span><br><span class="line">               log.info(&quot;【商品列表】参数为空&quot;);</span><br><span class="line">               throw new MallException(ResponseEnum.PARAMETER_NULL);</span><br><span class="line">           &#125;</span><br><span class="line">           ModelAndView modelAndView = new ModelAndView();</span><br><span class="line">           modelAndView.setViewName(&quot;productList&quot;);</span><br><span class="line">           //把值拿出来</span><br><span class="line">           modelAndView.addObject(&quot;list&quot;,this.productService.findAllByTypeAndProductCategoryId(type, productCategeryId));</span><br><span class="line">           return null;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>修改前端代码<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509013310.png"></p>
 </li>
-<li></li>
+<li><p>修改前端代码，加载拿到的list数据<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509013310.png"></p>
+</li>
 </ol>
 <h1 id="九、商品列表"><a href="#九、商品列表" class="headerlink" title="九、商品列表"></a>九、商品列表</h1><ol>
 <li><p>更改链接，从后台进入页面<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509180922.png"></p>
@@ -431,11 +456,11 @@ List&lt;ProductCategoryVO&gt; children = new ArrayList&lt;&gt;();
 </li>
 <li><p>测试是否能拿到数据<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509183303.png"></p>
 </li>
-<li><pre><code class="java">        //先判断传来的数据是否为空
-        if (type == null || productCategeryId == null)&#123;
-            log.info(&quot;【商品列表】参数为空&quot;);
-            throw new MallException(ResponseEnum.PARAMETER_NULL);
-        &#125;
+<li><pre><code class="java">    //先判断传来的数据是否为空
+    if (type == null || productCategeryId == null)&#123;
+        log.info(&quot;【商品列表】参数为空&quot;);
+        throw new MallException(ResponseEnum.PARAMETER_NULL);
+    &#125;
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">   ![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509193941.png)</span><br><span class="line"></span><br><span class="line">6. 修改`ProductService`，![](https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509194207.png)</span><br><span class="line"></span><br><span class="line">7. 进`impl`中实现，根据type设置查询字段</span><br><span class="line"></span><br><span class="line">   ```java</span><br><span class="line">       @Autowired</span><br><span class="line">       private  ProductMapper productMapper;</span><br><span class="line">   </span><br><span class="line">       @Override</span><br><span class="line">       public List&lt;Product&gt; findAllByTypeAndProductCategoryId(Integer type, Integer id) &#123;</span><br><span class="line">           //进行条件查询</span><br><span class="line">           QueryWrapper&lt;Product&gt; queryWrapper = new QueryWrapper&lt;&gt;();</span><br><span class="line">           String column = null;</span><br><span class="line">           switch (type)&#123;</span><br><span class="line">               case 1:</span><br><span class="line">                   column = &quot;categorylevelone_id&quot;;</span><br><span class="line">                   break;</span><br><span class="line">               case 2:</span><br><span class="line">                   column = &quot;categoryleveltwo_id&quot;;</span><br><span class="line">                   break;</span><br><span class="line">               case 3:</span><br><span class="line">                   column = &quot;categorylevelthree_id&quot;;</span><br><span class="line">                   break;</span><br><span class="line">           &#125;</span><br><span class="line">           queryWrapper.eq(column,id);</span><br><span class="line">           return this.productMapper.selectList(queryWrapper);</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 </code></pre>
 </li>
@@ -451,7 +476,47 @@ List&lt;ProductCategoryVO&gt; children = new ArrayList&lt;&gt;();
 </li>
 <li></li>
 </ol>
-<h1 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h1><h2 id="1、路径问题"><a href="#1、路径问题" class="headerlink" title="1、路径问题"></a>1、路径问题</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502170717.png" alt="20220502170717"></p>
+<h1 id="十、搜索"><a href="#十、搜索" class="headerlink" title="十、搜索"></a>十、搜索</h1><h2 id="优化："><a href="#优化：" class="headerlink" title="优化："></a>优化：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510004759.png"></h2><p>单独去写，回到<code>ProductCategoryController</code><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510005014.png"></p>
+<p>去<code>service</code>提供一个方法<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510005128.png"></p>
+<p>去实现方法CTRL+I，<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510005337.png"></p>
+<p>首先获取一级分类，先获取全部数据再进行筛选，把所有一级分类转成VO，再调<code>getLevelOneProduct</code>这个方法，全部查询出来改代码P12 5:44 <img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510010716.png"></p>
+<p>然后<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510010950.png"></p>
+<p>减少查询次数</p>
+<h2 id="1、修改前端代码"><a href="#1、修改前端代码" class="headerlink" title="1、修改前端代码"></a>1、修改前端代码<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510015403.png"></h2><h2 id="2、去写控制器"><a href="#2、去写控制器" class="headerlink" title="2、去写控制器"></a>2、去写控制器</h2><ol>
+<li><p><code>ProductController</code>里写一个<code>search</code>的方法，从上面粘点代码<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510013538.png">（图中shop-details应为productlist)</p>
+</li>
+<li><pre><code class="java">    @PostMapping(&quot;/search&quot;)
+    //拿keyword
+    public ModelAndView search(String keyWord,HttpSession session)&#123;
+        //先对数据进行判断,错误给提示
+        if (keyWord == null)&#123;
+            log.info(&quot;【商品列表】参数为空&quot;);
+            throw new MallException(ResponseEnum.PARAMETER_NULL);
+        &#125;
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName(&quot;shop-details&quot;);
+        //判断用户是否为登录用户
+        User user = (User) session.getAttribute(&quot;user&quot;);
+        if (user == null)&#123;
+            //未登录（直接返回一个空集合）
+            modelAndView.addObject(&quot;cartList&quot;, new ArrayList&lt;&gt;());
+        &#125;else &#123;
+            //已登录,查询用户的购物车记录
+//            modelAndView.addObject(&quot;cartList&quot;, this.cartService.findVOListByUserId(user.getId()));
+        &#125;
+        //封装商品分类菜单
+        modelAndView.addObject(&quot;list&quot;,this.productCategoryService.buildProductCategoryMenu());
+        return modelAndView;
+    &#125;
+</code></pre>
+</li>
+<li><p>进行模糊查询，交给<code>service</code><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220510014225.png"></p>
+</li>
+<li></li>
+</ol>
+<h1 id="十一、商品详情"><a href="#十一、商品详情" class="headerlink" title="十一、商品详情"></a>十一、商品详情</h1><h1 id="debug"><a href="#debug" class="headerlink" title="debug"></a>debug</h1><p>商品分类和分类商品<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220509230432.png"></p>
+<p>购物车<img src="C:\Users\10937\AppData\Roaming\Typora\typora-user-images\image-20220509230515777.png" alt="image-20220509230515777"></p>
+<h2 id="1、路径问题"><a href="#1、路径问题" class="headerlink" title="1、路径问题"></a>1、路径问题</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502170717.png" alt="20220502170717"></p>
 <h2 id="2、mapper找不到"><a href="#2、mapper找不到" class="headerlink" title="2、mapper找不到"></a>2、mapper找不到</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174133.png" alt="20220502174133"></p>
 <h2 id="3、没有配数据库"><a href="#3、没有配数据库" class="headerlink" title="3、没有配数据库"></a>3、没有配数据库</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220502174432.png" alt="20220502174432"></p>
 <h2 id="3、手机号校验出错（未解决）"><a href="#3、手机号校验出错（未解决）" class="headerlink" title="3、手机号校验出错（未解决）"></a>3、手机号校验出错（未解决）</h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220505230940.png" alt="20220505230940"><br><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/vscode-img/20220505230946.png" alt="20220505230946"></p>
@@ -579,7 +644,7 @@ List&lt;ProductCategoryVO&gt; children = new ArrayList&lt;&gt;();
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">1.</span> <span class="toc-text">一、技术框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.</span> <span class="toc-text">二、前端页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">三、数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91"><span class="toc-number">4.</span> <span class="toc-text">四、项目开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%96%B0%E5%BB%BAspring-boot%E5%B7%A5%E7%A8%8B%EF%BC%8C%E9%80%89%E6%8B%A9%E5%AF%B9%E5%BA%94%E4%BE%9D%E8%B5%96"><span class="toc-number">4.1.</span> <span class="toc-text">1、新建spring boot工程，选择对应依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%8B%B7%E8%B4%9D%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="toc-number">4.2.</span> <span class="toc-text">2、拷贝静态资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%88%9B%E5%BB%BA-RedirectController%EF%BC%8C%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%98%A0%E5%B0%84"><span class="toc-number">4.3.</span> <span class="toc-text">3、创建 RedirectController，实现页面的映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%BD%BF%E7%94%A8MyBatis-Plus-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%EF%BC%88Controller%E3%80%81Service%E3%80%81Entity%E3%80%81Mapper%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">4、使用MyBatis Plus 连接数据库，自动生成代码（Controller、Service、Entity、Mapper）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%89%AB%E6%8F%8Fmapper%E6%8E%A5%E5%8F%A3"><span class="toc-number">4.5.</span> <span class="toc-text">5、扫描mapper接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">4.6.</span> <span class="toc-text">6、配置数据库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%BC%82%E5%B8%B8%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text">五、异常统一处理机制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%B3%A8%E5%86%8C"><span class="toc-number">6.</span> <span class="toc-text">六、注册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E7%AB%AF%E8%BF%9B%E8%A1%8C%E6%A0%A1%E9%AA%8C%EF%BC%8C%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%EF%BC%8C%E5%8F%91%E9%80%81%E5%88%B0%E5%90%8E%E7%AB%AF"><span class="toc-number">6.1.</span> <span class="toc-text">1、前端进行校验，提交表单，发送到后端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%90%8E%E7%AB%AF%E5%86%8D%E4%B8%80%E6%AC%A1%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%EF%BC%88%E9%9D%9E%E7%A9%BA%E6%A0%A1%E9%AA%8C%EF%BC%88springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%EF%BC%89-amp-%E6%A0%BC%E5%BC%8F%E6%A0%A1%E9%AA%8C%EF%BC%89"><span class="toc-number">6.2.</span> <span class="toc-text">2、后端再一次进行数据校验（非空校验（springmvc的数据校验） &amp; 格式校验）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%BC%95%E7%94%A8%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96"><span class="toc-number">6.2.1.</span> <span class="toc-text">1、引用相关依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%9D%9E%E7%A9%BA%E6%A0%A1%E9%AA%8C%EF%BC%88%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E4%B8%93%E9%97%A8%E7%94%A8%E6%9D%A5%E6%A0%A1%E9%AA%8C%EF%BC%89"><span class="toc-number">6.2.2.</span> <span class="toc-text">2、非空校验（创建表单对象专门用来校验）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">6.2.3.</span> <span class="toc-text">3、异常处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%A0%BC%E5%BC%8F%E6%A0%A1%E9%AA%8C"><span class="toc-number">6.2.4.</span> <span class="toc-text">4、格式校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">6.2.5.</span> <span class="toc-text">5、异常处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%88%A4%E6%96%AD%E7%94%A8%E6%88%B7%E5%90%8D%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="toc-number">6.2.6.</span> <span class="toc-text">6、判断用户名是否存在</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD"><span class="toc-number">6.3.</span> <span class="toc-text">3、将数据存储到数据库中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BC%98%E5%8C%96%EF%BC%9Acontroller%E5%8F%AA%E8%B4%9F%E8%B4%A3%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%84%B6%E5%90%8E%E8%B0%83%E7%94%A8service%E5%B1%82"><span class="toc-number">6.3.1.</span> <span class="toc-text">1、优化：controller只负责接收数据，然后调用service层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE"><span class="toc-number">6.3.2.</span> <span class="toc-text">2、存储数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%99%BB%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">七、登录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%8A%A0%E8%BD%BD%E9%A6%96%E9%A1%B5%E6%95%B0%E6%8D%AE"><span class="toc-number">8.</span> <span class="toc-text">八、加载首页数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8"><span class="toc-number">9.</span> <span class="toc-text">九、商品列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#debug"><span class="toc-number">10.</span> <span class="toc-text">debug</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-number">10.1.</span> <span class="toc-text">1、路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81mapper%E6%89%BE%E4%B8%8D%E5%88%B0"><span class="toc-number">10.2.</span> <span class="toc-text">2、mapper找不到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%B2%A1%E6%9C%89%E9%85%8D%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">10.3.</span> <span class="toc-text">3、没有配数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%89%8B%E6%9C%BA%E5%8F%B7%E6%A0%A1%E9%AA%8C%E5%87%BA%E9%94%99%EF%BC%88%E6%9C%AA%E8%A7%A3%E5%86%B3%EF%BC%89"><span class="toc-number">10.4.</span> <span class="toc-text">3、手机号校验出错（未解决）</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%8A%80%E6%9C%AF%E6%A1%86%E6%9E%B6"><span class="toc-number">1.</span> <span class="toc-text">一、技术框架</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%89%8D%E7%AB%AF%E9%A1%B5%E9%9D%A2"><span class="toc-number">2.</span> <span class="toc-text">二、前端页面</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">3.</span> <span class="toc-text">三、数据库</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91"><span class="toc-number">4.</span> <span class="toc-text">四、项目开发</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E6%96%B0%E5%BB%BAspring-boot%E5%B7%A5%E7%A8%8B%EF%BC%8C%E9%80%89%E6%8B%A9%E5%AF%B9%E5%BA%94%E4%BE%9D%E8%B5%96"><span class="toc-number">4.1.</span> <span class="toc-text">1、新建spring boot工程，选择对应依赖</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E6%8B%B7%E8%B4%9D%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="toc-number">4.2.</span> <span class="toc-text">2、拷贝静态资源</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%88%9B%E5%BB%BA-RedirectController%EF%BC%8C%E5%AE%9E%E7%8E%B0%E9%A1%B5%E9%9D%A2%E7%9A%84%E6%98%A0%E5%B0%84"><span class="toc-number">4.3.</span> <span class="toc-text">3、创建 RedirectController，实现页面的映射</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4%E3%80%81%E4%BD%BF%E7%94%A8MyBatis-Plus-%E8%BF%9E%E6%8E%A5%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%EF%BC%88Controller%E3%80%81Service%E3%80%81Entity%E3%80%81Mapper%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">4、使用MyBatis Plus 连接数据库，自动生成代码（Controller、Service、Entity、Mapper）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5%E3%80%81%E6%89%AB%E6%8F%8Fmapper%E6%8E%A5%E5%8F%A3"><span class="toc-number">4.5.</span> <span class="toc-text">5、扫描mapper接口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6%E3%80%81%E9%85%8D%E7%BD%AE%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">4.6.</span> <span class="toc-text">6、配置数据库</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E5%BC%82%E5%B8%B8%E7%BB%9F%E4%B8%80%E5%A4%84%E7%90%86%E6%9C%BA%E5%88%B6"><span class="toc-number">5.</span> <span class="toc-text">五、异常统一处理机制</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%B3%A8%E5%86%8C"><span class="toc-number">6.</span> <span class="toc-text">六、注册</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E5%89%8D%E7%AB%AF%E8%BF%9B%E8%A1%8C%E6%A0%A1%E9%AA%8C%EF%BC%8C%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95%EF%BC%8C%E5%8F%91%E9%80%81%E5%88%B0%E5%90%8E%E7%AB%AF"><span class="toc-number">6.1.</span> <span class="toc-text">1、前端进行校验，提交表单，发送到后端</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%90%8E%E7%AB%AF%E5%86%8D%E4%B8%80%E6%AC%A1%E8%BF%9B%E8%A1%8C%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%EF%BC%88%E9%9D%9E%E7%A9%BA%E6%A0%A1%E9%AA%8C%EF%BC%88springmvc%E7%9A%84%E6%95%B0%E6%8D%AE%E6%A0%A1%E9%AA%8C%EF%BC%89-amp-%E6%A0%BC%E5%BC%8F%E6%A0%A1%E9%AA%8C%EF%BC%89"><span class="toc-number">6.2.</span> <span class="toc-text">2、后端再一次进行数据校验（非空校验（springmvc的数据校验） &amp; 格式校验）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%BC%95%E7%94%A8%E7%9B%B8%E5%85%B3%E4%BE%9D%E8%B5%96"><span class="toc-number">6.2.1.</span> <span class="toc-text">1、引用相关依赖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E9%9D%9E%E7%A9%BA%E6%A0%A1%E9%AA%8C%EF%BC%88%E5%88%9B%E5%BB%BA%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E4%B8%93%E9%97%A8%E7%94%A8%E6%9D%A5%E6%A0%A1%E9%AA%8C%EF%BC%89"><span class="toc-number">6.2.2.</span> <span class="toc-text">2、非空校验（创建表单对象专门用来校验）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">6.2.3.</span> <span class="toc-text">3、异常处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E6%A0%BC%E5%BC%8F%E6%A0%A1%E9%AA%8C"><span class="toc-number">6.2.4.</span> <span class="toc-text">4、格式校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5%E3%80%81%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86"><span class="toc-number">6.2.5.</span> <span class="toc-text">5、异常处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6%E3%80%81%E5%88%A4%E6%96%AD%E7%94%A8%E6%88%B7%E5%90%8D%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8"><span class="toc-number">6.2.6.</span> <span class="toc-text">6、判断用户名是否存在</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E5%B0%86%E6%95%B0%E6%8D%AE%E5%AD%98%E5%82%A8%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD"><span class="toc-number">6.3.</span> <span class="toc-text">3、将数据存储到数据库中</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E4%BC%98%E5%8C%96%EF%BC%9Acontroller%E5%8F%AA%E8%B4%9F%E8%B4%A3%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE%EF%BC%8C%E7%84%B6%E5%90%8E%E8%B0%83%E7%94%A8service%E5%B1%82"><span class="toc-number">6.3.1.</span> <span class="toc-text">1、优化：controller只负责接收数据，然后调用service层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%AD%98%E5%82%A8%E6%95%B0%E6%8D%AE"><span class="toc-number">6.3.2.</span> <span class="toc-text">2、存储数据</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E7%99%BB%E5%BD%95"><span class="toc-number">7.</span> <span class="toc-text">七、登录</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E5%8A%A0%E8%BD%BD%E9%A6%96%E9%A1%B5%E6%95%B0%E6%8D%AE"><span class="toc-number">8.</span> <span class="toc-text">八、加载首页数据</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E5%95%86%E5%93%81%E5%88%97%E8%A1%A8"><span class="toc-number">9.</span> <span class="toc-text">九、商品列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%90%9C%E7%B4%A2"><span class="toc-number">10.</span> <span class="toc-text">十、搜索</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E5%8C%96%EF%BC%9A"><span class="toc-number">10.1.</span> <span class="toc-text">优化：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E4%BF%AE%E6%94%B9%E5%89%8D%E7%AB%AF%E4%BB%A3%E7%A0%81"><span class="toc-number">10.2.</span> <span class="toc-text">1、修改前端代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81%E5%8E%BB%E5%86%99%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="toc-number">10.3.</span> <span class="toc-text">2、去写控制器</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E5%95%86%E5%93%81%E8%AF%A6%E6%83%85"><span class="toc-number">11.</span> <span class="toc-text">十一、商品详情</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#debug"><span class="toc-number">12.</span> <span class="toc-text">debug</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#1%E3%80%81%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98"><span class="toc-number">12.1.</span> <span class="toc-text">1、路径问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2%E3%80%81mapper%E6%89%BE%E4%B8%8D%E5%88%B0"><span class="toc-number">12.2.</span> <span class="toc-text">2、mapper找不到</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%B2%A1%E6%9C%89%E9%85%8D%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="toc-number">12.3.</span> <span class="toc-text">3、没有配数据库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3%E3%80%81%E6%89%8B%E6%9C%BA%E5%8F%B7%E6%A0%A1%E9%AA%8C%E5%87%BA%E9%94%99%EF%BC%88%E6%9C%AA%E8%A7%A3%E5%86%B3%EF%BC%89"><span class="toc-number">12.4.</span> <span class="toc-text">3、手机号校验出错（未解决）</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
