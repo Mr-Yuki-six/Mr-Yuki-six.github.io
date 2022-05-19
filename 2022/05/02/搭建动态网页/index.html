@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220519160341.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220519160437.png">
 <meta property="article:published_time" content="2022-05-02T07:32:57.000Z">
-<meta property="article:modified_time" content="2022-05-19T15:42:15.096Z">
+<meta property="article:modified_time" content="2022-05-19T15:48:16.962Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="thyme leaf">
@@ -908,7 +908,6 @@ public ModelAndView list(
 </li>
 <li><p>通过id查询用户的购物车记录<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220519160341.png"></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//已登录,查询该用户的购物车记录</span></span><br><span class="line">            modelAndView.addObject(<span class="string">&quot;cartList&quot;</span>,<span class="built_in">this</span>.cartService.findVOListByUserId(user.getId()));</span><br></pre></td></tr></table></figure>
-
 </li>
 <li><p>前端对<code>cartList</code>进行遍历即可获得所需的数据<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/yuque-img/20220519160437.png"></p>
 </li>
