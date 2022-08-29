@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          undefined 字
+          299 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          NaN 分钟
+          3 分钟
         
       </span>
     
@@ -275,7 +275,7 @@
                 
                 <h1 id="改变博客的代码高亮风格"><a href="#改变博客的代码高亮风格" class="headerlink" title="改变博客的代码高亮风格"></a>改变博客的代码高亮风格</h1><span id="more"></span>
 <h1 id="使用Color-themes-for-Google-Code-Prettify改变代码高亮风格"><a href="#使用Color-themes-for-Google-Code-Prettify改变代码高亮风格" class="headerlink" title="使用Color themes for Google Code Prettify改变代码高亮风格"></a>使用Color themes for Google Code Prettify改变代码高亮风格</h1><h2 id="一：放弃使用highlight-js代码高亮"><a href="#一：放弃使用highlight-js代码高亮" class="headerlink" title="一：放弃使用highlight.js代码高亮"></a>一：放弃使用highlight.js代码高亮</h2><p>在博客配置文件_config.yml中将highlight相关配置全设置为false：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">highlight:</span><br><span class="line">  enable: false</span><br><span class="line">  line_number: false</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace: &#x27;&#x27;</span><br><span class="line">  wrap: true</span><br><span class="line">  hljs: false</span><br></pre></td></tr></table></figure>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">highlight:</span><br>  <span class="hljs-attr">enable:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">line_number:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">auto_detect:</span> <span class="hljs-literal">false</span><br>  <span class="hljs-attr">tab_replace:</span> <span class="hljs-string">&#x27;&#x27;</span><br>  <span class="hljs-attr">wrap:</span> <span class="hljs-literal">true</span><br>  <span class="hljs-attr">hljs:</span> <span class="hljs-literal">false</span><br></code></pre></td></tr></table></figure>
 
 <p>然后去掉highlight.css样式文件的加载，其中有代码相关的<code>pre</code>标签和<code>code</code>标签样式，会影响后面我们加载code-prettify代码样式。</p>
 
