@@ -1,12 +1,22 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Yuki">
+  <meta name="keywords" content="">
   
-  <title>Markdown教程 | Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。Markdown 编写的文档后缀为 .md, .markdown。">
+    <meta name="description" content="Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。Markdown 编写的文档后缀为 .md, .markdown。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Markdown教程">
 <meta property="og:url" content="http://example.com/2022/02/11/Markdown%E6%95%99%E7%A8%8B/index.html">
@@ -43,87 +53,254 @@
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="笔记">
 <meta property="article:tag" content="markdown">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20%3D%20%E5%92%8C%20-%20%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98.png">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
   
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-    
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+  <title>Markdown教程 - Hexo</title>
 
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.2","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
 
   
 <meta name="generator" content="Hexo 6.2.0"></head>
 
+
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="Markdown教程"></span>
+          
+        </div>
+
         
-          <a class="main-nav-link" href="/">Home</a>
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-02-11 01:17" pubdate>
+          2022年2月11日 凌晨
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
         
-          <a class="main-nav-link" href="/archives">Archives</a>
+          undefined 字
         
-      </nav>
-      <nav id="sub-nav">
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS 订阅"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+        
+          NaN 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
       </div>
+
+      
     </div>
   </div>
-</header>
+</div>
 
-      <div class="outer">
-        <section id="main"><article id="post-Markdown教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/02/11/Markdown%E6%95%99%E7%A8%8B/" class="article-date">
-  <time class="dt-published" datetime="2022-02-10T17:17:35.000Z" itemprop="datePublished">2022-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      Markdown教程
-    </h1>
-  
+</div>
 
-      </header>
+  </header>
+
+  <main>
     
-    <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">Markdown教程</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
 <span id="more"></span>
 
 <h1 id="Markdown教程"><a href="#Markdown教程" class="headerlink" title="Markdown教程"></a>Markdown教程</h1><h2 id="一-简介"><a href="#一-简介" class="headerlink" title="一. 简介"></a>一. 简介</h2><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。<br>Markdown 语言在 2004 由约翰·格鲁伯（英语：John Gruber）创建。<br>Markdown 编写的文档可以导出 HTML 、Word、图像、PDF、Epub 等多种格式的文档。<br>Markdown 编写的文档后缀为 <strong>.md</strong>, <strong>.markdown</strong>。</p>
@@ -131,38 +308,38 @@
 <h2 id="二-Markdown-标题"><a href="#二-Markdown-标题" class="headerlink" title="二.Markdown 标题"></a>二.Markdown 标题</h2><h3 id="1-格式一："><a href="#1-格式一：" class="headerlink" title="1.格式一："></a>1.格式一：</h3><p>使用 &#x3D; 和 - 标记一级和二级标题，&#x3D; 和 - 标记语法格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">我展示的是一级标题</span><br><span class="line">=================</span><br><span class="line"></span><br><span class="line">我展示的是二级标题</span><br><span class="line">-----------------</span><br></pre></td></tr></table></figure>
 <p>显示效果如下图：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20%3D%20%E5%92%8C%20-%20%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98.png" alt="使用 = 和 - 标记一级和二级标题"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20%3D%20%E5%92%8C%20-%20%E6%A0%87%E8%AE%B0%E4%B8%80%E7%BA%A7%E5%92%8C%E4%BA%8C%E7%BA%A7%E6%A0%87%E9%A2%98.png" srcset="/img/loading.gif" lazyload alt="使用 = 和 - 标记一级和二级标题"></p>
 <h3 id="2-格式二："><a href="#2-格式二：" class="headerlink" title="2.格式二："></a>2.格式二：</h3><p>使用 # 号可表示 1-6 级标题，一级标题对应一个 # 号，二级标题对应两个 # 号，以此类推，语法格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 一级标题</span><br><span class="line">## 二级标题</span><br><span class="line">### 三级标题</span><br><span class="line">#### 四级标题</span><br><span class="line">##### 五级标题</span><br><span class="line">###### 六级标题</span><br></pre></td></tr></table></figure>
-<p>显示效果如下图：<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20" alt="使用#号标记"></p>
+<p>显示效果如下图：<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BD%BF%E7%94%A8%20" srcset="/img/loading.gif" lazyload alt="使用#号标记"></p>
 <h2 id="三-Markdown-段落格式"><a href="#三-Markdown-段落格式" class="headerlink" title="三.Markdown 段落格式"></a>三.Markdown 段落格式</h2><ul>
-<li><p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%AE%B5%E8%90%BD%E6%8D%A2%E8%A1%8C.png" alt="image-20220210235910549"></p>
+<li><p>Markdown 段落没有特殊的格式，直接编写文字就好，段落的换行是使用两个以上空格加上回车。<br><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%AE%B5%E8%90%BD%E6%8D%A2%E8%A1%8C.png" srcset="/img/loading.gif" lazyload alt="image-20220210235910549"></p>
 </li>
 <li><p>字体<br>Markdown 可以使用以下几种字体：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">*斜体文本*</span><br><span class="line">_斜体文本_</span><br><span class="line">**粗体文本**</span><br><span class="line">__粗体文本__</span><br><span class="line">***粗斜体文本***</span><br><span class="line">___粗斜体文本___</span><br></pre></td></tr></table></figure>
 <p>显示效果如图：</p>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%AD%97%E4%BD%93.png" alt="字体"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%AD%97%E4%BD%93.png" srcset="/img/loading.gif" lazyload alt="字体"></p>
 <ul>
 <li>分隔线<br>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">***</span><br><span class="line"></span><br><span class="line">* * *</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">----------</span><br></pre></td></tr></table></figure>
 显示效果如下所示：</li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%86%E9%9A%94%E7%BA%BF.png" alt="分隔线"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%86%E9%9A%94%E7%BA%BF.png" srcset="/img/loading.gif" lazyload alt="分隔线"></p>
 <ul>
 <li><p>删除线</p>
 <p>如果段落上的文字要添加删除线，只需要在文字的两端加上两个波浪线 <strong>~~</strong> 即可，实例如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~~ hello world~~</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%A0%E9%99%A4%E7%BA%BF.png" alt="删除线"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%A0%E9%99%A4%E7%BA%BF.png" srcset="/img/loading.gif" lazyload alt="删除线"></p>
 </li>
 <li><p>下划线</p>
 <p>下划线可以通过 HTML 的<code>&lt;u&gt;</code>标签来实现：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;u&gt;下划线&lt;/u&gt;</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%B8%8B%E5%88%92%E7%BA%BF.png" alt="下划线"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%B8%8B%E5%88%92%E7%BA%BF.png" srcset="/img/loading.gif" lazyload alt="下划线"></p>
 </li>
 <li><p>脚注</p>
 <p>脚注是对文本的补充说明。</p>
@@ -172,7 +349,7 @@
 <p>实例演示：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">创建脚注格式类似这样 [^这是脚注]。</span><br><span class="line"></span><br><span class="line">[^这是脚注]: 你的鼠标放到了脚注上</span><br></pre></td></tr></table></figure>
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%84%9A%E6%B3%A8%E5%B1%95%E7%A4%BA.png" alt="脚注"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%84%9A%E6%B3%A8%E5%B1%95%E7%A4%BA.png" srcset="/img/loading.gif" lazyload alt="脚注"></p>
 </li>
 </ul>
 <h2 id="四-Markdown-列表"><a href="#四-Markdown-列表" class="headerlink" title="四.Markdown 列表"></a>四.Markdown 列表</h2><p>Markdown 支持有序列表和无序列表。</p>
@@ -180,47 +357,47 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">* 第二项</span><br><span class="line">* 第三项</span><br><span class="line"></span><br><span class="line">+ 第一项</span><br><span class="line">+ 第二项</span><br><span class="line">+ 第三项</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- 第一项</span><br><span class="line">- 第二项</span><br><span class="line">- 第三项</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8.png" alt="无序列表"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8.png" srcset="/img/loading.gif" lazyload alt="无序列表"></p>
 <p>有序列表使用数字并加上 <strong>.</strong> 号来表示，如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项</span><br><span class="line">2. 第二项</span><br><span class="line">3. 第三项</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8.png" alt="有序列表"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8.png" srcset="/img/loading.gif" lazyload alt="有序列表"></p>
 <p>列表嵌套只需在子列表中的选项前面添加四个空格即可：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1. 第一项：</span><br><span class="line">    - 第一项嵌套的第一个元素</span><br><span class="line">    - 第一项嵌套的第二个元素</span><br><span class="line">2. 第二项：</span><br><span class="line">    - 第二项嵌套的第一个元素</span><br><span class="line">    - 第二项嵌套的第二个元素</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97.png" alt="列表嵌套"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%97%E8%A1%A8%E5%B5%8C%E5%A5%97.png" srcset="/img/loading.gif" lazyload alt="列表嵌套"></p>
 <h2 id="五-Markdown-区块"><a href="#五-Markdown-区块" class="headerlink" title="五.Markdown 区块"></a>五.Markdown 区块</h2><p>Markdown 区块引用是在段落开头使用 &gt; 符号 ，然后后面紧跟一个空格符号：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 春眠不觉晓，</span><br><span class="line">&gt; 处处闻啼鸟。</span><br><span class="line">&gt; 夜来风雨声，</span><br><span class="line">&gt; 花落知多少。</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8.png" alt="区块引用"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E5%BC%95%E7%94%A8.png" srcset="/img/loading.gif" lazyload alt="区块引用"></p>
 <p>另外区块是可以嵌套的，一个 <strong>&gt;</strong> 符号是最外层，两个 <strong>&gt;</strong> 符号是第一层嵌套，以此类推：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 春眠不觉晓，</span><br><span class="line">&gt; &gt; 处处闻啼鸟。</span><br><span class="line">&gt; &gt; &gt; 夜来风雨声，</span><br><span class="line">&gt; &gt; &gt; &gt; 花落知多少。</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E5%B5%8C%E5%A5%97.png" alt="区块嵌套"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E5%B5%8C%E5%A5%97.png" srcset="/img/loading.gif" lazyload alt="区块嵌套"></p>
 <p>区块中使用列表实例如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; 区块中使用列表</span><br><span class="line">&gt; 1. 第一项</span><br><span class="line">&gt; 2. 第二项</span><br><span class="line">&gt; + 第一项</span><br><span class="line">&gt; + 第二项</span><br><span class="line">&gt; + 第三项</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8.png" alt="区块中使用列表"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%8C%BA%E5%9D%97%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%88%97%E8%A1%A8.png" srcset="/img/loading.gif" lazyload alt="区块中使用列表"></p>
 <p>如果要在列表项目内放进区块，那么就需要在 <strong>&gt;</strong> 前添加四个空格的缩进。</p>
 <p>列表中使用区块实例如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">* 第一项</span><br><span class="line">    &gt; 春眠不觉晓</span><br><span class="line">    &gt; 处处闻啼鸟</span><br><span class="line">* 第二项</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97.png" alt="列表中使用区块"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E5%88%97%E8%A1%A8%E4%B8%AD%E4%BD%BF%E7%94%A8%E5%8C%BA%E5%9D%97.png" srcset="/img/loading.gif" lazyload alt="列表中使用区块"></p>
 <h2 id="六-Markdown-代码"><a href="#六-Markdown-代码" class="headerlink" title="六.Markdown 代码"></a>六.Markdown 代码</h2><p>如果是段落上的一个函数或片段的代码可以用反引号把它包起来（**&#96;**），例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`printf()` 函数</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.png" alt="代码片段"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5.png" srcset="/img/loading.gif" lazyload alt="代码片段"></p>
 <p>代码区块使用 <strong>4 个空格</strong>或者一个<strong>制表符（Tab 键）</strong>。例如：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97.png" alt="代码区块"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97.png" srcset="/img/loading.gif" lazyload alt="代码区块"></p>
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97%E6%BC%94%E7%A4%BA.png" alt="代码区块演示"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E4%BB%A3%E7%A0%81%E5%8C%BA%E5%9D%97%E6%BC%94%E7%A4%BA.png" srcset="/img/loading.gif" lazyload alt="代码区块演示"></p>
 <p>也可以用 <strong>&#96;&#96;&#96;</strong> 包裹一段代码，并指定一种语言（也可以不指定）：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">helloworld</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;helloworld&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -233,12 +410,12 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个B站链接 [哔哩哔哩](https://www.bilibili.com/)</span><br><span class="line">&lt;https://www.bilibili.com/&gt;</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%93%BE%E6%8E%A5.png" alt="链接"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%93%BE%E6%8E%A5.png" srcset="/img/loading.gif" lazyload alt="链接"></p>
 <p>高级链接：我们可以通过变量来设置一个链接，变量赋值在文档末尾进行，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">这个链接用 1 作为网址变量 [Google][1]</span><br><span class="line">这个链接用 2 作为网址变量 [Baidu][2]</span><br><span class="line">然后在文档的结尾为变量赋值（网址）</span><br><span class="line"></span><br><span class="line">  [1]: https://www.google.com/</span><br><span class="line">  [2]: https://www.baidu.com/</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5.png" alt="高级链接"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5.png" srcset="/img/loading.gif" lazyload alt="高级链接"></p>
 <h2 id="八-Markdown-图片"><a href="#八-Markdown-图片" class="headerlink" title="八.Markdown 图片"></a>八.Markdown 图片</h2><p>Markdown 图片语法格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![alt 属性文本](图片地址)</span><br><span class="line"></span><br><span class="line">![alt 属性文本](图片地址 &quot;可选标题&quot;)</span><br></pre></td></tr></table></figure>
 
@@ -255,13 +432,13 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E9%AB%98%E7%BA%A7%E9%93%BE%E6%8E%A5.png&quot; width=&quot;50%&quot;&gt;</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E7%94%A8img%E8%AE%BE%E7%BD%AE%E9%AB%98%E5%BA%A6%E4%B8%8E%E5%AE%BD%E5%BA%A6.png" alt="用img设置高度与宽度"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E7%94%A8img%E8%AE%BE%E7%BD%AE%E9%AB%98%E5%BA%A6%E4%B8%8E%E5%AE%BD%E5%BA%A6.png" srcset="/img/loading.gif" lazyload alt="用img设置高度与宽度"></p>
 <h2 id="九-Markdown-表格"><a href="#九-Markdown-表格" class="headerlink" title="九.Markdown 表格"></a>九.Markdown 表格</h2><p>Markdown 制作表格使用 <strong>|</strong> 来分隔不同的单元格，使用 <strong>-</strong> 来分隔表头和其他行。</p>
 <p>语法格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">|  表头   | 表头  |</span><br><span class="line">|  ----  | ----  |</span><br><span class="line">| 单元格  | 单元格 |</span><br><span class="line">| 单元格  | 单元格 |</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%A1%A8%E6%A0%BC.png" alt="表格"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%A1%A8%E6%A0%BC.png" srcset="/img/loading.gif" lazyload alt="表格"></p>
 <p><strong>我们可以设置表格的对齐方式：</strong></p>
 <ul>
 <li><strong>-:</strong> 设置内容和标题栏居右对齐。</li>
@@ -272,162 +449,332 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 左对齐 | 右对齐 | 居中对齐 |</span><br><span class="line">| :-----| ----: | :----: |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br><span class="line">| 单元格 | 单元格 | 单元格 |</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%A1%A8%E6%A0%BC%E5%AF%B9%E9%BD%90.png" alt="表格对齐"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%A1%A8%E6%A0%BC%E5%AF%B9%E9%BD%90.png" srcset="/img/loading.gif" lazyload alt="表格对齐"></p>
 <h2 id="十-Markdown-高级技巧"><a href="#十-Markdown-高级技巧" class="headerlink" title="十.Markdown 高级技巧"></a>十.Markdown 高级技巧</h2><h3 id="支持的-HTML-元素"><a href="#支持的-HTML-元素" class="headerlink" title="支持的 HTML 元素"></a>支持的 HTML 元素</h3><p>不在 Markdown 涵盖范围之内的标签，都可以直接在文档里面用 HTML 撰写。</p>
 <p>目前支持的 HTML 元素有：<code>&lt;kbd&gt; &lt;b&gt; &lt;i&gt; &lt;em&gt; &lt;sup&gt; &lt;sub&gt; &lt;br&gt;</code>等 ，如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">使用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;Del&lt;/kbd&gt; 重启电脑</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/HTML%E5%85%83%E7%B4%A0.png" alt="HTML元素"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/HTML%E5%85%83%E7%B4%A0.png" srcset="/img/loading.gif" lazyload alt="HTML元素"></p>
 <p>Markdown 使用了很多特殊符号来表示特定的意义，如果需要显示特定的符号则需要使用转义字符，Markdown 使用反斜杠转义特殊字符：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">**文本加粗** </span><br><span class="line">\*\* 正常显示星号 \*\*</span><br></pre></td></tr></table></figure>
 
 <p>显示效果如下所示：</p>
-<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%BD%AC%E4%B9%89.png" alt="转义"></p>
+<p><img src="https://raw.githubusercontent.com/Mr-Yuki-six/blog-img/main/%E8%BD%AC%E4%B9%89.png" srcset="/img/loading.gif" lazyload alt="转义"></p>
 <p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   下划线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  小括号</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   感叹号</span><br></pre></td></tr></table></figure>
 <hr>
 <p>文献参考<br><a target="_blank" rel="noopener" href="https://www.runoob.com/markdown/md-tutorial.html">https://www.runoob.com/markdown/md-tutorial.html</a></p>
 
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%AC%94%E8%AE%B0/">#笔记</a>
+      
+        <a href="/tags/markdown/">#markdown</a>
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/02/11/Markdown%E6%95%99%E7%A8%8B/" data-id="cl7ete5bd000bmkcqd4um438z" data-title="Markdown教程" class="article-share-link">分享</a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li></ul>
+  
+</div>
 
-    </footer>
-  </div>
+
+              
   
-    
-<nav id="article-nav">
-  
-    <a href="/2022/02/13/%E4%BD%BF%E7%94%A8Color-themes-for-Google-Code-Prettify%E6%94%B9%E5%8F%98%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">前一篇</strong>
-      <div class="article-nav-title">
-        
-          改变代码高亮风格
-        
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>Markdown教程</div>
+      <div>http://example.com/2022/02/11/Markdown教程/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Yuki</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年2月11日</div>
+        </div>
+      
+      
+      <div class="license-meta-item">
+        <div>许可协议</div>
+        <div>
+          
+            
+            
+              <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+              <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                <i class="iconfont icon-by"></i>
+              </span>
+              </a>
+            
+          
+        </div>
       </div>
-    </a>
-  
-  
-</nav>
-
-  
-</article>
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BootStrap/" rel="tag">BootStrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDEA/" rel="tag">IDEA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javaweb/" rel="tag">Javaweb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/R2S/" rel="tag">R2S</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/debug/" rel="tag">debug</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javaweb/" rel="tag">javaweb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javawev/" rel="tag">javawev</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jsp/" rel="tag">jsp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/markdown/" rel="tag">markdown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mvc/" rel="tag">mvc</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/spring-boot/" rel="tag">spring boot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/thyme-leaf/" rel="tag">thyme leaf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vue/" rel="tag">vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AC%94%E8%AE%B0/" rel="tag">笔记</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/" rel="tag">软路由</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" rel="tag">阿里云</a></li></ul>
     </div>
+    <div class="license-icon iconfont"></div>
   </div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/BootStrap/" style="font-size: 10px;">BootStrap</a> <a href="/tags/IDEA/" style="font-size: 10px;">IDEA</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Javaweb/" style="font-size: 17.5px;">Javaweb</a> <a href="/tags/R2S/" style="font-size: 10px;">R2S</a> <a href="/tags/debug/" style="font-size: 10px;">debug</a> <a href="/tags/hexo/" style="font-size: 12.5px;">hexo</a> <a href="/tags/javaweb/" style="font-size: 10px;">javaweb</a> <a href="/tags/javawev/" style="font-size: 10px;">javawev</a> <a href="/tags/jsp/" style="font-size: 10px;">jsp</a> <a href="/tags/markdown/" style="font-size: 12.5px;">markdown</a> <a href="/tags/mvc/" style="font-size: 10px;">mvc</a> <a href="/tags/spring-boot/" style="font-size: 15px;">spring boot</a> <a href="/tags/thyme-leaf/" style="font-size: 17.5px;">thyme leaf</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 20px;">笔记</a> <a href="/tags/%E8%BD%AF%E8%B7%AF%E7%94%B1/" style="font-size: 10px;">软路由</a> <a href="/tags/%E9%98%BF%E9%87%8C%E4%BA%91/" style="font-size: 10px;">阿里云</a>
-    </div>
-  </div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">五月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">四月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">三月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">二月 2022</a></li></ul>
-    </div>
-  </div>
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2022/02/13/%E4%BD%BF%E7%94%A8Color-themes-for-Google-Code-Prettify%E6%94%B9%E5%8F%98%E4%BB%A3%E7%A0%81%E9%AB%98%E4%BA%AE%E9%A3%8E%E6%A0%BC/" title="改变代码高亮风格">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">改变代码高亮风格</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2022/08/29/%E5%95%8A%E5%AE%9E%E6%89%93%E5%AE%9E%E6%89%93%E7%AE%97/">啊实打实打算</a>
-          </li>
-        
-          <li>
-            <a href="/2022/08/29/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/02/%E6%90%AD%E5%BB%BA%E5%95%86%E5%9F%8E%E7%BD%91%E9%A1%B5/">搭建商城网站</a>
-          </li>
-        
-          <li>
-            <a href="/2022/05/02/%E6%90%AD%E5%BB%BA%E5%8A%A8%E6%80%81%E7%BD%91%E9%A1%B5/">搭建动态网站</a>
-          </li>
-        
-          <li>
-            <a href="/2022/04/19/IDEA%E8%87%AA%E5%8A%A8%E5%AF%BC%E5%8C%85/">IDEA自动导包</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
+            
+          </article>
+        </div>
       </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2022 Yuki<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
     </div>
-  </div>
-</footer>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
 
     </div>
-    <nav id="mobile-nav">
+  </div>
+</div>
+
+
+
+
+
   
-    <a href="/" class="mobile-nav-link">Home</a>
+
+
+
   
-    <a href="/archives" class="mobile-nav-link">Archives</a>
+
+
+
   
-</nav>
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
     
 
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+    <script  src="/js/img-lazyload.js" ></script>
+  
 
 
 
 
-<script src="/js/script.js"></script>
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      headingSelector : CONFIG.toc.headingSelector || 'h1,h2,h3,h4,h5,h6',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      collapseDepth   : CONFIG.toc.collapseDepth || 0,
+      scrollSmooth    : true,
+      headingsOffset  : -boardTop
+    });
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
 
 
 
 
 
-  </div>
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
 </body>
 </html>
