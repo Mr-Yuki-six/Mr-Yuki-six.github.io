@@ -130,8 +130,10 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220908004153.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220908004229.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909151430.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909152242.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909194745.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-09-09T07:15:06.844Z">
+<meta property="article:modified_time" content="2022-09-09T11:50:52.057Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -328,7 +330,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          12k 字
+          13k 字
         
       </span>
     
@@ -339,7 +341,7 @@
         
         
         
-          101 分钟
+          110 分钟
         
       </span>
     
@@ -925,7 +927,7 @@
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220907174734.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220907182020.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220907184216.png" srcset="/img/loading.gif" lazyload></p>
-<h4 id="4-循环结构"><a href="#4-循环结构" class="headerlink" title="4. 循环结构"></a>4. 循环结构</h4><ul>
+<h4 id="4-循环结构1：for循环"><a href="#4-循环结构1：for循环" class="headerlink" title="4. 循环结构1：for循环"></a>4. 循环结构1：for循环</h4><ul>
 <li>循环结构<ul>
 <li>在某些条件满足的情况下，反复执行特定代码的功能</li>
 </ul>
@@ -945,8 +947,7 @@
 </li>
 </ul>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220907224525.png" srcset="/img/loading.gif" lazyload></p>
-<ol>
-<li><p>for循环</p>
+<p>for循环</p>
 <ul>
 <li><strong>语法格式：</strong><font color = red>for(①初始化部分; ②循环条件部分; ④迭代部分){③循环体部分;}</font></li>
 <li><strong>执行过程：</strong>①-②-③-④-②-③-④-②-③-④-…..-②</li>
@@ -961,9 +962,7 @@
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220908000813.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220908004153.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220908004229.png" srcset="/img/loading.gif" lazyload></p>
-</li>
-<li><p>while循环</p>
-<ul>
+<h4 id="5-循环结构2：while循环"><a href="#5-循环结构2：while循环" class="headerlink" title="5. 循环结构2：while循环"></a>5. 循环结构2：while循环</h4><ul>
 <li>语法格式：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909151430.png" srcset="/img/loading.gif" lazyload></li>
 <li>执行过程：①-②-③-④-②-③-④-②-③-④-…-②</li>
 <li>说明：<ul>
@@ -972,10 +971,31 @@
 </ul>
 </li>
 </ul>
+<h4 id="6-循环结构3：do-while循环"><a href="#6-循环结构3：do-while循环" class="headerlink" title="6. 循环结构3：do-while循环"></a>6. 循环结构3：do-while循环</h4><ul>
+<li>语法格式<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909152242.png" srcset="/img/loading.gif" lazyload></li>
+<li>执行过程：①-<font color =red>③-④</font>-②-③-④-②-③-④-…②</li>
+<li>说明：do-while循环至少执行一次循环体。</li>
+</ul>
+<h4 id="7-嵌套循环"><a href="#7-嵌套循环" class="headerlink" title="7. 嵌套循环"></a>7. 嵌套循环</h4><p><strong>嵌套循环(多重循环)</strong></p>
+<ul>
+<li>将一个循环放在另一个循环体内，就形成了嵌套循环。其中，<br>for ,while ,do…while均可以作为外层循环或内层循环。</li>
+<li>实质上，嵌套循环就是把内层循环当成外层循环的循环体。当只有内层循环的<br>循环条件为false时，才会完全跳出内层循环，才可结束外层的当次循环，开<br>始下一次的循环。</li>
+<li>设外层循环次数为m次，内层为n次，则内层循环体实际上需要执行m*n次。</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909194745.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> sep09;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">NestingLoop</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br>        <span class="hljs-comment">//99乘法表</span><br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">9</span>; i++) &#123;<br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; j &lt;= i; j++) &#123;<br>                System.out.print(i+<span class="hljs-string">&quot;×&quot;</span>+j+<span class="hljs-string">&quot;=&quot;</span>+ i*j+<span class="hljs-string">&quot; &quot;</span>);<br>            &#125;<br>            System.out.println();<br>        &#125;<br>        <span class="hljs-comment">//输出100以内的所有质数</span><br>        <span class="hljs-comment">//方法一</span><br>        <span class="hljs-type">long</span> <span class="hljs-variable">Start</span> <span class="hljs-operator">=</span> System.currentTimeMillis();<span class="hljs-comment">//获取当前时间距离1970年01-01的毫秒数</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;i &lt;= <span class="hljs-number">10000</span>;i++)&#123;<span class="hljs-comment">//遍历100以内的自然数</span><br>            <span class="hljs-type">boolean</span> <span class="hljs-variable">isFlag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<span class="hljs-comment">//标识i是否被j除尽，一旦除尽，修改其值</span><br>            <span class="hljs-comment">//for(int j = 2;j &lt; i;j++)&#123;//j:被i去除</span><br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;j &lt;= Math.sqrt(i);j++)&#123;<span class="hljs-comment">//优化二：对本身是质数的自然数有效</span><br>                <span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123; <span class="hljs-comment">//i被j除尽</span><br>                    isFlag = <span class="hljs-literal">false</span>;<br>                    <span class="hljs-keyword">break</span>;<span class="hljs-comment">//优化一：只对本身非质数的自然数是有效的</span><br>                &#125;<br>            &#125;<br>            <span class="hljs-comment">//</span><br>            <span class="hljs-keyword">if</span>(isFlag == <span class="hljs-literal">true</span>)&#123;<br>                System.out.print(i+<span class="hljs-string">&quot; &quot;</span>);<br>            &#125;<br>        &#125;<br>        <span class="hljs-type">long</span> <span class="hljs-variable">End</span> <span class="hljs-operator">=</span> System.currentTimeMillis();<span class="hljs-comment">//获取当前时间距离1970年01-01的毫秒数</span><br>        System.out.println(<span class="hljs-string">&quot;(程序执行时间) = &quot;</span> + (End-Start));<br><br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<h4 id="8-特殊关键字的使用：break、continue"><a href="#8-特殊关键字的使用：break、continue" class="headerlink" title="8. 特殊关键字的使用：break、continue"></a>8. 特殊关键字的使用：break、continue</h4><p><strong>特殊流程控制语句1</strong></p>
+<ul>
+<li><p>break语句</p>
+<ul>
+<li><p>break语句用于终止某个语句块的执行</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">&#123;<br>    <span class="hljs-keyword">break</span>；<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
-<li><p>do-while循环</p>
+<li></li>
+</ul>
 </li>
-</ol>
+</ul>
 <h1 id="第三章、数组"><a href="#第三章、数组" class="headerlink" title="第三章、数组"></a>第三章、数组</h1><h1 id="第四章、面向对象编程（上）"><a href="#第四章、面向对象编程（上）" class="headerlink" title="第四章、面向对象编程（上）"></a>第四章、面向对象编程（上）</h1><h1 id="第五章、面向对象编程（中）"><a href="#第五章、面向对象编程（中）" class="headerlink" title="第五章、面向对象编程（中）"></a>第五章、面向对象编程（中）</h1><h1 id="第六章、面向对象编程（下）"><a href="#第六章、面向对象编程（下）" class="headerlink" title="第六章、面向对象编程（下）"></a>第六章、面向对象编程（下）</h1><h1 id="第七章、异常处理"><a href="#第七章、异常处理" class="headerlink" title="第七章、异常处理"></a>第七章、异常处理</h1><hr>
 <p>文献参考<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=1">https://www.bilibili.com/video/BV1Kb411W75N?p=1</a></p>
 
