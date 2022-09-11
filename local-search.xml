@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>实用软件</title>
+    <link href="/2022/09/11/%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6/"/>
+    <url>/2022/09/11/%E5%AE%9E%E7%94%A8%E8%BD%AF%E4%BB%B6/</url>
+    
+    <content type="html"><![CDATA[<h2 id="文字转语音"><a href="#文字转语音" class="headerlink" title="文字转语音"></a>文字转语音</h2><ol><li><a href="https://azure.microsoft.com/zh-cn/services/cognitive-services/text-to-speech/#overview">Azure Cognitive Services</a>。<a href="https://greasyfork.org/zh-CN/scripts/444347-azure-speech-download">语音下载</a></li><li><a href="https://www.52pojie.cn/forum.php?mod=viewthread&tid=1635364"><strong>自动朗读工具，可设置起始点</strong></a></li></ol><h2 id="图片转文字"><a href="#图片转文字" class="headerlink" title="图片转文字"></a>图片转文字</h2><ol><li><a href="https://github.com/hiroi-sora/Umi-OCR">支持离线使用的OCR图片识字软件</a></li></ol><h2 id="下载工具"><a href="#下载工具" class="headerlink" title="下载工具"></a>下载工具</h2><ol><li><a href="https://github.com/picotorrent/picotorrent">PicoTorrent 种子下载软件</a></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>搭建Hexo博客</title>
     <link href="/2022/08/29/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/"/>
     <url>/2022/08/29/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/</url>
