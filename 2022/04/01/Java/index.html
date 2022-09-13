@@ -192,6 +192,9 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913195608636.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913233003115.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913233448484.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913234702684.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235214180.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235238027.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202222.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202322.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202340.png">
@@ -200,7 +203,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202659.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202738.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-09-13T15:37:31.596Z">
+<meta property="article:modified_time" content="2022-09-13T15:52:41.100Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -397,7 +400,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          31k 字
+          33k 字
         
       </span>
     
@@ -408,7 +411,7 @@
         
         
         
-          260 分钟
+          273 分钟
         
       </span>
     
@@ -1520,7 +1523,93 @@
 </tr>
 </tbody></table>
 <hr>
-<h2 id="5、类的成员之二：方法-method"><a href="#5、类的成员之二：方法-method" class="headerlink" title="5、类的成员之二：方法(method)"></a>5、类的成员之二：方法(method)</h2><hr>
+<h2 id="5、类的成员之二：方法-method"><a href="#5、类的成员之二：方法-method" class="headerlink" title="5、类的成员之二：方法(method)"></a>5、类的成员之二：方法(method)</h2><p><strong>什么是方法(method、函数):</strong></p>
+<ul>
+<li>方法是类或对象行为特征的抽象，用来完成某个功能操作。在某些语言中也称为函数或过程。</li>
+<li>将功能封装为方法的目的是，可以实现代码重用，简化代码</li>
+<li>Java里的方法不能独立存在，所有的方法必须定义在类里。</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span>&#123;<br><span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getAge</span><span class="hljs-params">()</span> &#123; <span class="hljs-comment">//声明方法getAge()</span><br><span class="hljs-keyword">return</span> age;<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setAge</span><span class="hljs-params">(<span class="hljs-type">int</span> i)</span> &#123; <span class="hljs-comment">//声明方法setAge</span><br>age = i;<br><span class="hljs-comment">//将参数i的值赋给类的成员变量age</span><br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<p><strong>方法的声明格式：</strong></p>
+<p><font color = "00af50">修饰符</font> <font color = red >返回值类型</font> <font color = "30497d">方法名</font> (<font color = red >参数类型 <font color = blue>形参1,</font> 参数类型 <font color = blue>形参2,</font> ……</font>){</p>
+<p><font color = red >方法体程序代码</font></p>
+<p><font color = red >return 返回值;</font></p>
+<p>}</p>
+<p><strong>其中：</strong>修饰符：<font color = "00af50">public,缺省,private, protected</font>等</p>
+<p>返回值类型：</p>
+<ul>
+<li>没有返回值：<font color = red >void</font></li>
+<li>有返回值，声明出返回值的类型。与方法体中<font color = red >“return 返回值”</font>搭配使用</li>
+</ul>
+<p>方法名：属于标识符，命名时遵循标识符命名规则和规范，“见名知意”</p>
+<p>形参列表：可以包含零个，一个或多个参数。多个参数时，中间用“,”隔开</p>
+<p>返回值：方法在执行完毕后返还给调用它的程序的数据。</p>
+<p><font color = blue> 如何理解方法返回值类型为void的情况 ?</font></p>
+<p><strong>方法的分类：按照是否有形参及返回值</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">无返回值</th>
+<th align="center">有返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">无形参</td>
+<td align="center">void 方法名（）{}</td>
+<td align="center">返回值的类型 方法名（）{}</td>
+</tr>
+<tr>
+<td align="center">有形参</td>
+<td align="center">void 方法名（形参列表）{}</td>
+<td align="center">返回值的类型 方法名（形参列表）{}</td>
+</tr>
+</tbody></table>
+<ul>
+<li><strong>方法的调用</strong>：方法通过方法名被调用，且只有被调用才会执行。</li>
+<li><strong>方法调用的过程分析</strong><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913234702684.png" srcset="/img/loading.gif" lazyload></li>
+<li><strong>注 意：</strong><ul>
+<li>方法被调用一次，就会执行一次</li>
+<li>没有具体返回值的情况，返回值类型用关键字void表示，那么方法体中可以不必使用return语句。如果使用，仅用来结束方法。</li>
+<li>定义方法时，方法的结果应该返回给调用者，交由调用者处理。</li>
+<li>方法中只能调用方法或属性，不可以在方法内部定义方法。</li>
+</ul>
+</li>
+</ul>
+<p><strong><font align = center>练习3</font></strong></p>
+<ol>
+<li><p>要求：</p>
+<p>(1)创建Person类的对象，设置该对象的name、创建一个Person类，其定义如下：age和sex属性，调用study方法，输出字符串“studying”，调用showAge()方法显示age值，调用addAge()方法给对象的age属性值增加2岁。</p>
+<p>(2)创建第二个对象，执行上述操作，体会同一个类的不同对象之间的关系。</p>
+</li>
+<li><p>利用面向对象的编程方法，设计类Circle计算圆的面积。</p>
+</li>
+<li><ol>
+<li>编写程序，声明一个method方法，在方法中打印一个10<em>8 的</em>型矩形，在main方法中调用该方法。</li>
+<li>改上一个程序，在method方法中，除打印一个10<em>8的</em>型矩形外，再计算该矩形的面积，并将其作为方法返回值。在main方法中调用该方法，接收返回的面积值并打印。</li>
+<li>修改上一个程序，在method方法提供m和n两个参数，方法中打印一个m<em>n的</em>型矩形，并计算该矩形的面积， 将其作为方法返回值。在main方法中调用该方法，接收返回的面积值并打印。</li>
+</ol>
+</li>
+<li><p>对象数组题目：定义类Student，包含三个属性：学号number(int)，年级state(int)，成绩score(int)。 创建20个学生对象，学号为1到20，年级和成绩都由随机数确定。</p>
+<p>问题一：打印出3年级(state值为3）的学生信息。<br>问题二：使用冒泡排序按学生成绩排序，并遍历所有学生信息</p>
+<p>提示：</p>
+<ol>
+<li>生成随机数：Math.random()，返回值类型double;</li>
+<li>四舍五入取整：Math.round(double d)，返回值类型long。</li>
+</ol>
+</li>
+<li><p>声明一个日期类型MyDate：有属性：年year,月month，日day。创建2个日期对象，分别赋值为：你的出生日期，你对象的出生日期，并显示信息。</p>
+</li>
+</ol>
+<p><strong>对象数组的内存解析</strong></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235214180.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235238027.png" srcset="/img/loading.gif" lazyload></p>
+<hr>
+<hr>
 <h2 id="6、再谈方法"><a href="#6、再谈方法" class="headerlink" title="6、再谈方法"></a>6、再谈方法</h2><hr>
 <h2 id="7、OOP特征一：封装与隐藏"><a href="#7、OOP特征一：封装与隐藏" class="headerlink" title="7、OOP特征一：封装与隐藏"></a>7、OOP特征一：封装与隐藏</h2><hr>
 <h2 id="8、类的成员之三：构造器"><a href="#8、类的成员之三：构造器" class="headerlink" title="8、类的成员之三：构造器"></a>8、类的成员之三：构造器</h2><hr>
