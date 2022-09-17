@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917133453005.png">
 <meta property="article:published_time" content="2022-09-17T05:29:47.000Z">
-<meta property="article:modified_time" content="2022-09-17T05:36:02.137Z">
+<meta property="article:modified_time" content="2022-09-17T05:44:59.660Z">
 <meta property="article:author" content="Yuki">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917133453005.png">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          678 字
+          1.6k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          6 分钟
+          14 分钟
         
       </span>
     
@@ -279,6 +279,26 @@
 
 
 
+
+
+<h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><ol>
+<li><p>使用冒泡排序，实现如下的数组从小到大排序。<code>int[] arr = new int[]&#123;34,5,22,-98,6,-76,0,-3&#125;;</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[]&#123;<span class="hljs-number">34</span>,<span class="hljs-number">5</span>,<span class="hljs-number">22</span>,-<span class="hljs-number">98</span>,<span class="hljs-number">6</span>,-<span class="hljs-number">76</span>,<span class="hljs-number">0</span>,-<span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;i &lt; arr.length - <span class="hljs-number">1</span>;i++)&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;j &lt; arr.length - <span class="hljs-number">1</span> - i;j++)&#123;<br>		<span class="hljs-keyword">if</span>(arr[j] &gt; arr[j + <span class="hljs-number">1</span>])&#123;<br>			<span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> arr[j];<br>			arr[j] = arr[j + <span class="hljs-number">1</span>];<br>			arr[j + <span class="hljs-number">1</span>] = temp;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>快排时间复杂度：O(nlogn)<br>冒泡时间复杂度：O(n^2)<br>堆排序、归并排序</p>
+</li>
+<li><p>反转上面的数组。请代码实现</p>
+</li>
+<li><p>复制上述数组，得到一个新的数组</p>
+</li>
+<li><p>使用线性查找，从上述数组中查找22是否存在。存在，返回所在位置的索引。不存在，输出提示信息。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">dest</span> <span class="hljs-operator">=</span> <span class="hljs-number">22</span>;<br><span class="hljs-type">boolean</span> <span class="hljs-variable">isFlag</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<span class="hljs-keyword">for</span>(<br><span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;i&lt;arr.length;i++)<br>&#123;<br><br><span class="hljs-keyword">if</span> (dest == arr[i]) &#123;<br>sysout(i);<br>isFlag = <span class="hljs-literal">false</span>;<br><span class="hljs-keyword">break</span>;<br>&#125;<br>&#125;<br><br><span class="hljs-keyword">if</span>(isFlag)<br>&#123;<br>sysout(<span class="hljs-string">&quot;未找到&quot;</span>);<br>&#125;<br><br>或<br><br><span class="hljs-type">int</span> <span class="hljs-variable">dest</span> <span class="hljs-operator">=</span> <span class="hljs-number">22</span>;<span class="hljs-keyword">for</span>(<br><span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;i&lt;arr.length;i++)<br>&#123;<br><br><span class="hljs-keyword">if</span> (dest == arr[i]) &#123;<br>sysout(i);<br><span class="hljs-keyword">break</span>;<br>&#125;<br>&#125;<br><br><span class="hljs-keyword">if</span>(i==arr.length)&#123;<br>sysout(<span class="hljs-string">&quot;未找到&quot;</span>);<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>数组中常见的异常有哪些？请举例说明</p>
+<p>ArrayIndexOutOfBoundsException:数组角标越界异常：<br>合理范围：[0,arr.length -1]<br>越界：arr[-1],arr[arr.length]</p>
+<p>NullPointerException:空指针异常<br><code>int[] arr = null;</code><br><code>arr[0];</code></p>
+</li>
+</ol>
 <h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><ol>
 <li><p>面向对象思想编程内容的三条主线分别是什么</p>
 <ul>
