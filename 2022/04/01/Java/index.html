@@ -195,6 +195,12 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913234702684.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235214180.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235238027.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917223630837.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224702945.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224743263.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224810408.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224931763.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224952495.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202222.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202322.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202340.png">
@@ -203,7 +209,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202659.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202738.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-09-17T05:18:24.230Z">
+<meta property="article:modified_time" content="2022-09-17T14:49:57.803Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -400,7 +406,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          36k 字
+          39k 字
         
       </span>
     
@@ -411,7 +417,7 @@
         
         
         
-          304 分钟
+          323 分钟
         
       </span>
     
@@ -1627,7 +1633,71 @@
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220913235238027.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
 <hr>
-<h2 id="6、再谈方法"><a href="#6、再谈方法" class="headerlink" title="6、再谈方法"></a>6、再谈方法</h2><hr>
+<h2 id="6、再谈方法"><a href="#6、再谈方法" class="headerlink" title="6、再谈方法"></a>6、再谈方法</h2><h4 id="1、方法的重载"><a href="#1、方法的重载" class="headerlink" title="1、方法的重载"></a>1、方法的重载</h4><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917223630837.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PrintStream</span> &#123;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">(<span class="hljs-type">int</span> i)</span> &#123;……&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">(<span class="hljs-type">float</span> f)</span> &#123;……&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">print</span><span class="hljs-params">(String s)</span> &#123;……&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		print(<span class="hljs-number">3</span>);<br>		print(<span class="hljs-number">1.2f</span>);<br>		print(<span class="hljs-string">&quot;hello!&quot;</span>);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<ul>
+<li><p>使用重载方法，可以为编程带来方便。</p>
+</li>
+<li><p>例如，System.out.println()方法就是典型的重载方法，其内部的声明形式如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">byte</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">short</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">int</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">long</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">float</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">double</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">char</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">(<span class="hljs-type">double</span> x)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">println</span><span class="hljs-params">()</span><br>……<br></code></pre></td></tr></table></figure>
+
+<p><strong>练习4</strong></p>
+<ol>
+<li><p>判 断：</p>
+<p>与void show(int a,char b,double c){}构成重载的有：<br>a) void show(int x,char y,double z){} &#x2F;&#x2F; no<br>b) int show(int a,double c,char b){} &#x2F;&#x2F; yes<br>c) void show(int a,double c,char b){} &#x2F;&#x2F; yes<br>d) boolean show(int c,char b){} &#x2F;&#x2F; yes<br>e) void show(double c){} &#x2F;&#x2F; yes<br>f) double show(int x,char y,double z){} &#x2F;&#x2F; no<br>g) void shows(){double c} &#x2F;&#x2F; no</p>
+</li>
+<li><p>编写程序，定义三个重载方法并调用。方法名为mOL。</p>
+<ul>
+<li><p>三个方法分别接收一个int参数、两个int参数、一个字符串参数。分别执行平方运算并输出结果，相乘并输出结果，输出字符串信息。</p>
+</li>
+<li><p>在主类的main ()方法中分别用参数区别调用三个方法。</p>
+</li>
+</ul>
+</li>
+<li><p>定义三个重载方法max()，第一个方法求两个int值中的最大值，第二个方法求两个double值中的最大值，第三个方法求三个double值中的最大值，并分别调用三个方法。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="2、可变形参的方法"><a href="#2、可变形参的方法" class="headerlink" title="2、可变形参的方法"></a>2、可变形参的方法</h4><p><strong>JavaSE 5.0</strong> 中提供了<strong>Varargs</strong>(variable number of arguments)机制，允许直接定义能和多个实参相匹配的形参。从而，可以用一种更简单的方式，来传递个数可变的实参。</p>
+<ul>
+<li><p>JDK 5.0以前：采用数组形参来定义方法，传入多个同一类型变量<font color = red><code>public static void test(int a ,String[] books);</code></font></p>
+</li>
+<li><p>JDK5.0：采用可变个数形参来定义方法，传入多个同一类型变量<font color = red><code>public static void test(int a ,String…books);</code></font></p>
+</li>
+</ul>
+<p><strong>说明：</strong></p>
+<ol>
+<li>声明格式：<font color = red >方法名(参数的类型名 …参数名)</font></li>
+<li>可变参数：方法参数部分指定类型的参数个数是可变多个：0个，1个或多个</li>
+<li>可变个数形参的方法与同名的方法之间，彼此构成重载</li>
+<li>可变参数方法的使用与方法参数部分使用数组是一致的</li>
+<li>方法的参数部分有可变形参，需要放在形参声明的最后</li>
+<li>在一个方法的形参位置，最多只能声明一个可变个数形参</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">(String[] msg)</span>&#123;<br>System.out.println(“含字符串数组参数的test方法 <span class="hljs-string">&quot;);</span><br><span class="hljs-string">&#125;</span><br><span class="hljs-string">public void test1(String book)&#123;</span><br><span class="hljs-string">System.out.println(“****与可变形参方法构成重载的test1方法****&quot;</span>);<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test1</span><span class="hljs-params">(String ... books)</span>&#123;<br>System.out.println(<span class="hljs-string">&quot;****形参长度可变的test1方法****&quot;</span>);<br>&#125;<br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span>&#123;<br><span class="hljs-type">TestOverload</span> <span class="hljs-variable">to</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">TestOverload</span>();<br><span class="hljs-comment">//下面两次调用将执行第二个test方法</span><br>to.test1();<br>to.test1(<span class="hljs-string">&quot;aa&quot;</span> , <span class="hljs-string">&quot;bb&quot;</span>);<br><span class="hljs-comment">//下面将执行第一个test方法</span><br>to.test(<span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[]&#123;<span class="hljs-string">&quot;aa&quot;</span>&#125;);<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<h4 id="3、方法参数的值传递机制"><a href="#3、方法参数的值传递机制" class="headerlink" title="3、方法参数的值传递机制"></a><font color  =red>3、方法参数的值传递机制</font></h4><ul>
+<li><p>方法，必须由其所在类或对象调用才有意义。若方法含有参数：</p>
+<ul>
+<li>形参：方法声明时的参数</li>
+<li>实参：方法调用时实际传给形参的参数值</li>
+</ul>
+</li>
+<li><p><font color = red >Java的实参值如何传入方法呢？</font></p>
+<p>Java里方法的参数传递方式只有一种：<font color = red >值传递</font>。 即将实际参数值的副本（复制品）传入方法内，而参数本身不受影响。</p>
+<ul>
+<li>形参是基本数据类型：将实参基本数据类型变量的“数据值”传递给形参</li>
+<li>形参是引用数据类型：将实参引用数据类型变量的“地址值”传递给形参</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224702945.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224743263.png" srcset="/img/loading.gif" lazyload><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224810408.png" srcset="/img/loading.gif" lazyload><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224931763.png" srcset="/img/loading.gif" lazyload><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917224952495.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ul>
+<h4 id="4、递归方法"><a href="#4、递归方法" class="headerlink" title="4、递归方法"></a>4、递归方法</h4><hr>
 <h2 id="7、OOP特征一：封装与隐藏"><a href="#7、OOP特征一：封装与隐藏" class="headerlink" title="7、OOP特征一：封装与隐藏"></a>7、OOP特征一：封装与隐藏</h2><hr>
 <h2 id="8、类的成员之三：构造器"><a href="#8、类的成员之三：构造器" class="headerlink" title="8、类的成员之三：构造器"></a>8、类的成员之三：构造器</h2><hr>
 <h2 id="9、关键字：this"><a href="#9、关键字：this" class="headerlink" title="9、关键字：this"></a>9、关键字：this</h2><hr>
