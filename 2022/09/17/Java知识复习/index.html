@@ -23,12 +23,13 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Java知识复习">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917133453005.png">
 <meta property="article:published_time" content="2022-09-17T05:29:47.000Z">
-<meta property="article:modified_time" content="2022-09-17T05:44:59.660Z">
+<meta property="article:modified_time" content="2022-09-17T06:20:09.048Z">
 <meta property="article:author" content="Yuki">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917133453005.png">
+<meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png">
   
   
   
@@ -220,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          5k 字
         
       </span>
     
@@ -231,7 +232,7 @@
         
         
         
-          14 分钟
+          42 分钟
         
       </span>
     
@@ -277,10 +278,129 @@
                 <p>Java知识复习</p>
 <span id="more"></span>
 
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><ol>
+<li><p>JDK,JRE,JVM三者之间的关系，以及JDK、JRE包含的主要结构有哪些</p>
+<p>JDK &#x3D; JRE + Java的开发工具（javac.exe,java.exe,javadoc.exe）<br>JRD &#x3D; JVM + Java核心类库</p>
+</li>
+<li><p>为什么要配置path环境变量？如何配置？</p>
+<p>JAVA_HOME &#x3D; bin的上一层目录<br>path &#x3D; %JAVA_HOME%\bin</p>
+</li>
+<li><p>常用的几个命令行操作都有哪些？(至少4个)</p>
+<p><code>cd</code> <code>md</code> <code>rd</code> <code>del</code> <code>cd..</code> <code>cd/</code></p>
+</li>
+<li><p>编译和运行</p>
+<p>编译：javac ClassName.java<br>运行：java ClassName</p>
+</li>
+</ol>
+<hr>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><ol>
+<li><p>标识符的命名规则有哪些？不遵守，编译不通过</p>
+<ul>
+<li>由26个英文字母大小写，0-9 ，_或 $ 组成</li>
+<li>不可以以数字开头</li>
+<li>不可以使用关键字和保留字，但能包含关键字和保留字。</li>
+<li>Java中严格区分大小写，长度无限制。</li>
+<li>标识符不能包含空格。</li>
+</ul>
+</li>
+<li><p>标识符的命名规范有哪些？不遵守，编译运行都可以通过</p>
+<p>包名:xxxyyyzzz</p>
+<p>类名、接口名：XxxYyyZzz</p>
+<p>变量名、方法名：xxxYyyZzz</p>
+<p>常量名：XXX_YYY_ZZZ</p>
+</li>
+<li><p>Java变量按照数据类型怎么划分？并指出Java的基本数据类型有哪8种，并指出各自占用的内存空间大小</p>
+<p>byte short int long</p>
+<p>char</p>
+<p>float double</p>
+<p>boolean</p>
+<p>引用数据类型：类、接口、数组</p>
+</li>
+<li><p>说明基本数据类型变量之间自动类型提升的运算规则。</p>
+<p>byte、short、char→int →long →float →double </p>
+</li>
+<li><p>说明基本数据类型变量之间强制类型转换的使用规则和强转可能</p>
+<p>容量大→容量小</p>
+<p>使用强转符：()</p>
+<p>精度损失。</p>
+<hr>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><ol>
+<li><p>“&amp;”和“&amp;&amp;”的异同</p>
+</li>
+<li><p>程序输出，结果为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">OperatorTest</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">boolean</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<br>		<span class="hljs-type">boolean</span> <span class="hljs-variable">y</span> <span class="hljs-operator">=</span> <span class="hljs-literal">false</span>;<br>		<span class="hljs-type">short</span> <span class="hljs-variable">z</span> <span class="hljs-operator">=</span> <span class="hljs-number">40</span>;<br>		<span class="hljs-keyword">if</span> ((z++ == <span class="hljs-number">40</span>) &amp;&amp; (y = <span class="hljs-literal">true</span>)) &#123;<br>			z++;<br>		&#125;<br>		<span class="hljs-keyword">if</span> ((x = <span class="hljs-literal">false</span>) || (++z == <span class="hljs-number">43</span>)) &#123;<br>			z++;<br>		&#125;<br>		System.out.println(<span class="hljs-string">&quot;z = &quot;</span> + z);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>定义三个int型变量并赋值，使用三元运算符或者if-else获取这三个数中的较大数的实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">num1</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>,num2 = <span class="hljs-number">21</span>,num3 = -<span class="hljs-number">21</span>;<br><br><span class="hljs-type">int</span> max;<br><span class="hljs-keyword">if</span>(num1 &gt;= num2 &amp;&amp; num1 &gt;= num3)&#123;<br>	max = num1;<br>&#125;<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(num2 &gt;= num1 &amp;&amp; num2 &gt;= num3)&#123;<br>	max = num2;<br>&#125;<span class="hljs-keyword">else</span>&#123;<br>	max = num3;<br>&#125;<br><br>System.out.println(<span class="hljs-string">&quot;三个数中的最大值为：&quot;</span> + max);<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>编写程序，声明2个double型变量并赋值。判断第一个数大于10.0，且第2个数小于20.0，打印两数之和。否则，打印两数的乘积。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">double</span> <span class="hljs-variable">d1</span> <span class="hljs-operator">=</span> <span class="hljs-number">12.3</span>;<br><span class="hljs-type">double</span> <span class="hljs-variable">d2</span> <span class="hljs-operator">=</span> <span class="hljs-number">32.1</span>;<br><span class="hljs-keyword">if</span>(d1 &gt; <span class="hljs-number">10</span> &amp;&amp; d2 &lt; <span class="hljs-number">20</span>)&#123;<br>&#125;<span class="hljs-keyword">else</span>&#123;	<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>交换两个变量值的代码的实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;北京&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;南京&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> s1;<br>         s1 = s2;<br>         s2 = temp;<br></code></pre></td></tr></table></figure></li>
+</ol>
+<hr>
+</li>
+</ol>
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><ol>
+<li><p>switch后面使用的表达式可以是哪些数据类型的。</p>
+<p>byte 、 short 、char 、int 、枚举类型变量、String类型。</p>
+</li>
+<li><p>使用switch语句改写下列if语句：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br><span class="hljs-keyword">if</span>(a==<span class="hljs-number">1</span>)<br>x+=<span class="hljs-number">5</span>;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a==<span class="hljs-number">2</span>)<br>x+=<span class="hljs-number">10</span>;<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a==<span class="hljs-number">3</span>)<br>x+=<span class="hljs-number">16</span>;<br><span class="hljs-keyword">else</span>		<br>x+=<span class="hljs-number">34</span>;<br></code></pre></td></tr></table></figure>
 
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">x</span> <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br><span class="hljs-keyword">switch</span>(a)&#123;<br><span class="hljs-keyword">case</span> <span class="hljs-number">1</span>:<br>	x+=<span class="hljs-number">5</span>;<br>	<span class="hljs-keyword">break</span>;<br><span class="hljs-keyword">case</span> <span class="hljs-number">2</span>:<br>	x+=<span class="hljs-number">10</span>;<br>	<span class="hljs-keyword">break</span>;<br><span class="hljs-keyword">case</span> <span class="hljs-number">3</span>:<br>	x+=<span class="hljs-number">16</span>;<br>	<span class="hljs-keyword">break</span>;<br><span class="hljs-keyword">default</span>:<br>	x+=<span class="hljs-number">34</span>;<br>	<span class="hljs-comment">//break;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>谈谈你对三元运算符、if-else和switch-case结构使用场景的理解</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> c;<br><span class="hljs-keyword">if</span>(a != b)&#123;<br>	c = a;<br>&#125;<span class="hljs-keyword">else</span>&#123;<br>	c = b;<br>&#125;<br><span class="hljs-type">int</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> (a != b)? a : b;<br><span class="hljs-type">int</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>如何从控制台获取String和int型的变量，并输出？使用代码实现</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Scanner;<br><span class="hljs-type">Scanner</span> <span class="hljs-variable">scan</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><span class="hljs-type">String</span> <span class="hljs-variable">info</span> <span class="hljs-operator">=</span> scan.next(); <br>   <span class="hljs-type">int</span> <span class="hljs-variable">id</span> <span class="hljs-operator">=</span> scan.nextInt();<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>使用for循环遍历100以内的奇数，并计算所有的奇数的和并输出。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;i &lt;= <span class="hljs-number">100</span>;i++)&#123;<br>	<span class="hljs-keyword">if</span>(i % <span class="hljs-number">2</span> != <span class="hljs-number">0</span>)&#123;<br>		Sysout(i);<br>		sum += i;<br>	&#125;<br>&#125;<br>syout(sum);<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><ol>
+<li><p>循环结构是如何最后退出循环的，有哪些不同的情况请说明。</p>
+<ol>
+<li>循环条件返回false</li>
+<li>在循环体内，一旦执行到break，跳出循环</li>
+</ol>
+</li>
+<li><p>指出如下程序输出的结果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java">label: <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">4</span>; i++) &#123;<br>			<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; j &lt;= <span class="hljs-number">10</span>; j++) &#123;<br>				<span class="hljs-keyword">if</span> (j % <span class="hljs-number">4</span> == <span class="hljs-number">0</span>) &#123;<br>					<span class="hljs-keyword">continue</span> label;<br>				&#125;<br>				System.out.print(j);<br>			&#125;<br>			System.out.println();<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<p>正确结果：123123123123</p>
+</li>
+<li><p>一个数如果恰好等于它的因子之和，这个数就称为”完数”。例如6&#x3D;1＋2＋3。编程 找出1000以内的所有完数。（因子：除去这个数本身的其它约数）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//int factor = 0;</span><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;i &lt;= <span class="hljs-number">1000</span>;i++)&#123;<br>	<span class="hljs-type">int</span> <span class="hljs-variable">factor</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;	<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;j &lt;= i/<span class="hljs-number">2</span>;j++)&#123;<br>		<span class="hljs-keyword">if</span>(i % j == <span class="hljs-number">0</span>)&#123;<br>			factor += j;<br>		&#125;<br>	&#125;<br>	<span class="hljs-keyword">if</span>(i == factor)&#123;<br>		System.out.println(i);<br>	&#125;<br>	<span class="hljs-comment">//重置factor</span><br>	<span class="hljs-comment">//factor = 0;</span><br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>说明break和continue使用上的相同点和不同点</p>
+<p>break:s witch-case 和 循环结构（结束当前循环），其后不可以声明执行语句</p>
+<p>continue: 循环结构（结束当次循环），其后不可以声明执行语句</p>
+</li>
+<li><p>从控制台输出如下结构：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs java">******<br>*****<br>****	<br>***	<br>**	<br>*<br>外层循环控制行数<br>内层循环控制列数<br><br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;i &lt;= <span class="hljs-number">6</span>;i++)&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;j &lt;= <span class="hljs-number">7</span> - i;j++)&#123;<br>		System.out.print(<span class="hljs-string">&quot;*&quot;</span>);<br>	&#125;<br><br>	System.out.println();<br>	<br>&#125;<br><br>或<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;i &lt; <span class="hljs-number">6</span>;i++)&#123;<br>	<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;j &lt; <span class="hljs-number">6</span> - i;j++)&#123;<br>		System.out.print(<span class="hljs-string">&quot;*&quot;</span>);<br>	&#125;<br><br>	System.out.println();<br>&#125;<br></code></pre></td></tr></table></figure>
 
+<hr>
+</li>
+</ol>
+<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><ol>
+<li><p>写出一维数组初始化的两种方式</p>
+</li>
+<li><p>写出二维数组初始化的两种方式</p>
+</li>
+<li><p>如何遍历如下的二维数组<code>int[] arr = new int[][]&#123;&#123;1,2,3&#125;,&#123;4,5&#125;,&#123;6,7,8&#125;&#125;;</code></p>
+</li>
+<li><p>不同类型的一维数组元素的默认初始化值各是多少</p>
+</li>
+<li><p>一维数组的内存解析：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">String[] strs = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[<span class="hljs-number">5</span>];<br>strs[<span class="hljs-number">2</span>] = “Tom”;<br>strs = <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>[<span class="hljs-number">3</span>];<br></code></pre></td></tr></table></figure>
 
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ol>
+<hr>
 <h2 id="7"><a href="#7" class="headerlink" title="7"></a>7</h2><ol>
 <li><p>使用冒泡排序，实现如下的数组从小到大排序。<code>int[] arr = new int[]&#123;34,5,22,-98,6,-76,0,-3&#125;;</code></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[]&#123;<span class="hljs-number">34</span>,<span class="hljs-number">5</span>,<span class="hljs-number">22</span>,-<span class="hljs-number">98</span>,<span class="hljs-number">6</span>,-<span class="hljs-number">76</span>,<span class="hljs-number">0</span>,-<span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;i &lt; arr.length - <span class="hljs-number">1</span>;i++)&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;j &lt; arr.length - <span class="hljs-number">1</span> - i;j++)&#123;<br>		<span class="hljs-keyword">if</span>(arr[j] &gt; arr[j + <span class="hljs-number">1</span>])&#123;<br>			<span class="hljs-type">int</span> <span class="hljs-variable">temp</span> <span class="hljs-operator">=</span> arr[j];<br>			arr[j] = arr[j + <span class="hljs-number">1</span>];<br>			arr[j + <span class="hljs-number">1</span>] = temp;<br>		&#125;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -297,6 +417,7 @@
 <li><p>数组中常见的异常有哪些？请举例说明</p>
 <p>ArrayIndexOutOfBoundsException:数组角标越界异常：<br>合理范围：[0,arr.length -1]<br>越界：arr[-1],arr[arr.length]</p>
 <p>NullPointerException:空指针异常<br><code>int[] arr = null;</code><br><code>arr[0];</code></p>
+<hr>
 </li>
 </ol>
 <h2 id="8"><a href="#8" class="headerlink" title="8"></a>8</h2><ol>
@@ -338,6 +459,7 @@
 </ul>
 </li>
 </ol>
+<hr>
 
                 
               </div>
