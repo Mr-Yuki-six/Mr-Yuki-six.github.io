@@ -222,7 +222,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202659.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202738.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-09-19T10:07:21.798Z">
+<meta property="article:modified_time" content="2022-09-19T13:37:55.458Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -430,7 +430,7 @@
         
         
         
-          333 分钟
+          338 分钟
         
       </span>
     
@@ -1718,7 +1718,9 @@
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917225833072.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917225851953.png" srcset="/img/loading.gif" lazyload><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917225901936.png" srcset="/img/loading.gif" lazyload></p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917225943171.png" srcset="/img/loading.gif" lazyload></p>
-</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> sep19;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Circle</span> &#123;<br>	<span class="hljs-type">double</span> radius;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-type">double</span> <span class="hljs-title function_">findArea</span><span class="hljs-params">()</span> &#123;<br>		<span class="hljs-keyword">return</span> radius * radius * Math.PI;<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> sep19;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PassObject</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-type">PassObject</span> <span class="hljs-variable">ob</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">PassObject</span>();<br>		<span class="hljs-type">Circle</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Circle</span>();<br>		ob.printAreas(c, <span class="hljs-number">5</span>);<br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">printAreas</span><span class="hljs-params">(Circle c, <span class="hljs-type">int</span> time)</span> &#123;<br>		System.out.println(<span class="hljs-string">&quot;Radious&quot;</span> + <span class="hljs-string">&quot;\t&quot;</span> + <span class="hljs-string">&quot;Area&quot;</span>);<br>		<span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>; i &lt;= time; i++) &#123;<br>			c.radius = i;<br>			System.out.println((<span class="hljs-type">double</span>) i + <span class="hljs-string">&quot;\t&quot;</span> + c.findArea());<br>		&#125;<br>		System.out.println(<span class="hljs-string">&quot;now radious is:&quot;</span> + (time+<span class="hljs-number">1</span>));<br><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="4、递归-recursion-方法"><a href="#4、递归-recursion-方法" class="headerlink" title="4、递归(recursion)方法"></a>4、递归(recursion)方法</h4><ul>
 <li><p><font color = red >递归方法：一个方法体内调用它自身。</font></p>
