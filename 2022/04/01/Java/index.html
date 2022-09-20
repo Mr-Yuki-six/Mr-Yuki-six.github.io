@@ -214,6 +214,12 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917230137288.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917230156065.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917230216500.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155559576.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155738138.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155824824.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155908918.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155922683.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920160014271.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202222.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202322.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202340.png">
@@ -222,7 +228,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202659.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202738.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-09-19T15:00:58.117Z">
+<meta property="article:modified_time" content="2022-09-20T08:00:25.707Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -430,7 +436,7 @@
         
         
         
-          348 分钟
+          352 分钟
         
       </span>
     
@@ -1740,7 +1746,38 @@
 </li>
 </ul>
 <hr>
-<h2 id="7、OOP特征一：封装与隐藏"><a href="#7、OOP特征一：封装与隐藏" class="headerlink" title="7、OOP特征一：封装与隐藏"></a>7、OOP特征一：封装与隐藏</h2><hr>
+<h2 id="7、OOP特征一：封装与隐藏"><a href="#7、OOP特征一：封装与隐藏" class="headerlink" title="7、OOP特征一：封装与隐藏"></a>7、OOP特征一：封装与隐藏</h2><ul>
+<li>为什么需要封装？封装的作用和含义？<ul>
+<li>我要用洗衣机，只需要按一下开关和洗涤模式就可以了。有必要了解洗衣机内部的结构吗？有必要碰电动机吗？</li>
+<li>我要开车，…</li>
+</ul>
+</li>
+<li>我们程序设计追求“高内聚，低耦合”。<ul>
+<li>高内聚 ：类的内部数据操作细节自己完成，不允许外部干涉；</li>
+<li>低耦合 ：仅对外暴露少量的方法用于使用。</li>
+</ul>
+</li>
+<li>隐藏对象内部的复杂性，只对外公开简单的接口。便于外界调用，从而提高系统的可扩展性、可维护性。通俗的说，<font color = red >把该隐藏的隐藏起来，该暴露<br>的暴露出来。这就是封装性的设计思想。</font></li>
+</ul>
+<p>使用者对类内部定义的属性(对象的成员变量)的直接操作会导致数据的错误、混乱或安全性问题。</p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155559576.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>信息的封装和隐藏</strong></p>
+<p>Java中通过将数据声明为私有的(private)，再提供公共的（public）方法:<font color = red >getXxx()和setXxx()</font>实现对该属性的操作，以实现下述目的：</p>
+<ul>
+<li><font color = red >隐藏</font>一个类中不需要对外提供的实现细节；</li>
+<li>使用者只能通过事先定制好的<font color = red >方法来访问数据</font>，可以方便地加入控制逻辑，限制对属性的不合理操作；</li>
+<li>便于修改，增强代码的可维护性；</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155738138.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155824824.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155908918.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920155922683.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>练习8</strong></p>
+<ol>
+<li><p>创建程序,在其中定义两个类：Person和PersonTest类。定义如下：用setAge()设置人的合法年龄(0~130)，用getAge()返回人的年龄。在 PersonTest 类 中 实 例 化 Person 类 的 对 象 b ， 调 用 setAge() 和getAge()方法，体会Java的封装性。<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220920160014271.png" srcset="/img/loading.gif" lazyload></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">   <br></code></pre></td></tr></table></figure></li>
+</ol>
+<hr>
 <h2 id="8、类的成员之三：构造器"><a href="#8、类的成员之三：构造器" class="headerlink" title="8、类的成员之三：构造器"></a>8、类的成员之三：构造器</h2><hr>
 <h2 id="9、关键字：this"><a href="#9、关键字：this" class="headerlink" title="9、关键字：this"></a>9、关键字：this</h2><hr>
 <h2 id="10、关键字：package、import"><a href="#10、关键字：package、import" class="headerlink" title="10、关键字：package、import"></a>10、关键字：package、import</h2><hr>
