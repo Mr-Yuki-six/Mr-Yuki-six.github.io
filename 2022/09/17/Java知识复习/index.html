@@ -25,9 +25,8 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917133453005.png">
-<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/clip_image002.jpg">
 <meta property="article:published_time" content="2022-09-17T05:29:47.000Z">
-<meta property="article:modified_time" content="2022-09-22T14:21:00.910Z">
+<meta property="article:modified_time" content="2022-09-22T14:53:57.047Z">
 <meta property="article:author" content="Yuki">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png">
@@ -222,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          5.4k 字
+          6.2k 字
         
       </span>
     
@@ -233,7 +232,7 @@
         
         
         
-          45 分钟
+          52 分钟
         
       </span>
     
@@ -471,31 +470,11 @@
 </li>
 <li><p>引用数据类型：地址值 (含变量的数据类型)</p>
 </li>
-<li><pre><code class="java">Person p1 =  new Person();  eat();age
-User u1 = p1;//编译错误    (逆向思维、反证法)
-u1.eat()  u1.age
-</code></pre>
-</li>
+<li><p>&#96;&#96;&#96;java<br>Person p1 &#x3D;  new Person();  eat();age<br>User u1 &#x3D; p1;&#x2F;&#x2F;编译错误    (逆向思维、反证法)<br>u1.eat()  u1.age</p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs csharp"><br><span class="hljs-number">3.</span> 成员变量和局部变量在声明的位置上、是否有默认初始化值上、是否能有权限修饰符修饰上、内存分配的位置上有何不同？<br><br><span class="hljs-number">4.</span> 谈谈<span class="hljs-keyword">return</span>关键字的使用<br><br>   <span class="hljs-number">1.</span> 结束方法<br>   <span class="hljs-number">2.</span> 针对于有返回值的方法，<span class="hljs-keyword">return</span> + 返回数据<br><br><span class="hljs-number">5.</span>  提供如下代码的内存解析<br><br>   ![](https:<span class="hljs-comment">//yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/clip_image002.jpg)</span><br><br>   <span class="hljs-number">1.</span>  内存结构：栈（局部变量）、堆(<span class="hljs-keyword">new</span>出来的结构:对象(非<span class="hljs-keyword">static</span>成员变量)、数组)<br>   <span class="hljs-number">2.</span> 变量：成员变量 vs 局部变量（方法内、方法形参、构造器内、构造器形参、代码块内）<br><br>----------------<br><br><span class="hljs-meta">## 10</span><br><br><span class="hljs-number">1.</span> 构造器的作用是什么？使用中有哪些注意点(&gt;=<span class="hljs-number">3</span>条)<br><br>   <span class="hljs-number">1.</span> 创建对象<br>   <span class="hljs-number">2.</span> 初始化对象结构<br><br><span class="hljs-number">2.</span> 关于类的属性的赋值，有几种赋值的方式。谈谈赋值的先后<br><br>   默认初始化-显式初始化-构造器中初始化-对象.方法 或 对象.属性 给属性赋值<br><br><span class="hljs-number">3.</span> <span class="hljs-keyword">this</span>关键字可以用来调用哪些结构，简单说明一下其使用。<br><br>   <span class="hljs-keyword">this</span>:属性、方法、构造器<br><br>   <span class="hljs-keyword">this</span>:理解为当前对象，当前正在创建的对象<br><br><span class="hljs-number">4.</span> Java中目前学习涉及到的四种权限修饰符都有什么？并说明各自的权限范围<br><br>   <span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> age;<br><br>   <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">eat</span>()</span>&#123;&#125;<br><br><span class="hljs-number">5.</span> 创建Circle类，提供私有的radius属性，提供相应的<span class="hljs-keyword">get</span>和<span class="hljs-keyword">set</span>方法，提供求圆面积的方法。<br><br>```java<br><span class="hljs-keyword">class</span> <span class="hljs-title">Circle</span>&#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-built_in">double</span> radius;<br>    <br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setRadius</span>(<span class="hljs-params"><span class="hljs-built_in">double</span> radius</span>)</span>&#123;<br>        <span class="hljs-keyword">if</span>(radius &gt; <span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">this</span>.radius = radius;<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">double</span> <span class="hljs-title">getRadius</span>()</span>&#123;<br>        <span class="hljs-keyword">return</span> radius;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-built_in">double</span> <span class="hljs-title">getArea</span>()</span>&#123;<br>        <span class="hljs-keyword">return</span> Math.PI * radius * radius;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
-<li><p>成员变量和局部变量在声明的位置上、是否有默认初始化值上、是否能有权限修饰符修饰上、内存分配的位置上有何不同？</p>
-</li>
-<li><p>谈谈return关键字的使用</p>
-<ol>
-<li>结束方法</li>
-<li>针对于有返回值的方法，return + 返回数据</li>
 </ol>
-</li>
-<li><p>提供如下代码的内存解析</p>
-</li>
-</ol>
-<p>   <img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/clip_image002.jpg" srcset="/img/loading.gif" lazyload></p>
-<ol>
-<li>内存结构：栈（局部变量）、堆(new出来的结构:对象(非static成员变量)、数组)</li>
-<li>变量：成员变量 vs 局部变量（方法内、方法形参、构造器内、构造器形参、代码块内）</li>
-</ol>
-<hr>
-<h2 id="10"><a href="#10" class="headerlink" title="10"></a>10</h2><p>1. </p>
 
                 
               </div>
