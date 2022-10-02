@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/clip_image002.jpg">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221001175640731.png">
 <meta property="article:published_time" content="2022-09-17T05:29:47.000Z">
-<meta property="article:modified_time" content="2022-10-01T09:57:04.062Z">
+<meta property="article:modified_time" content="2022-10-02T07:53:03.724Z">
 <meta property="article:author" content="Yuki">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.3k 字
+          7k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          53 分钟
+          59 分钟
         
       </span>
     
@@ -539,6 +539,85 @@
 </li>
 <li><p>在下面的代码结构中：使用关键字：this,super;方法的重写;继承;</p>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221001175640731.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+</ol>
+<h2 id="13"><a href="#13" class="headerlink" title="13"></a>13</h2><ol>
+<li><p>如何实现向下转型？需要注意什么问题？如何解决此问题？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Person</span> <span class="hljs-variable">p</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Man</span>();<br>使用强转符：()	<br><span class="hljs-type">Man</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> (Man)p;<br><br>可能ClassCastException异常。<br><br>使用<span class="hljs-keyword">instanceof</span>在进行向下转型前判断。<br><span class="hljs-keyword">if</span>(p <span class="hljs-keyword">instanceof</span> Man)&#123;<br>	<span class="hljs-type">Man</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> (Man)p;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>&#x3D;&#x3D; 和 equals()有何区别？</p>
+</li>
+<li><pre><code class="java">class User&#123;
+        String name;
+        int age;
+        //重写其equals()方法
+&#125;
+
+class User &#123;
+    String name;
+    int age;
+
+    // 重写其equals()方法
+    public boolean equals(Object obj) &#123;
+        if (obj == this) &#123;
+            return true;
+        &#125;
+
+        if (obj instanceof User) &#123;
+            User u = (User) obj;
+            return this.age == u.age &amp;&amp; this.name.equals(u.name);
+        &#125;
+
+        return false;
+    &#125;
+
+&#125;
+</code></pre>
+</li>
+<li><p>写出8种基本数据类型及其对应的包装类</p>
+<table>
+<thead>
+<tr>
+<th align="center">byte</th>
+<th align="center">Byte</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">short</td>
+<td align="center">Short</td>
+</tr>
+<tr>
+<td align="center">Int</td>
+<td align="center">Integer</td>
+</tr>
+<tr>
+<td align="center">long</td>
+<td align="center">Long</td>
+</tr>
+<tr>
+<td align="center">float</td>
+<td align="center">Float</td>
+</tr>
+<tr>
+<td align="center">Double</td>
+<td align="center">double</td>
+</tr>
+<tr>
+<td align="center">boolean</td>
+<td align="center">Boolean</td>
+</tr>
+<tr>
+<td align="center">char</td>
+<td align="center">Character</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>基本数据类型、包装类与String三者之间如何转换</p>
+<p>自动装箱、自动拆箱</p>
+<p>Integer i &#x3D; 10;</p>
+<p>基本数据类型、包装类—&gt;String: valueOf(Xxx xx)<br>String—&gt;基本数据类型、包装类:parseXxx(String s)</p>
 </li>
 </ol>
 
