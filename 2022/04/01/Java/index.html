@@ -356,8 +356,16 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220923162556011.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220923181629179.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220923182716453.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008130542568.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008130625634.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131354484.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131420129.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131446079.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131524070.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131627006.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131717308.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-10-08T03:45:25.812Z">
+<meta property="article:modified_time" content="2022-10-08T05:17:29.442Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -554,7 +562,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          141k 字
+          142k 字
         
       </span>
     
@@ -565,7 +573,7 @@
         
         
         
-          1176 分钟
+          1183 分钟
         
       </span>
     
@@ -3670,6 +3678,42 @@
 <p><strong>attention：</strong>终止程序 避免空指针</p>
 </li>
 </ol>
+<h2 id="3-Project3（开发团队人员调度软件）"><a href="#3-Project3（开发团队人员调度软件）" class="headerlink" title="3.Project3（开发团队人员调度软件）"></a>3.Project3（开发团队人员调度软件）</h2><h3 id="1-目-标-2"><a href="#1-目-标-2" class="headerlink" title="1. 目 标"></a>1. 目 标</h3><ul>
+<li>模拟实现一个基于文本界面的《开发团队调度软件》</li>
+<li>熟悉Java面向对象的高级特性，进一步掌握编程技巧和调试技巧</li>
+<li><font color = red>主要涉及以下知识点：</font><ul>
+<li><font color = red>类的继承性和多态性</font></li>
+<li><font color = red>对象的值传递、接口</font></li>
+<li><font color = red>static和final修饰符</font></li>
+<li><font color = red>特殊类的使用：包装类、抽象类、内部类</font></li>
+<li><font color = red>异常处理</font></li>
+</ul>
+</li>
+</ul>
+<h3 id="2-需求说明-2"><a href="#2-需求说明-2" class="headerlink" title="2.需求说明"></a>2.需求说明</h3><ul>
+<li>该软件实现以下功能：<ul>
+<li>软件启动时，根据给定的数据创建公司部分成员列表（数组）</li>
+<li>根据菜单提示，基于现有的公司成员，组建一个开发团队以开发一个新的项目</li>
+<li>组建过程包括将成员插入到团队中，或从团队中删除某成员，还可以列出团队中现有成员的列表</li>
+<li>开发团队成员包括架构师、设计师和程序员</li>
+</ul>
+</li>
+</ul>
+<p>本软件采用单级菜单方式工作。当软件运行时，主界面显示公司成员的列表，如下：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008130542568.png" srcset="/img/loading.gif" lazyload></p>
+<p>当选择“<font color = red>添加团队成员</font>”菜单时，将执行从列表中添加指定（通过ID）成员到开发团队的功能：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008130625634.png" srcset="/img/loading.gif" lazyload></p>
+<p>添加成功后，按回车键将重新显示主界面。<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131354484.png" srcset="/img/loading.gif" lazyload></p>
+<p>如果添加操作因某种原因失败，将显示类似以下信息（失败原因视具体原因而不同）：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131420129.png" srcset="/img/loading.gif" lazyload></p>
+<p>当选择“<font color = red>删除团队成员</font>”菜单时，将执行从开发团队中删除指定（通过TeamID）成员的功能：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131446079.png" srcset="/img/loading.gif" lazyload></p>
+<p>删除成功后，按回车键将重新显示主界面。</p>
+<p>当选择“<font color = red>团队列表</font>”菜单时，将列出开发团队中的现有成员，例如：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131524070.png" srcset="/img/loading.gif" lazyload></p>
+<h3 id="3-软件设计结构-1"><a href="#3-软件设计结构-1" class="headerlink" title="3.软件设计结构"></a>3.软件设计结构</h3><p>该软件由以下三个模块组成：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131627006.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>com.atguigu.team.view模块为主控模块，负责菜单的显示和处理用户操作</li>
+<li>com.atguigu.team.service模块为实体对象（Employee及其子类如程序员等）的管理模块， NameListService和TeamService类分别用各自的数组来管理公司员工和开发团队成员对象</li>
+<li>domain模块为Employee及其子类等JavaBean类所在的包</li>
+<li>com.atguigu.team.domain模块中包含了所有实体类：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008131717308.png" srcset="/img/loading.gif" lazyload></li>
+<li>其中程序员(Programmer)及其子类，均会领用某种电子设备(Equipment)。</li>
+</ul>
 <hr>
 <p>文献参考<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Kb411W75N?p=1">https://www.bilibili.com/video/BV1Kb411W75N?p=1</a></p>
 
