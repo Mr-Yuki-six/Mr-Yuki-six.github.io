@@ -336,6 +336,11 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002182155277.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002182552230.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008235359966.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008235808942.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001247909.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001606912.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001624270.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009002340850.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183333455.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183353530.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202222.png">
@@ -372,7 +377,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008213936236.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008214313610.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-10-08T15:54:04.484Z">
+<meta property="article:modified_time" content="2022-10-08T16:28:16.948Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -569,7 +574,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          167k 字
+          169k 字
         
       </span>
     
@@ -580,7 +585,7 @@
         
         
         
-          1388 分钟
+          1410 分钟
         
       </span>
     
@@ -3357,8 +3362,176 @@
 </li>
 </ul>
 <p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008235359966.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>进程与线程</strong></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008235808942.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>单核CPU和多核CPU的理解<ul>
+<li>单核CPU，其实是一种假的多线程，因为在一个时间单元内，也只能执行一个线程的任务。例如：虽然有多车道，但是收费站只有一个工作人员在收费，只有收了费才能通过，那么CPU就好比收费人员。如果有某个人不想交钱，那么收费人员可以把他“挂起”（晾着他，等他想通了，准备好了钱，再去收费）。但是因为CPU时间单元特别短，因此感觉不出来。</li>
+<li>如果是多核的话，才能更好的发挥多线程的效率。（现在的服务器都是多核的）</li>
+<li>一个Java应用程序java.exe，其实至少有三个线程：main()主线程，gc()垃圾回收线程，异常处理线程。当然如果发生异常，会影响主线程。</li>
+</ul>
+</li>
+<li>并行与并发<ul>
+<li>并行：多个CPU同时执行多个任务。比如：多个人同时做不同的事。</li>
+<li>并发：一个CPU(采用时间片)同时执行多个任务。比如：秒杀、多个人做同一件事。</li>
+</ul>
+</li>
+</ul>
+<p><strong>使用多线程的优点</strong></p>
+<p><strong>背景：</strong>以单核CPU为例，只使用单个线程先后完成多个任务（调用多个方法），肯定比用多个线程来完成用的时间更短，为何仍需多线程呢？</p>
+<p>多线程程序的优点：</p>
+<ol>
+<li>提高应用程序的响应。对图形化界面更有意义，可增强用户体验。</li>
+<li>提高计算机系统CPU的利用率</li>
+<li>改善程序结构。将既长又复杂的进程分为多个线程，独立运行，利于理解和修改</li>
+</ol>
+<p><strong>何时需要多线程</strong></p>
+<ul>
+<li>程序需要同时执行两个或多个任务。</li>
+<li>程序需要实现一些需要等待的任务时，如用户输入、文件读写操作、网络操作、搜索等。</li>
+<li>需要一些后台运行的程序时。</li>
+</ul>
 <hr>
-<h2 id="2、线程的创建和使用"><a href="#2、线程的创建和使用" class="headerlink" title="2、线程的创建和使用"></a>2、<font color = red>线程的创建和使用</font></h2><hr>
+<h2 id="2、线程的创建和使用"><a href="#2、线程的创建和使用" class="headerlink" title="2、线程的创建和使用"></a>2、<font color = red>线程的创建和使用</font></h2><p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001247909.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>线程的创建和启动</strong></p>
+<ul>
+<li>Java语言的JVM允许程序运行多个线程，它通过<font color = red><code>java.lang.Thread</code></font>类来体现。</li>
+<li>Thread类的特性<ul>
+<li>每个线程都是通过某个特定Thread对象的run()方法来完成操作的，经常把run()方法的主体称为线程体</li>
+<li>通过该Thread对象的start()方法来启动这个线程，而非直接调用run()</li>
+</ul>
+</li>
+</ul>
+<p><strong>Thread类</strong></p>
+<ul>
+<li>构造器<ul>
+<li><font color = red><code>Thread()：</code></font>创建新的Thread对象</li>
+<li><font color = red><code>Thread(String threadname)：</code></font>创建线程并指定线程实例名</li>
+<li><font color = red><code>Thread(Runnable target)：</code></font>指定创建线程的目标对象，它实现了Runnable接口中的run方法</li>
+<li><font color = red><code>Thread(Runnable target, String name)：</code></font>创建新的Thread对象</li>
+</ul>
+</li>
+</ul>
+<p><strong>API中创建线程的两种方式</strong></p>
+<ul>
+<li>JDK1.5之前创建新执行线程有两种方法：<ul>
+<li>继承Thread类的方式</li>
+<li>实现Runnable接口的方式</li>
+</ul>
+</li>
+<li>方式一：继承Thread类<ol>
+<li>定义子类继承Thread类。</li>
+<li><font color = red>子类中重写Thread类中的run方法。</font></li>
+<li>创建Thread子类对象，即创建了线程对象。</li>
+<li>调用线程对象start方法：启动线程，调用run方法。</li>
+</ol>
+</li>
+</ul>
+<p><strong>mt子线程的创建和启动过程</strong></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001606912.png" srcset="/img/loading.gif" lazyload><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001624270.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>注意点：</strong></p>
+<ol>
+<li>如果自己手动调用run()方法，那么就只是普通方法，没有启动多线程模式。</li>
+<li>run()方法由JVM调用，什么时候调用，执行的过程控制都有操作系统的CPU调度决定。</li>
+<li>想要启动多线程，必须调用start方法。</li>
+<li>一个线程对象只能调用一次start()方法启动，如果重复调用了，则将抛出以上的异常<code>IllegalThreadStateException</code>。</li>
+</ol>
+<p><strong>API中创建线程的两种方式</strong></p>
+<ul>
+<li>方式二：实现Runnable接口<ol>
+<li>定义子类，实现Runnable接口。</li>
+<li><font color = red>子类中重写Runnable接口中的run方法。</font></li>
+<li>通过Thread类含参构造器创建线程对象。</li>
+<li><font color = red>将Runnable接口的子类对象作为实际参数传递给Thread类的构造器中。</font></li>
+<li>调用Thread类的start方法：开启线程，调用Runnable子类接口的run方法。</li>
+</ol>
+</li>
+</ul>
+<p><strong>继承方式和实现方式的联系与区别</strong></p>
+<p><font color = red><code>public class Thread extends Object implements Runnable</code></font></p>
+<ul>
+<li>区别<ul>
+<li>继承Thread：线程代码存放Thread子类run方法中。</li>
+<li>实现Runnable：线程代码存在接口的子类的run方法。</li>
+</ul>
+</li>
+<li>实现方式的好处<ul>
+<li>避免了单继承的局限性</li>
+<li>多个线程可以共享同一个接口实现类的对象，非常适合多个相同线程来处理同一份资源。</li>
+</ul>
+</li>
+</ul>
+<p><strong>练习</strong></p>
+<p>创建两个分线程，让其中一个线程输出1-100之间的偶数，另一个线程输出1-100之间的奇数。</p>
+<p><strong>Thread类的有关方法(1)</strong></p>
+<ul>
+<li><font color = red><code>void start() </code></font>:启动线程，并执行对象的run()方法</li>
+<li><font color = red><code>run() </code></font>:线程在被调度时执行的操作</li>
+<li><font color = red><code>String getName()</code></font>:返回线程的名称</li>
+<li><font color = red><code>void setName(String name)</code></font>:设置该线程名称</li>
+<li><font color = red><code>static Thread currentThread()</code></font>:返回当前线程。在Thread子类中就是this，通常用于主线程和Runnable实现类</li>
+</ul>
+<p><strong>Thread类的有关方法(2)</strong></p>
+<ul>
+<li><font color = red><code>static void yield()</code></font>:线程让步<ul>
+<li>暂停当前正在执行的线程，把执行机会让给优先级相同或更高的线程</li>
+<li>若队列中没有同优先级的线程，忽略此方法</li>
+</ul>
+</li>
+<li><font color = red><code>join() </code></font>:当某个程序执行流中调用其他线程的 join() 方法时，调用线程将被阻塞，直到 join() 方法加入的 join 线程执行完为止<ul>
+<li>低优先级的线程也可以获得执行</li>
+</ul>
+</li>
+<li><font color = red><code>static void sleep(long millis)</code></font>:(指定时间:毫秒)<ul>
+<li>令当前活动线程在指定时间段内放弃对CPU控制,使其他线程有机会被执行,时间到后重排队。</li>
+<li>抛出InterruptedException异常</li>
+</ul>
+</li>
+<li><strong>stop()</strong>: 强制线程生命期结束，不推荐使用</li>
+<li>**boolean isAlive()**：返回boolean，判断线程是否还活着</li>
+</ul>
+<p><strong>线程的调度</strong></p>
+<ul>
+<li><strong>调度策略</strong><ul>
+<li>时间片<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009002340850.png" srcset="/img/loading.gif" lazyload></li>
+<li><font color = red>抢占式：高优先级的线程抢占CPU</font></li>
+</ul>
+</li>
+<li><strong>Java的调度方法</strong><ul>
+<li>同优先级线程组成先进先出队列（先到先服务），使用时间片策略</li>
+<li>对高优先级，使用优先调度的抢占式策略</li>
+</ul>
+</li>
+</ul>
+<p><strong>线程的优先级</strong></p>
+<ul>
+<li>线程的优先级等级<ul>
+<li><font color = red><code>MAX_PRIORITY</code>：10</font></li>
+<li><font color = red><code>MIN _PRIORITY</code>：1</font></li>
+<li><font color = red><code>NORM_PRIORITY</code>：5</font></li>
+</ul>
+</li>
+<li>涉及的方法<ul>
+<li><font color = red><code>getPriority()</code></font> ：返回线程优先值</li>
+<li><font color = red><code>setPriority(int newPriority) </code></font>：改变线程的优先级</li>
+</ul>
+</li>
+<li>说明<ul>
+<li>线程创建时继承父线程的优先级</li>
+<li>低优先级只是获得调度的概率低，并非一定是在高优先级线程之后才被调用</li>
+</ul>
+</li>
+</ul>
+<p><strong>补充：线程的分类</strong></p>
+<p>Java中的线程分为两类：一种是<font color = red>守护线程</font>，一种是<font color = red>用户线程</font>。</p>
+<ul>
+<li>它们在几乎每个方面都是相同的，唯一的区别是判断JVM何时离开。</li>
+<li>守护线程是用来服务用户线程的，通过在start()方法前调用<font color = red><code>thread.setDaemon(true)</code></font>可以把一个用户线程变成一个守护线程。</li>
+<li>Java垃圾回收就是一个典型的守护线程。</li>
+<li>若JVM中都是守护线程，当前JVM将退出。</li>
+<li>形象理解：<font color = blue>兔死狗烹，鸟尽弓藏</font></li>
+</ul>
+<hr>
 <h2 id="3、线程的生命周期"><a href="#3、线程的生命周期" class="headerlink" title="3、线程的生命周期"></a>3、线程的生命周期</h2><hr>
 <h2 id="4、线程的同步"><a href="#4、线程的同步" class="headerlink" title="4、线程的同步"></a>4、<font color = red>线程的同步</font></h2><hr>
 <h2 id="5、线程的通信"><a href="#5、线程的通信" class="headerlink" title="5、线程的通信"></a>5、线程的通信</h2><hr>
