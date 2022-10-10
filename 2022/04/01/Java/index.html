@@ -335,6 +335,8 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002182130864.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002182155277.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002182552230.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183333455.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183353530.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008235359966.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008235808942.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221009001247909.png">
@@ -347,8 +349,6 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221010130434744.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221010130445371.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221010130723275.png">
-<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183333455.png">
-<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183353530.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202222.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202322.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202340.png">
@@ -383,7 +383,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008213936236.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008214313610.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-10-10T05:29:21.647Z">
+<meta property="article:modified_time" content="2022-10-10T05:36:49.464Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -580,7 +580,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          176k 字
+          177k 字
         
       </span>
     
@@ -591,7 +591,7 @@
         
         
         
-          1466 分钟
+          1475 分钟
         
       </span>
     
@@ -3350,6 +3350,34 @@
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MyExpTest</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">regist</span><span class="hljs-params">(<span class="hljs-type">int</span> num)</span> <span class="hljs-keyword">throws</span> MyException &#123;<br>		<span class="hljs-keyword">if</span> (num &lt; <span class="hljs-number">0</span>)<br>			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyException</span>(<span class="hljs-string">&quot;人数为负值，不合理&quot;</span>, <span class="hljs-number">3</span>);<br>		<span class="hljs-keyword">else</span><br>			System.out.println(<span class="hljs-string">&quot;登记人数&quot;</span> + num);<br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">manager</span><span class="hljs-params">()</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			regist(<span class="hljs-number">100</span>);<br>		&#125; <span class="hljs-keyword">catch</span> (MyException e) &#123;<br>			System.out.print(<span class="hljs-string">&quot;登记失败，出错种类&quot;</span> + e.getId());<br>		&#125;<br>		System.out.print(<span class="hljs-string">&quot;本次登记操作结束&quot;</span>);<br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String args[])</span> &#123;<br>		<span class="hljs-type">MyExpTest</span> <span class="hljs-variable">t</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">MyExpTest</span>();<br>		t.manager();<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
+
+<p><strong>练习3：判断程序的输出结果</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ReturnExceptionDemo</span> &#123;<br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">methodA</span><span class="hljs-params">()</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;进入方法A&quot;</span>);<br>			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;制造异常&quot;</span>);<br>		&#125; <span class="hljs-keyword">finally</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;用A方法的finally&quot;</span>);<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">methodB</span><span class="hljs-params">()</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;进入方法B&quot;</span>);<br>			<span class="hljs-keyword">return</span>;<br>		&#125; <span class="hljs-keyword">finally</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;调用B方法的finally&quot;</span>);<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			methodA();<br>		&#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125;<br>		methodB();<br>	&#125;<br>&#125;<br><br>进入方法A<br>用A方法的<span class="hljs-keyword">finally</span><br>制造异常 <br>进入方法B<br>调用B方法的<span class="hljs-keyword">finally</span><br></code></pre></td></tr></table></figure>
+
+
+
+
+<p><strong>练习4</strong></p>
+<ul>
+<li>编写应用程序EcmDef.java，接收命令行的两个参数，要求不能输入负数，计算两数相除。对 数 据 类 型 不 一 致 (NumberFormatException) 、 缺少命令行参 数(ArrayIndexOutOfBoundsException、除0(ArithmeticException)及输入负数(EcDef 自定义的异常)进行异常处理。</li>
+<li>提示：<ol>
+<li><p>在主类(EcmDef)中定义异常方法(ecm)完成两数相除功能。</p>
+</li>
+<li><p>在main()方法中使用异常处理语句进行异常处理。</p>
+</li>
+<li><p>在程序中，自定义对应输入负数的异常类(EcDef)。</p>
+</li>
+<li><p>运行时接受参数 java EcmDef 20 10<font color = blue>&#x2F;&#x2F;args[0]&#x3D;“20” args[1]&#x3D;“10”</font></p>
+</li>
+<li><p>Interger类的static方法parseInt(String s)将s转换成对应的int值。如：int a&#x3D;Interger.parseInt(“314”);&#x2F;&#x2F;a&#x3D;314;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.yuki.exer4;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EcDef</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">RuntimeException</span> &#123;<br><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">long</span> <span class="hljs-variable">serialVersionUID</span> <span class="hljs-operator">=</span> <span class="hljs-number">1L</span>;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">EcDef</span><span class="hljs-params">()</span> &#123;<br><br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">EcDef</span><span class="hljs-params">(String msg)</span> &#123;<br>		<span class="hljs-built_in">super</span>(msg);<br>	&#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.yuki.exer4;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EcmDef</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			System.out.println(ecm(args[<span class="hljs-number">0</span>], args[<span class="hljs-number">1</span>]));<br>		&#125; <span class="hljs-keyword">catch</span> (ArrayIndexOutOfBoundsException e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125; <span class="hljs-keyword">catch</span> (NumberFormatException e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125; <span class="hljs-keyword">catch</span> (EcDef e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125; <span class="hljs-keyword">catch</span> (ArithmeticException e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125;<br><br>	&#125;<br><br>	<span class="hljs-comment">/**</span><br><span class="hljs-comment">	 * 计算两数相除</span><br><span class="hljs-comment">	 * </span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span></span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> Yuki</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> 2022年10月8日上午12:20:21</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> string</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> string2</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">	 */</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">double</span> <span class="hljs-title function_">ecm</span><span class="hljs-params">(String string, String string2)</span> <span class="hljs-keyword">throws</span> EcDef &#123;<br>		<span class="hljs-keyword">if</span> (Integer.parseInt(string) &lt; <span class="hljs-number">0</span> || Integer.parseInt(string2) &lt; <span class="hljs-number">0</span>) &#123;<br>			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">EcDef</span>(<span class="hljs-string">&quot;不能输入负数&quot;</span>);<br>		&#125;<br><span class="hljs-comment">//		if (Integer.parseInt(string2) == 0) &#123;</span><br><span class="hljs-comment">//			throw new ArithmeticException(&quot;被除数为0&quot;);</span><br><span class="hljs-comment">//		&#125; else &#123;</span><br><span class="hljs-comment">//			return Integer.parseInt(string) / Integer.parseInt(string2);</span><br><span class="hljs-comment">//		&#125;</span><br>		<span class="hljs-keyword">return</span> Integer.parseInt(string) / Integer.parseInt(string2);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+</ol>
+</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183333455.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183353530.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
 <hr>
 <h1 id="第八章、多线程"><a href="#第八章、多线程" class="headerlink" title="第八章、多线程"></a>第八章、多线程</h1><h2 id="1、基本概念：程序、进程、线程"><a href="#1、基本概念：程序、进程、线程" class="headerlink" title="1、基本概念：程序、进程、线程"></a>1、基本概念：程序、进程、线程</h2><ul>
@@ -3750,34 +3778,58 @@
 <li>在主类中创建线程进行测试。考虑线程安全问题。</li>
 </ol>
 <hr>
-<h2 id="6、JDK5-0新增线程创建方式"><a href="#6、JDK5-0新增线程创建方式" class="headerlink" title="6、JDK5.0新增线程创建方式"></a>6、JDK5.0新增线程创建方式</h2><hr>
-<hr>
-<p><strong>练习3：判断程序的输出结果</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ReturnExceptionDemo</span> &#123;<br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">methodA</span><span class="hljs-params">()</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;进入方法A&quot;</span>);<br>			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;制造异常&quot;</span>);<br>		&#125; <span class="hljs-keyword">finally</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;用A方法的finally&quot;</span>);<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">methodB</span><span class="hljs-params">()</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;进入方法B&quot;</span>);<br>			<span class="hljs-keyword">return</span>;<br>		&#125; <span class="hljs-keyword">finally</span> &#123;<br>			System.out.println(<span class="hljs-string">&quot;调用B方法的finally&quot;</span>);<br>		&#125;<br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			methodA();<br>		&#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125;<br>		methodB();<br>	&#125;<br>&#125;<br><br>进入方法A<br>用A方法的<span class="hljs-keyword">finally</span><br>制造异常 <br>进入方法B<br>调用B方法的<span class="hljs-keyword">finally</span><br></code></pre></td></tr></table></figure>
-
-
-
-<p><strong>练习4</strong></p>
+<h2 id="6、JDK5-0新增线程创建方式"><a href="#6、JDK5-0新增线程创建方式" class="headerlink" title="6、JDK5.0新增线程创建方式"></a>6、JDK5.0新增线程创建方式</h2><p><strong>新增方式一：实现Callable接口</strong></p>
 <ul>
-<li>编写应用程序EcmDef.java，接收命令行的两个参数，要求不能输入负数，计算两数相除。对 数 据 类 型 不 一 致 (NumberFormatException) 、 缺少命令行参 数(ArrayIndexOutOfBoundsException、除0(ArithmeticException)及输入负数(EcDef 自定义的异常)进行异常处理。</li>
-<li>提示：<ol>
-<li><p>在主类(EcmDef)中定义异常方法(ecm)完成两数相除功能。</p>
+<li>与使用Runnable相比， Callable功能更强大些<ul>
+<li>相比run()方法，可以有返回值</li>
+<li>方法可以抛出异常</li>
+<li>支持泛型的返回值</li>
+<li>需要借助FutureTask类，比如获取返回结果</li>
+</ul>
 </li>
-<li><p>在main()方法中使用异常处理语句进行异常处理。</p>
-</li>
-<li><p>在程序中，自定义对应输入负数的异常类(EcDef)。</p>
-</li>
-<li><p>运行时接受参数 java EcmDef 20 10<font color = blue>&#x2F;&#x2F;args[0]&#x3D;“20” args[1]&#x3D;“10”</font></p>
-</li>
-<li><p>Interger类的static方法parseInt(String s)将s转换成对应的int值。如：int a&#x3D;Interger.parseInt(“314”);&#x2F;&#x2F;a&#x3D;314;</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.yuki.exer4;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EcDef</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">RuntimeException</span> &#123;<br><br>	<span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-type">long</span> <span class="hljs-variable">serialVersionUID</span> <span class="hljs-operator">=</span> <span class="hljs-number">1L</span>;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">EcDef</span><span class="hljs-params">()</span> &#123;<br><br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">EcDef</span><span class="hljs-params">(String msg)</span> &#123;<br>		<span class="hljs-built_in">super</span>(msg);<br>	&#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
-
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.yuki.exer4;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EcmDef</span> &#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>		<span class="hljs-keyword">try</span> &#123;<br>			System.out.println(ecm(args[<span class="hljs-number">0</span>], args[<span class="hljs-number">1</span>]));<br>		&#125; <span class="hljs-keyword">catch</span> (ArrayIndexOutOfBoundsException e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125; <span class="hljs-keyword">catch</span> (NumberFormatException e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125; <span class="hljs-keyword">catch</span> (EcDef e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125; <span class="hljs-keyword">catch</span> (ArithmeticException e) &#123;<br>			System.out.println(e.getMessage());<br>		&#125;<br><br>	&#125;<br><br>	<span class="hljs-comment">/**</span><br><span class="hljs-comment">	 * 计算两数相除</span><br><span class="hljs-comment">	 * </span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@Description</span></span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@author</span> Yuki</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@date</span> 2022年10月8日上午12:20:21</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> string</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@param</span> string2</span><br><span class="hljs-comment">	 * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">	 */</span><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">double</span> <span class="hljs-title function_">ecm</span><span class="hljs-params">(String string, String string2)</span> <span class="hljs-keyword">throws</span> EcDef &#123;<br>		<span class="hljs-keyword">if</span> (Integer.parseInt(string) &lt; <span class="hljs-number">0</span> || Integer.parseInt(string2) &lt; <span class="hljs-number">0</span>) &#123;<br>			<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">EcDef</span>(<span class="hljs-string">&quot;不能输入负数&quot;</span>);<br>		&#125;<br><span class="hljs-comment">//		if (Integer.parseInt(string2) == 0) &#123;</span><br><span class="hljs-comment">//			throw new ArithmeticException(&quot;被除数为0&quot;);</span><br><span class="hljs-comment">//		&#125; else &#123;</span><br><span class="hljs-comment">//			return Integer.parseInt(string) / Integer.parseInt(string2);</span><br><span class="hljs-comment">//		&#125;</span><br>		<span class="hljs-keyword">return</span> Integer.parseInt(string) / Integer.parseInt(string2);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
-</ol>
+<li>Future接口<ul>
+<li>可以对具体Runnable、Callable任务的执行结果进行取消、查询是否完成、获取结果等。</li>
+<li><font color = blue> FutrueTask是Futrue接口的唯一的实现类</font></li>
+<li>FutureTask 同时实现了Runnable, Future接口。它既可以作为Runnable被线程执行，又可以作为Future得到Callable的返回值</li>
+</ul>
 </li>
 </ul>
-<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183333455.png" srcset="/img/loading.gif" lazyload></p>
-<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221002183353530.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>新增方式二：使用线程池</strong></p>
+<ul>
+<li>背景：经常创建和销毁、使用量特别大的资源，比如并发情况下的线程，对性能影响很大。</li>
+<li>思路：提前创建好多个线程，放入线程池中，使用时直接获取，使用完放回池中。可以避免频繁创建销毁、实现重复利用。类似生活中的公共交通工具。</li>
+<li>好处：<ul>
+<li>提高响应速度（减少了创建新线程的时间）</li>
+<li>降低资源消耗（重复利用线程池中线程，不需要每次都创建）</li>
+<li>便于线程管理<ul>
+<li>corePoolSize：核心池的大小</li>
+<li>maximumPoolSize：最大线程数</li>
+<li>keepAliveTime：线程没有任务时最多保持多长时间后会终止</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>线程池相关API</strong></p>
+<ul>
+<li>JDK 5.0起提供了线程池相关API：ExecutorService 和 Executors</li>
+<li>ExecutorService：真正的线程池接口。常见子类ThreadPoolExecutor<ul>
+<li><code>void execute(Runnable command) </code> ：执行任务&#x2F;命令，没有返回值，一般用来执行Runnable</li>
+<li><code>&lt;T&gt; Future&lt;T&gt; submit(Callable&lt;T&gt; task)</code>：执行任务，有返回值，一般又来执行Callable</li>
+<li><code>void shutdown() </code>：关闭连接池</li>
+</ul>
+</li>
+<li>Executors：工具类、线程池的工厂类，用于创建并返回不同类型的线程池<ul>
+<li><code>Executors.newCachedThreadPool()</code>：创建一个可根据需要创建新线程的线程池</li>
+<li><code>Executors.newFixedThreadPool(n)</code>:创建一个可重用固定线程数的线程池</li>
+<li><code>Executors.newSingleThreadExecutor() </code>：创建一个只有一个线程的线程池</li>
+<li><code> Executors.newScheduledThreadPool(n)</code>：创建一个线程池，它可安排在给定延迟后运行命令或者定期地执行。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<hr>
 <hr>
 <hr>
 <h1 id="项目"><a href="#项目" class="headerlink" title="项目:"></a>项目:</h1><h2 id="1-Project1（家庭收支记账软件）"><a href="#1-Project1（家庭收支记账软件）" class="headerlink" title="1. Project1（家庭收支记账软件）"></a>1. Project1（家庭收支记账软件）</h2><h3 id="1-目-标"><a href="#1-目-标" class="headerlink" title="1. 目 标"></a>1. 目 标</h3><ul>
