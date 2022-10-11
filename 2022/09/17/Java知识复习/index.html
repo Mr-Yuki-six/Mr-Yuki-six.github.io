@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/clip_image002.jpg">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221001175640731.png">
 <meta property="article:published_time" content="2022-09-17T05:29:47.000Z">
-<meta property="article:modified_time" content="2022-10-09T06:47:21.072Z">
+<meta property="article:modified_time" content="2022-10-11T11:09:17.752Z">
 <meta property="article:author" content="Yuki">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20220917140302258.png">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          8.2k 字
+          9.7k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          69 分钟
+          81 分钟
         
       </span>
     
@@ -597,6 +597,71 @@ class User &#123;
 <li><p>对比两种创建方式</p>
 </li>
 <li><p>说说你对IDEA中Project和Module的理解</p>
+</li>
+</ol>
+<h2 id="17"><a href="#17" class="headerlink" title="17"></a>17</h2><ol>
+<li><p>画图说明线程的生命周期，以及各状态切换使用到的方法等</p>
+<p>状态，方法</p>
+</li>
+<li><p>同步代码块中涉及到同步监视器和共享数据，谈谈你对同步监视器和共享数据的理解，以及注意点。</p>
+<p>synchronized(同步监视器){</p>
+<p>​     &#x2F;&#x2F;操作共享数据的代码 （不能包括多了，也不能包括少了）</p>
+<p>}</p>
+</li>
+<li><p>sleep()和wait()的区别</p>
+</li>
+<li><p>写一个线程安全的懒汉式</p>
+</li>
+<li><p>创建多线程有哪几种方式：4种</p>
+<p>继承Thread类</p>
+<p>实现Runnable接口</p>
+<p>实现Callable接口</p>
+<p>线程池（响应速度提高了，提高了资源的重用率，便于管理）</p>
+</li>
+</ol>
+<h2 id="18"><a href="#18" class="headerlink" title="18"></a>18</h2><ol>
+<li><p>画出如下几行代码的内容结构：</p>
+<p>String s1 &#x3D; “hello”; </p>
+<p>String s2 &#x3D; “hello”;</p>
+<p>String s3 &#x3D; new String(“hello”);</p>
+<p>s1 +&#x3D; “world”; </p>
+</li>
+<li><p>如何理解String类的不可变性</p>
+</li>
+<li><p>String类是否可以被继承？为什么？</p>
+<p>String s &#x3D; new String(“hello”);在内存中创建了几个对象？请说明</p>
+</li>
+<li><p>String，StringBuffer，StringBuilder三者的对比</p>
+</li>
+<li><p>String的常用方法有哪些？（至少7个）</p>
+</li>
+</ol>
+<p>   length() &#x2F; charAt() &#x2F; equals() &#x2F; compareTo() &#x2F; startsWith() &#x2F; endsWith()</p>
+<p>   containts() &#x2F; indexOf() &#x2F; lastIndexOf() &#x2F; getBytes() &#x2F; toCharArray() &#x2F; valueOf() &#x2F; …. </p>
+<h2 id="19"><a href="#19" class="headerlink" title="19"></a>19</h2><ol>
+<li><p>将字符串”2017-08-16”转换为对应的java.sql.Date类的对象。（使用JDK8之前或JDK8中的API皆可）</p>
+<p>SimpleDateFormat sdf &#x3D; new SimpleDateFormat(“yyyy-MM-dd”);</p>
+<p>解析：java.util.Date date &#x3D; sdf.parse(“2017-08-16”);</p>
+<p>DateTimeFormatter dtf&#x3D; DateTimeFormatter.ofPattern(“yyyy-MM-dd”); </p>
+<p>new + 构造器</p>
+<p>单例、Calendar.getInstance()</p>
+</li>
+<li><p>解释何为编码？解码？ 何为日期时间的格式化？解析？</p>
+<p>编码：字符串 → 字节</p>
+<p>解码：字节 → 字符串</p>
+<p>格式化：日期 → 字符串</p>
+<p>解析：字符串 → 日期</p>
+</li>
+<li><p>自定义Person类如下，如何实现自然排序（按姓名从小到大排序），代码说明</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Person</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">Comparable</span>&#123;<br>	<span class="hljs-keyword">private</span> String name;<br>	<span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br>	<span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compareTo</span><span class="hljs-params">(Object obj)</span>&#123;<br>		<span class="hljs-comment">//…  this.name.compareTo(s.name);</span><br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>提供定制排序涉及到的接口的实现类对象，并按Person类的年龄从大到小排序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Comparator</span> <span class="hljs-variable">com</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Comparator</span>()&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">compare</span><span class="hljs-params">(Object obj1,Object obj2)</span>&#123;<br>		<span class="hljs-keyword">if</span>()&#123;<br>		&#125;<br>	&#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>JDK 8之前和JDK8中日期、时间相关的类分别有哪些？</p>
+<p>java.util.Date 和 java.sql.Date → Instant</p>
+<p>SimpleDateFormat → DateTimeFormatter</p>
+<p>Calendar → LocalDate、LocalTime、LocalDateTime</p>
 </li>
 </ol>
 
