@@ -419,6 +419,19 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221018225331004.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221018225358019.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221018225803086.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225112171.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225136696.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225507758.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225715168.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225936091.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123230406989.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123230432664.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231005931.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231406945.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231625240.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231719573.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123233037927.png">
+<meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123233646784.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202222.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202322.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/20220909202340.png">
@@ -453,7 +466,7 @@
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008213936236.png">
 <meta property="og:image" content="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221008214313610.png">
 <meta property="article:published_time" content="2022-04-01T14:33:56.000Z">
-<meta property="article:modified_time" content="2022-11-21T14:14:27.736Z">
+<meta property="article:modified_time" content="2022-11-23T15:38:43.819Z">
 <meta property="article:author" content="Yuki">
 <meta property="article:tag" content="Java">
 <meta property="article:tag" content="笔记">
@@ -650,7 +663,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          270k 字
+          280k 字
         
       </span>
     
@@ -661,7 +674,7 @@
         
         
         
-          2250 分钟
+          2337 分钟
         
       </span>
     
@@ -5590,7 +5603,7 @@
 </li>
 <li><p>Java程序支持跨平台运行，因此路径分隔符要慎用。</p>
 </li>
-<li><p>为了解决这个隐患，File类提供了一个常量：<br><font color = blue><code>public static final String separator</code></font>。根据操作系统，动态的提供分隔符。</p>
+<li><p>为了解决这个隐患，File类提供了一&#x2F;个常量：<br><font color = blue><code>public static final String separator</code></font>。根据操作系统，动态的提供分隔符。</p>
 </li>
 <li><p>举例：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">File</span> <span class="hljs-variable">file1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;d:\\atguigu\\info.txt&quot;</span>);<br><span class="hljs-type">File</span> <span class="hljs-variable">file2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;d:&quot;</span> + File.separator + <span class="hljs-string">&quot;atguigu&quot;</span> + File.separator + <span class="hljs-string">&quot;info.txt&quot;</span>);<br><span class="hljs-type">File</span> <span class="hljs-variable">file3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;d:/atguigu&quot;</span>);<br></code></pre></td></tr></table></figure></li>
@@ -5857,7 +5870,6 @@
 </li>
 <li><p>实现图片加密操作。<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221018224442661.png" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//图片加密</span><br><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">test1</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">FileInputStream</span> <span class="hljs-variable">fis</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>    <span class="hljs-type">FileOutputStream</span> <span class="hljs-variable">fos</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">try</span> &#123;<br>        fis = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;worldmap.jpg&quot;</span>));<br>        fos = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileOutputStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;map_secret.jpg&quot;</span>));<br>   <br>        <span class="hljs-type">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">20</span>];<br>        <span class="hljs-type">int</span> len;<br>        <span class="hljs-keyword">while</span> ((len = fis.read(buffer)) != -<span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-comment">//字节数组进行修改</span><br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; len; i++) &#123;<br>                buffer[i] = (<span class="hljs-type">byte</span>) (buffer[i] ^ <span class="hljs-number">5</span>);<br>            &#125;<br>            fos.write(buffer, <span class="hljs-number">0</span>, len);<br>        &#125;<br>    &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>    &#125; <span class="hljs-keyword">finally</span> &#123;<br>        <span class="hljs-keyword">if</span> (fis != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                fis.close();<br>            &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (fos != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                fos.close();<br>            &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br><span class="hljs-comment">//图片解密</span><br><span class="hljs-meta">@Test</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">test2</span><span class="hljs-params">()</span> &#123;<br>    <span class="hljs-type">FileInputStream</span> <span class="hljs-variable">fis</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>    <span class="hljs-type">FileOutputStream</span> <span class="hljs-variable">fos</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>    <span class="hljs-keyword">try</span> &#123;<br>        fis = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileInputStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;map_secret.jpg&quot;</span>));<br>        fos = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileOutputStream</span>(<span class="hljs-keyword">new</span> <span class="hljs-title class_">File</span>(<span class="hljs-string">&quot;map_public.jpg&quot;</span>));<br>   <br>        <span class="hljs-type">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">20</span>];<br>        <span class="hljs-type">int</span> len;<br>        <span class="hljs-keyword">while</span> ((len = fis.read(buffer)) != -<span class="hljs-number">1</span>) &#123;<br>            <span class="hljs-comment">//字节数组进行修改</span><br>            <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; len; i++) &#123;<br>                buffer[i] = (<span class="hljs-type">byte</span>) (buffer[i] ^ <span class="hljs-number">5</span>);<br>            &#125;<br>            fos.write(buffer, <span class="hljs-number">0</span>, len);<br>        &#125;<br>    &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>    &#125; <span class="hljs-keyword">finally</span> &#123;<br>        <span class="hljs-keyword">if</span> (fis != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                fis.close();<br>            &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span> (fos != <span class="hljs-literal">null</span>) &#123;<br>            <span class="hljs-keyword">try</span> &#123;<br>                fos.close();<br>            &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-
 </li>
 <li><p>获取文本上<font color = red>每个字符</font>出现的次数<br>提示：遍历文本的每一个字符；字符及出现的次数保存在Map中；将Map中数据写入文件</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> com.yuki.exer;<br><br><span class="hljs-keyword">import</span> org.junit.jupiter.api.Test;<br><br><span class="hljs-keyword">import</span> java.io.FileReader;<br><span class="hljs-keyword">import</span> java.io.IOException;<br><span class="hljs-keyword">import</span> java.util.HashMap;<br><span class="hljs-keyword">import</span> java.util.Map;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> yuki</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@create</span> 2022-11-21 21:51</span><br><span class="hljs-comment"> */</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">WordCount</span> &#123;<br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span>&#123;<br>        <span class="hljs-type">FileReader</span> <span class="hljs-variable">fr</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-keyword">try</span> &#123;<br>            fr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">FileReader</span>(<span class="hljs-string">&quot;dbcp.txt&quot;</span>);<br>            HashMap&lt;Character, Integer&gt; map = <span class="hljs-keyword">new</span> <span class="hljs-title class_">HashMap</span>&lt;&gt;();<br>            <span class="hljs-type">int</span> <span class="hljs-variable">len</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>            <span class="hljs-keyword">while</span> ((len = fr.read()) != -<span class="hljs-number">1</span>)&#123;<br>                <span class="hljs-type">char</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> (<span class="hljs-type">char</span>) len;<br>                <span class="hljs-keyword">if</span> (map.containsKey(c))&#123;<br>                    map.put(c, map.get(c)+<span class="hljs-number">1</span>);<br>                &#125;<span class="hljs-keyword">else</span> &#123;<br>                    map.put(c,<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>            <span class="hljs-comment">/*char[] cbuf = new char[10];</span><br><span class="hljs-comment">            int len;</span><br><span class="hljs-comment">            while ((len = fr.read(cbuf)) != -1)&#123;</span><br><span class="hljs-comment">                for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="hljs-comment">                    if (map.containsKey(cbuf[i]))&#123;</span><br><span class="hljs-comment">                        map.put(cbuf[i],map.get(cbuf[i])+1);</span><br><span class="hljs-comment">                    &#125;else &#123;</span><br><span class="hljs-comment">                        map.put(cbuf[i],1);</span><br><span class="hljs-comment">                    &#125;</span><br><span class="hljs-comment">                &#125;</span><br><span class="hljs-comment">            &#125;*/</span><br>            <span class="hljs-keyword">for</span> (Map.Entry&lt;Character, Integer&gt; entry : map.entrySet()) &#123;<br>                System.out.println(entry);<br>            &#125;<br><br>        &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>            <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>        &#125; <span class="hljs-keyword">finally</span> &#123;<br>            <span class="hljs-keyword">if</span> (fr != <span class="hljs-literal">null</span>)&#123;<br>                <span class="hljs-keyword">try</span> &#123;<br>                    fr.close();<br>                &#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;<br>                    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(e);<br>                &#125;<br>            &#125;<br>        &#125;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -6200,19 +6212,372 @@
 <hr>
 <hr>
 <hr>
-<h1 id="第14章、网络编程"><a href="#第14章、网络编程" class="headerlink" title="第14章、网络编程"></a>第14章、网络编程</h1><h2 id="1、网络编程概述"><a href="#1、网络编程概述" class="headerlink" title="1、网络编程概述"></a>1、网络编程概述</h2><hr>
+<h1 id="第14章、网络编程"><a href="#第14章、网络编程" class="headerlink" title="第14章、网络编程"></a>第14章、网络编程</h1><h2 id="1、网络编程概述"><a href="#1、网络编程概述" class="headerlink" title="1、网络编程概述"></a>1、网络编程概述</h2><ul>
+<li>Java是 Internet 上的语言，它从语言级上提供了对网络应用程序的支持，程序员能够很容易开发常见的网络应用程序。</li>
+<li>ava提供的网络类库，可以实现无痛的网络连接，联网的底层细节被隐藏在 Java 的本机安装系统里，由 JVM 进行控制。并且 Java 实现了一个跨平台的网络库，<font color = blue>程序员面对的是一个统一<br>的网络编程环境。</font></li>
+</ul>
+<p><strong>网络基础</strong></p>
+<ul>
+<li><p><strong>计算机网络：</strong></p>
+<p>把分布在不同地理区域的计算机与专门的外部设备用通信线路互连成一个规模大、功能强的网络系统，从而使众多的计算机可以方便地互相传递信息、共享硬件、软件、数据信息等资源</p>
+</li>
+<li><p><strong>网络编程的目的：</strong></p>
+<p><font color = blue>直接或间接地通过网络协议与其它计算机实现数据交换，进行通讯。</font></p>
+</li>
+<li><p><strong>网络编程中有两个主要的问题：</strong></p>
+<ul>
+<li><font color = blue>如何准确地定位网络上一台或多台主机；定位主机上的特定的应用</font></li>
+<li><font color = blue>找到主机后如何可靠高效地进行数据传输</font></li>
+</ul>
+</li>
+</ul>
 <hr>
-<h2 id="2、网络通信要素概述"><a href="#2、网络通信要素概述" class="headerlink" title="2、网络通信要素概述"></a>2、网络通信要素概述</h2><hr>
 <hr>
-<h2 id="3、通信要素1：IP和端口号"><a href="#3、通信要素1：IP和端口号" class="headerlink" title="3、通信要素1：IP和端口号"></a>3、通信要素1：IP和端口号</h2><hr>
+<h2 id="2、网络通信要素概述"><a href="#2、网络通信要素概述" class="headerlink" title="2、网络通信要素概述"></a>2、网络通信要素概述</h2><ul>
+<li>IP和端口号</li>
+<li>网络通信协议</li>
+</ul>
+<p><strong>如何实现网络中的主机互相通信</strong></p>
+<ul>
+<li><font color = red>通信双方地址</font><ul>
+<li><font color = blue>IP</font></li>
+<li><font color = blue>端口号</font></li>
+</ul>
+</li>
+<li><font color = red>一定的规则</font>（即：网络通信协议。有两套参考模型）<ul>
+<li><font color = blue>OSI参考模型</font>：模型过于理想化，未能在因特网上进行广泛推广</li>
+<li><font color = blue>TCP&#x2F;IP参考模型(或TCP&#x2F;IP协议)</font>：事实上的国际标准。</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225112171.png" srcset="/img/loading.gif" lazyload></p>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225136696.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
-<h2 id="4、通信要素2：网络协议"><a href="#4、通信要素2：网络协议" class="headerlink" title="4、通信要素2：网络协议"></a>4、通信要素2：网络协议</h2><hr>
 <hr>
-<h2 id="5、TCP网络编程"><a href="#5、TCP网络编程" class="headerlink" title="5、TCP网络编程"></a>5、TCP网络编程</h2><hr>
+<h2 id="3、通信要素1：IP和端口号"><a href="#3、通信要素1：IP和端口号" class="headerlink" title="3、通信要素1：IP和端口号"></a>3、通信要素1：IP和端口号</h2><ul>
+<li><strong>IP 地址：InetAddress</strong><ul>
+<li>唯一的标识 Internet 上的计算机（通信实体）</li>
+<li>本地回环地址(hostAddress)：127.0.0.1 主机名(hostName)：localhost</li>
+<li>IP地址分类方式1：<font color = red>IPV4</font>和<font color = red>IPV6</font><ul>
+<li>IPV4：4个字节组成，4个0-255。大概42亿，30亿都在北美，亚洲4亿。2011年初已经用尽。以点分十进制表示，如192.168.0.1</li>
+<li>IPV6：128位（16个字节），写成8个无符号整数，每个整数用四个十六进制位表示，数之间用冒号（：）分开，如：3ffe:3201:1401:1280:c8ff:fe4d:db39:1984</li>
+</ul>
+</li>
+<li>IP地址分类方式2：<font color = red>公网地址(万维网使用)</font>和<font color = red>私有地址(局域网使用)</font>。192.168.开头的就是私有址址，范围即为192.168.0.0–192.168.255.255，专门为组织机构内部使用</li>
+<li>特点：不易记忆</li>
+</ul>
+</li>
+<li><strong>端口号</strong>标识正在计算机上运行的进程（程序）<ul>
+<li>不同的进程有不同的端口号</li>
+<li>被规定为一个 16 位的整数 0~65535。</li>
+<li>端口分类：<ul>
+<li><font color = red>公认端口：</font>0~1023。被预先定义的服务通信占用（如：HTTP占用端口80，FTP占用端口21，Telnet占用端口23）</li>
+<li><font color = red>注册端口：</font>1024~49151。分配给用户进程或应用程序。（如：Tomcat占用端口8080，MySQL占用端口3306，Oracle占用端口1521等）。</li>
+<li><font color = red>动态&#x2F;私有端口：</font>49152~65535。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><font color = blue>端口号与IP地址的组合得出一个网络套接字：Socket。</font></li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225507758.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>InetAddress类</strong></p>
+<ul>
+<li>Internet上的主机有两种方式表示地址：<ul>
+<li><font color = red>域名(hostName)：</font><a target="_blank" rel="noopener" href="http://www.atguigu.com/">www.atguigu.com</a></li>
+<li><font color = red>IP 地址(hostAddress)：</font>202.108.35.210</li>
+</ul>
+</li>
+<li>InetAddress类主要表示IP地址，两个子类：Inet4Address、Inet6Address。</li>
+<li>InetAddress 类 对 象 含 有 一 个Internet 主 机 地 址 的 域 名 和 IP 地 址 ：<a target="_blank" rel="noopener" href="http://www.atguigu.com/">www.atguigu.com</a> 和 202.108.35.210。</li>
+<li>域名容易记忆，当在连接网络时输入一个主机的域名后，域名服务器(DNS)负责将域名转化成IP地址，这样才能和主机建立连接。<font color = blue>——-域名解析</font></li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225715168.png" srcset="/img/loading.gif" lazyload></p>
+<ul>
+<li>InetAddress类没有提供公共的构造器，而是提供了如下几个静态方法来获取InetAddress实例<ul>
+<li><font color = red><code>public static InetAddress getLocalHost()</code></font></li>
+<li><font color = red><code>public static InetAddress getByName(String host)</code></font></li>
+</ul>
+</li>
+<li>InetAddress提供了如下几个常用的方法<ul>
+<li><font color = red><code>public String getHostAddress()</code></font>：返回 IP 地址字符串（以文本表现形式）。</li>
+<li><font color = red><code>public String getHostName()</code></font>：获取此 IP 地址的主机名</li>
+<li><font color = red><code>public boolean isReachable(int timeout)</code></font>：测试是否可以达到该地址</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123225936091.png" srcset="/img/loading.gif" lazyload></p>
 <hr>
-<h2 id="6、UDP网络编程"><a href="#6、UDP网络编程" class="headerlink" title="6、UDP网络编程"></a>6、UDP网络编程</h2><hr>
 <hr>
-<h2 id="7、URL编程"><a href="#7、URL编程" class="headerlink" title="7、URL编程"></a>7、URL编程</h2><hr>
+<h2 id="4、通信要素2：网络协议"><a href="#4、通信要素2：网络协议" class="headerlink" title="4、通信要素2：网络协议"></a>4、通信要素2：网络协议</h2><ul>
+<li><p><strong>网络通信协议</strong></p>
+<p>计算机网络中实现通信必须有一些约定，即通信协议，<font color = blue>对速率、传输代码、代码结构、传输控制步骤、出错控制等制定标准。</font></p>
+</li>
+<li><p><strong>问题：网络协议太复杂</strong></p>
+<p>计算机网络通信涉及内容很多，比如指定源地址和目标地址，加密解密，压缩解压缩，差错控制，流量控制，路由控制，如何实现如此复杂的网络协议呢？</p>
+</li>
+<li><p><strong>通信协议分层的思想</strong></p>
+<p>在制定协议时，把复杂成份分解成一些简单的成份，再将它们复合起来。最常用的复合方式是层次方式，即<font color = blue>同层间可以通信、上一层可以调用下一层，而与再下一层不发生关系</font>。各层互不影响，利于系统的开发和扩展。</p>
+</li>
+</ul>
+<p><strong>TCP&#x2F;IP协议簇</strong></p>
+<ul>
+<li>传输层协议中有两个非常重要的协议：<ul>
+<li>传输控制协议TCP(Transmission Control Protocol)</li>
+<li>用户数据报协议UDP(User Datagram Protocol)。</li>
+</ul>
+</li>
+<li><font color = blue>TCP&#x2F;IP 以其两个主要协议：传输控制协议(TCP)和网络互联协议(IP)</font>而得名，实际上是一组协议，包括多个具有不同功能且互为关联的协议。</li>
+<li>IP(Internet Protocol)协议是网络层的主要协议，支持网间互连的数据通信。</li>
+<li>TCP&#x2F;IP协议模型从更实用的角度出发，形成了高效的四层体系结构，即<font color = blue>物理链路层、IP层、传输层和应用层</font>。</li>
+</ul>
+<p><strong>TCP 和 UDP</strong></p>
+<ul>
+<li><font color = red>TCP协议：</font><ul>
+<li>使用TCP协议前，须先建立TCP连接，形成传输数据通道</li>
+<li>传输前，采用“三次握手”方式，点对点通信，<font color = red>是可靠的</font></li>
+<li>TCP协议进行通信的两个应用进程：客户端、服务端。</li>
+<li>在连接中可<font color = red>进行大数据量的传输</font></li>
+<li>传输完毕，需<font color = red>释放已建立的连接，效率低</font></li>
+</ul>
+</li>
+<li><font color = red>UDP协议：</font><ul>
+<li>将数据、源、目的封装成数据包，<font color = red>不需要建立连接</font></li>
+<li>每个数据报的大小限制在64K内</li>
+<li>发送不管对方是否准备好，接收方收到也不确认，故是不可靠的</li>
+<li>可以广播发送</li>
+<li>发送数据结束时<font color = red>无需释放资源，开销小，速度快</font></li>
+</ul>
+</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123230406989.png" srcset="/img/loading.gif" lazyload><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123230432664.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>Socket</strong></p>
+<ul>
+<li><p>利用套接字(Socket)开发网络应用程序早已被广泛的采用，以至于成为事实上的标准。</p>
+</li>
+<li><p><font color = red>网络上具有唯一标识的IP地址和端口号组合在一起才能构成唯一能识别的标识符套接字。</font></p>
+</li>
+<li><p>通信的两端都要有Socket，是两台机器间通信的端点。</p>
+</li>
+<li><p>网络通信其实就是Socket间的通信。</p>
+</li>
+<li><p>Socket允许程序把网络连接当成一个流，数据在两个Socket间通过IO传输。</p>
+</li>
+<li><p>一般主动发起通信的应用程序属<font color = blue>客户端</font>，等待通信请求的为<font color = blue>服务端</font>。</p>
+</li>
+<li><p>Socket分类：</p>
+<ul>
+<li><font color = red>流套接字（stream socket）：使用TCP提供可依赖的字节流服务</font></li>
+<li><font color = red>数据报套接字（datagram socket）：使用UDP提供“尽力而为”的数据报服务</font></li>
+</ul>
+</li>
+<li><p>Socket类的常用构造器：</p>
+<ul>
+<li><code>public Socket(InetAddress address,int port)</code>创建一个流套接字并将其连接到指定 IP 地址的指定端口号。</li>
+<li><code>public Socket(String host,int port)</code>创建一个流套接字并将其连接到指定主机上的指定端口号。</li>
+</ul>
+</li>
+<li><p>Socket类的常用方法：</p>
+<ul>
+<li><code>public InputStream getInputStream()</code>返回此套接字的输入流。可以用于接收网络消息</li>
+<li><code>public OutputStream getOutputStream()</code>返回此套接字的输出流。可以用于发送网络消息</li>
+<li><code>public InetAddress getInetAddress()</code>此套接字连接到的远程 IP 地址；如果套接字是未连接的，则返回 null。</li>
+<li><code>public InetAddress getLocalAddress()</code>获取套接字绑定的本地地址。 即本端的IP地址</li>
+<li><code>public int getPort()</code>此套接字连接到的远程端口号；如果尚未连接套接字，则返回 0。</li>
+<li><code>public int getLocalPort()</code>返回此套接字绑定到的本地端口。 如果尚未绑定套接字，则返回 -1。即本端的端口号。</li>
+<li><code>public void close()</code>关闭此套接字。套接字被关闭后，便不可在以后的网络连接中使用（即无法重新连接或重新绑定）。需要创建新的套接字对象。 关闭此套接字也将会关闭该套接字的 InputStream 和OutputStream。</li>
+<li><code>public void shutdownInput()</code>如果在套接字上调用 shutdownInput() 后从套接字输入流读取内容，则流将返回 EOF（文件结束符）。 即不能在从此套接字的输入流中接收任何数据。</li>
+<li><code>public void shutdownOutput()</code>禁用此套接字的输出流。对于 TCP 套接字，任何以前写入的数据都将被发送，并且后跟 TCP 的正常连接终止序列。 如果在套接字上调用 shutdownOutput() 后写入套接字输出流，则该流将抛出 IOException。 即不能通过此套接字的输出流发送任何数据。</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h2 id="5、TCP网络编程"><a href="#5、TCP网络编程" class="headerlink" title="5、TCP网络编程"></a>5、TCP网络编程</h2><p><strong>基于Socket的TCP编程</strong></p>
+<ul>
+<li><p>Java语言的基于套接字编程分为服务端编程和客户端编程，其通信模型如图所示：<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231005931.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p><font color = blue>客户端Socket的工作过程包含以下四个基本的步骤：</font></p>
+<ul>
+<li><strong>创建 Socket：</strong>根据指定服务端的 IP 地址或端口号构造 Socket 类对象。若服务器端响应，则建立客户端到服务器的通信线路。若连接失败，会出现异常。</li>
+<li><strong>打开连接到 Socket 的输入&#x2F;出流：</strong>使用 getInputStream()方法获得输入流，使用getOutputStream()方法获得输出流，进行数据传输</li>
+<li><strong>按照一定的协议对 Socket 进行读&#x2F;写操作：</strong>通过输入流读取服务器放入线路的信息（但不能读取自己放入线路的信息），通过输出流将信息写入线程。</li>
+<li><strong>关闭 Socket：</strong>断开客户端到服务器的连接，释放线路</li>
+</ul>
+</li>
+</ul>
+<p><strong>客户端创建Socket对象</strong></p>
+<ul>
+<li><p>客户端程序可以使用Socket类创建对象，<font color = blue>创建的同时会自动向服务器方发起连接</font>。Socket的构造器是：</p>
+<ul>
+<li><font color = blue><code>Socket(String host,int port)throws UnknownHostException,IOException</code></font>：向服务器(域名是host。端口号为port)发起TCP连接，若成功，则创建Socket对象，否则抛出异常。</li>
+<li><font color = blue><code>Socket(InetAddress address,int port)throws IOException</code></font>：根据InetAddress对象所表示的IP地址以及端口号port发起连接。</li>
+</ul>
+</li>
+<li><p>客户端建立socketAtClient对象的过程就是向服务器发出套接字连接请求<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231406945.png" srcset="/img/loading.gif" lazyload></p>
+</li>
+<li><p><font color = blue>服务器程序的工作过程包含以下四个基本的步骤：</font></p>
+<ul>
+<li><strong>调用 ServerSocket(int port) ：</strong>创建一个服务器端套接字，并绑定到指定端口上。用于监听客户端的请求。</li>
+<li><strong>调用 accept()：</strong>监听连接请求，如果客户端请求连接，则接受连接，返回通信套接字对象。</li>
+<li><strong>调用 该Socket类对象的 getOutputStream() 和 getInputStream ()：</strong>获取输出流和输入流，开始网络数据的发送和接收。</li>
+<li><strong>关闭ServerSocket和Socket对象：</strong>客户端访问结束，关闭通信套接字。</li>
+</ul>
+</li>
+</ul>
+<p><strong>服务器建立 ServerSocket 对象</strong></p>
+<ul>
+<li>ServerSocket 对象负责等待客户端请求建立套接字连接，类似邮局某个窗口中的业务员。也就是说，<font color = blue>服务器必须事先建立一个等待客户请求建立套接字连接的ServerSocket对象。</font></li>
+<li>所谓“接收”客户的套接字请求，就是accept()方法会返回一个 Socket 对象<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231625240.png" srcset="/img/loading.gif" lazyload></li>
+</ul>
+<p><strong>例 题</strong></p>
+<ol>
+<li>客户端发送内容给服务端，服务端将内容打印到控制台上。</li>
+<li>客户端发送文件给服务端，服务端将文件保存在本地。</li>
+<li>从客户端发送文件给服务端，服务端保存到本地。并返回“发送成功”给客户端。并关闭相应的连接。</li>
+</ol>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123231719573.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>练习</strong></p>
+<ol>
+<li>服务端读取图片并发送给客户端，客户端保存图片到本地</li>
+<li>客户端给服务端发送文本，服务端会将文本转成大写在返回给客户端。</li>
+</ol>
+<p><strong>客户端—服务端</strong></p>
+<ul>
+<li>客户端：<ul>
+<li>自定义</li>
+<li>浏览器</li>
+</ul>
+</li>
+<li>服务端：<ul>
+<li>自定义</li>
+<li>Tomcat服务器</li>
+</ul>
+</li>
+</ul>
+<hr>
+<hr>
+<h2 id="6、UDP网络编程"><a href="#6、UDP网络编程" class="headerlink" title="6、UDP网络编程"></a>6、UDP网络编程</h2><ul>
+<li>类 DatagramSocket 和 DatagramPacket 实现了基于 UDP 协议网络程序。</li>
+<li>UDP数据报通过数据报套接字 DatagramSocket 发送和接收，<font color = blue>系统不保证UDP数据报一定能够安全送到目的地，也不能确定什么时候可以抵达。</font></li>
+<li>DatagramPacket 对象封装了UDP数据报，在数据报中包含了发送端的IP地址和端口号以及接收端的IP地址和端口号。</li>
+<li>UDP协议中每个数据报都给出了完整的地址信息，因此无须建立发送方和接收方的连接。如同发快递包裹一样。</li>
+</ul>
+<p><strong>DatagramSocket 类的常用方法</strong></p>
+<ul>
+<li><code>public DatagramSocket(int port)</code>创建数据报套接字并将其绑定到本地主机上的指定端口。套接字将被绑定到通配符地址，IP 地址由内核来选择。</li>
+<li><code>public DatagramSocket(int port,InetAddress laddr)</code>创建数据报套接字，将其绑定到指定的本地地址。本地端口必须在 0 到 65535 之间（包括两者）。如果 IP 地址为 0.0.0.0，套接字将被绑定到通配符地址，IP 地址由内核选择。</li>
+<li><code>public void close()</code>关闭此数据报套接字。</li>
+<li><code>public void send(DatagramPacket p)</code>从此套接字发送数据报包。DatagramPacket 包含的信息指示：将要发送的数据、其长度、远程主机的 IP 地址和远程主机的端口号。</li>
+<li><code>public void receive(DatagramPacket p)</code>从此套接字接收数据报包。当此方法返回时，DatagramPacket的缓冲区填充了接收的数据。数据报包也包含发送方的 IP 地址和发送方机器上的端口号。 此方法在接收到数据报前一直阻塞。数据报包对象的 length 字段包含所接收信息的长度。如果信息比包的长度长，该信息将被截短。</li>
+<li><code>public InetAddress getLocalAddress()</code>获取套接字绑定的本地地址。</li>
+<li><code>public int getLocalPort()</code>返回此套接字绑定的本地主机上的端口号。</li>
+<li><code>public InetAddress getInetAddress()</code>返回此套接字连接的地址。如果套接字未连接，则返回 null。</li>
+<li><code>public int getPort()</code>返回此套接字的端口。如果套接字未连接，则返回 -1。</li>
+<li><code>public DatagramPacket(byte[] buf,int length)</code>构造 DatagramPacket，用来接收长度为 length 的数据包。 length 参数必须小于等于 buf.length。</li>
+<li><code>public DatagramPacket(byte[] buf,int length,InetAddress address,int port)</code>构造数据报包，用来将长度为 length 的包发送到指定主机上的指定端口号。length参数必须小于等于 buf.length。</li>
+<li><code>public InetAddress getAddress()</code>返回某台机器的 IP 地址，此数据报将要发往该机器或者是从该机器接收到的。</li>
+<li><code>public int getPort()</code>返回某台远程主机的端口号，此数据报将要发往该主机或者是从该主机接收到的。</li>
+<li><code>public byte[] getData()</code>返回数据缓冲区。接收到的或将要发送的数据从缓冲区中的偏移量 offset 处开始，持续 length 长度。</li>
+<li><code>public int getLength()</code>返回将要发送或接收到的数据的长度。</li>
+</ul>
+<p><strong>UDP网络通信</strong></p>
+<ul>
+<li>流 程：<ol>
+<li>DatagramSocket与DatagramPacket</li>
+<li>建立发送端，接收端</li>
+<li>建立数据包</li>
+<li>调用Socket的发送、接收方法</li>
+<li>关闭Socket</li>
+</ol>
+</li>
+<li>发送端与接收端是两个独立的运行程序</li>
+</ul>
+<p><strong>发送端</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">DatagramSocket</span> <span class="hljs-variable">ds</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br><span class="hljs-keyword">try</span><br>&#123;<br>    ds = <span class="hljs-keyword">new</span> <span class="hljs-title class_">DatagramSocket</span>();<br>    <span class="hljs-type">byte</span>[] by = <span class="hljs-string">&quot;hello,atguigu.com&quot;</span>.getBytes();<br>    <span class="hljs-type">DatagramPacket</span> <span class="hljs-variable">dp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">DatagramPacket</span>(by, <span class="hljs-number">0</span>, by.length,<br>            InetAddress.getByName(<span class="hljs-string">&quot;127.0.0.1&quot;</span>), <span class="hljs-number">10000</span>);<br>    ds.send(dp);<br>&#125; <span class="hljs-keyword">catch</span>(<br>Exception e)<br><br>&#123;<br>    e.printStackTrace();<br>&#125; <span class="hljs-keyword">finally</span><br><br>&#123;<br>    <span class="hljs-keyword">if</span> (ds != <span class="hljs-literal">null</span>)<br>        ds.close();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p><strong>接收端</strong></p>
+<p>在接收端，要指定监听的端口。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">DatagramSocket</span> <span class="hljs-variable">ds</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br><span class="hljs-keyword">try</span> &#123;<br>    ds = <span class="hljs-keyword">new</span> <span class="hljs-title class_">DatagramSocket</span>(<span class="hljs-number">10000</span>);<br>    <span class="hljs-type">byte</span>[] by = <span class="hljs-keyword">new</span> <span class="hljs-title class_">byte</span>[<span class="hljs-number">1024</span>];<br>    <span class="hljs-type">DatagramPacket</span> <span class="hljs-variable">dp</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">DatagramPacket</span>(by, by.length);<br>    ds.receive(dp);<br>    <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(dp.getData(), <span class="hljs-number">0</span>, dp.getLength());<br>    System.out.println(str + <span class="hljs-string">&quot;--&quot;</span> + dp.getAddress());<br>&#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>    e.printStackTrace();<br>&#125; <span class="hljs-keyword">finally</span> &#123;<br>    <span class="hljs-keyword">if</span> (ds != <span class="hljs-literal">null</span>)<br>        ds.close();<br>&#125;<br></code></pre></td></tr></table></figure>
+
+
+
+<hr>
+<hr>
+<h2 id="7、URL编程"><a href="#7、URL编程" class="headerlink" title="7、URL编程"></a>7、URL编程</h2><p><strong>URL类</strong></p>
+<ul>
+<li><p><font color = red>URL(Uniform Resource Locator)</font>：统一资源定位符，它表示 Internet 上<font color = red>某一资源</font>的地址。</p>
+</li>
+<li><p>它是一种具体的URI，即URL可以用来标识一个资源，而且还指明了如何locate这个资源。</p>
+</li>
+<li><p>通过 URL 我们可以访问 Internet 上的各种网络资源，比如最常见的 www，ftp站点。浏览器通过解析给定的 URL 可以在网络上查找相应的文件或其他资源。</p>
+</li>
+<li><p>URL的基本结构由5部分组成：</p>
+<p><font color = red>&lt;传输协议&gt;:&#x2F;&#x2F;&lt;主机名&gt;:&lt;端口号&gt;&#x2F;&lt;文件名&gt;#片段名?参数列表</font></p>
+<ul>
+<li>例如:<a target="_blank" rel="noopener" href="http://192.168.1.100:8080/helloworld/index.jsp#a?username=shkstart&amp;password=123">http://192.168.1.100:8080/helloworld/index.jsp#a?username=shkstart&amp;password=123</a></li>
+<li>#片段名：即锚点，例如看小说，直接定位到章节</li>
+<li>参数列表格式：参数名&#x3D;参数值&amp;参数名&#x3D;参数值….</li>
+</ul>
+</li>
+</ul>
+<p><strong>URL类构造器</strong></p>
+<ul>
+<li>为了表示URL，java.net 中实现了类 URL。我们可以通过下面的构造器来初始化一个 URL 对象：<ul>
+<li><font color = red><code>public URL (String spec)</code></font>：通过一个表示URL地址的字符串可以构造一个URL对象。例如：<font color = blue><code>URL url = new URL (&quot;http://www. atguigu.com/&quot;);</code></font></li>
+<li><font color = red><code>public URL(URL context, String spec)</code></font>：通过基 URL 和相对 URL 构造一个 URL 对象。例如：<font color = blue><code>URL downloadUrl = new URL(url, “download.html&quot;)</code></font></li>
+<li><code>public URL(String protocol, String host, String file);</code>例如：<font color = blue><code>new URL(&quot;http&quot;,&quot;www.atguigu.com&quot;, “download. html&quot;);</code></font></li>
+<li><code>public URL(String protocol, String host, int port, String file); </code>例如: <font color = blue><code> URL gamelan = new URL(&quot;http&quot;, &quot;www.atguigu.com&quot;, 80, “download.html&quot;);</code></font></li>
+</ul>
+</li>
+<li>URL类的构造器都声明抛出非运行时异常，必须要对这一异常进行处理，通常是用 try-catch 语句进行捕获。</li>
+</ul>
+<p><img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123233037927.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>URL类常用方法</strong></p>
+<ul>
+<li><p>一个URL对象生成后，其属性是不能被改变的，但可以通过它给定的方法来获取这些属性：</p>
+<ul>
+<li><code>public String getProtocol( ) </code>获取该URL的协议名</li>
+<li><code>public String getHost( )</code>获取该URL的主机名</li>
+<li><code>public String getPort( )</code>获取该URL的端口号</li>
+<li><font color = blue><code>public String getPath( )</code></font><font color = blue>获取该URL的文件路径</font></li>
+<li><code>public String getFile( )</code>获取该URL的文件名</li>
+<li><font color = blue><code>public String getQuery( ) </code></font><font color = blue>获取该URL的查询名</font></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">URL</span> <span class="hljs-variable">url</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">URL</span>(<span class="hljs-string">&quot;http://localhost:8080/examples/myTest.txt&quot;</span>);<br>System.out.println(<span class="hljs-string">&quot;getProtocol() :&quot;</span>+url.getProtocol());<br>System.out.println(<span class="hljs-string">&quot;getHost() :&quot;</span>+url.getHost());<br>System.out.println(<span class="hljs-string">&quot;getPort() :&quot;</span>+url.getPort());<br>System.out.println(<span class="hljs-string">&quot;getPath() :&quot;</span>+url.getPath());<br>System.out.println(<span class="hljs-string">&quot;getFile() :&quot;</span>+url.getFile());<br>System.out.println(<span class="hljs-string">&quot;getQuery() :&quot;</span>+url.getQuery());<br></code></pre></td></tr></table></figure></li>
+</ul>
+<p><strong>针对HTTP协议的URLConnection类</strong></p>
+<ul>
+<li><font color = red>URL的方法 openStream()：能从网络上读取数据</font></li>
+<li>若希望输出数据，例如向服务器端的 CGI （公共网关接口-Common GatewayInterface-的简称，是用户浏览器和服务器端的应用程序进行连接的接口）程序发送一些数据，则必须先与URL建立连接，然后才能对其进行读写，此时需要使用URLConnection 。</li>
+<li>URLConnection：表示到URL所引用的远程对象的连接。当与一个URL建立连接时，首先要在一个 URL 对象上通过方法 <font color = red><code>openConnection()</code></font>生成对应的 URLConnection对象。如果连接过程失败，将产生IOException.<ul>
+<li><code>URL netchinaren = new URL (&quot;http://www.atguigu.com/index.shtml&quot;);</code></li>
+<li><code>URLConnectonn u = netchinaren.openConnection( );</code></li>
+</ul>
+</li>
+<li>通过URLConnection对象获取的输入流和输出流，即可以与现有的CGI程序进行交互。<ul>
+<li><code>public Object getContent( ) throws IOException</code></li>
+<li><code>public int getContentLength( )</code></li>
+<li><code>public String getContentType( )</code></li>
+<li><code>public long getDate( )</code></li>
+<li><code>public long getLastModified( )</code></li>
+<li><font color = red><code>public InputStream getInputStream( )throws IOException</code></font></li>
+<li><code>public OutputSteram getOutputStream( )throws IOException</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>URI、URL和URN的区别</strong></p>
+<p><font color = red>URI，是uniform resource identifier，统一资源标识符，</font>用来唯一的标识一个资源。而<font color = red>URL是uniform resource locator，统一资源定位符</font>，它是一种具体的URI，即URL可以用来标识一个资源，而且还指明了如何locate这个资源。而URN，uniform resource name，统一资源命名，是通过名字来标识资源，比如mailto:<a href="mailto:&#x6a;&#x61;&#118;&#x61;&#x2d;&#110;&#101;&#116;&#x40;&#x6a;&#x61;&#118;&#x61;&#x2e;&#115;&#x75;&#x6e;&#x2e;&#99;&#x6f;&#x6d;">&#x6a;&#x61;&#118;&#x61;&#x2d;&#110;&#101;&#116;&#x40;&#x6a;&#x61;&#118;&#x61;&#x2e;&#115;&#x75;&#x6e;&#x2e;&#99;&#x6f;&#x6d;</a>。也就是说，URI是以一种抽象的，高层次概念定义统一资源标识，而URL和URN则是具体的资源标识的方式。URL和URN都是一种URI。</p>
+<p>在Java的URI中，一个URI实例可以代表绝对的，也可以是相对的，只要它符合URI的语法规则。而URL类则不仅符合语义，还包含了定位该资源的信息，因此它不能是相对的。<img src="https://yuki-picgo-img.oss-cn-beijing.aliyuncs.com/PicGo/image-20221123233646784.png" srcset="/img/loading.gif" lazyload></p>
+<p><strong>小结</strong></p>
+<ul>
+<li>位于网络中的计算机具有唯一的IP地址，这样不同的主机可以互相区分。</li>
+<li><font color = red>客户端－服务器</font>是一种最常见的网络应用程序模型。服务器是一个为其客户端提供某种特定服务的硬件或软件。客户机是一个用户应用程序，用于访问某台服务器提供的服务。<font color = red>端口号</font>是对一个服务的访问场所，它用于区分同一物理计算机上的多个服务。<font color = red>套接字</font>用于连接客户端和服务器，客户端和服务器之间的每个通信会话使用一个不同的套接字。TCP协议用于实现面向连接的会话。</li>
+<li>Java 中有关网络方面的功能都定义在 java.net 程序包中。Java 用 InetAddress 对象表示<font color = red>IP地址</font>，该对象里有两个字段：主机名(String) 和 IP 地址(int)。</li>
+<li>类 Socket 和 ServerSocket 实现了基于TCP协议的客户端－服务器程序。Socket是客户端和服务器之间的一个连接，连接创建的细节被隐藏了。这个连接提供了一个安全的数据传输通道，这是因为 TCP 协议可以解决数据在传送过程中的丢失、损坏、重复、乱序以及网络拥挤等问题，它保证数据可靠的传送。</li>
+<li>类 URL 和 URLConnection 提供了最高级网络应用。URL 的网络资源的位置来同一表示Internet 上各种网络资源。通过URL对象可以创建当前应用程序和 URL 表示的网络资源之间的连接，这样当前程序就可以读取网络资源数据，或者把自己的数据传送到网络上去。</li>
+</ul>
+<hr>
 <hr>
 <hr>
 <h1 id="第15章、Java反射机制"><a href="#第15章、Java反射机制" class="headerlink" title="第15章、Java反射机制"></a>第15章、Java反射机制</h1><h2 id="1、Java反射机制概述"><a href="#1、Java反射机制概述" class="headerlink" title="1、Java反射机制概述"></a>1、Java反射机制概述</h2><hr>
